@@ -1,0 +1,10 @@
+anthropic
+asyncpg
+beautifulsoup4
+cohere
+lxml
+openai
+pydantic
+python-dotenv
+requests
+tiktoken

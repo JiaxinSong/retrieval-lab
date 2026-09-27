@@ -1,0 +1,13 @@
+# Secrets
+.env
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Fetched HTML: large, and reproducible with scripts/01_fetch_docs.py
+data/raw/html/
+
+# macOS
+.DS_Store

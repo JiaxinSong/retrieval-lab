@@ -1,0 +1,1122 @@
+{
+  "runtime-config.html": {
+    "chapter": "runtime-config.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/runtime-config.html"
+  },
+  "config-setting.html": {
+    "chapter": "runtime-config.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/config-setting.html"
+  },
+  "runtime-config-file-locations.html": {
+    "chapter": "runtime-config.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/runtime-config-file-locations.html"
+  },
+  "runtime-config-connection.html": {
+    "chapter": "runtime-config.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/runtime-config-connection.html"
+  },
+  "runtime-config-resource.html": {
+    "chapter": "runtime-config.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/runtime-config-resource.html"
+  },
+  "runtime-config-wal.html": {
+    "chapter": "runtime-config.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/runtime-config-wal.html"
+  },
+  "runtime-config-replication.html": {
+    "chapter": "runtime-config.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/runtime-config-replication.html"
+  },
+  "runtime-config-query.html": {
+    "chapter": "runtime-config.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/runtime-config-query.html"
+  },
+  "runtime-config-logging.html": {
+    "chapter": "runtime-config.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/runtime-config-logging.html"
+  },
+  "runtime-config-statistics.html": {
+    "chapter": "runtime-config.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/runtime-config-statistics.html"
+  },
+  "runtime-config-autovacuum.html": {
+    "chapter": "runtime-config.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/runtime-config-autovacuum.html"
+  },
+  "runtime-config-client.html": {
+    "chapter": "runtime-config.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/runtime-config-client.html"
+  },
+  "runtime-config-locks.html": {
+    "chapter": "runtime-config.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/runtime-config-locks.html"
+  },
+  "runtime-config-compatible.html": {
+    "chapter": "runtime-config.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/runtime-config-compatible.html"
+  },
+  "runtime-config-error-handling.html": {
+    "chapter": "runtime-config.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/runtime-config-error-handling.html"
+  },
+  "runtime-config-preset.html": {
+    "chapter": "runtime-config.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/runtime-config-preset.html"
+  },
+  "runtime-config-custom.html": {
+    "chapter": "runtime-config.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/runtime-config-custom.html"
+  },
+  "runtime-config-developer.html": {
+    "chapter": "runtime-config.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/runtime-config-developer.html"
+  },
+  "runtime-config-short.html": {
+    "chapter": "runtime-config.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/runtime-config-short.html"
+  },
+  "performance-tips.html": {
+    "chapter": "performance-tips.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/performance-tips.html"
+  },
+  "using-explain.html": {
+    "chapter": "performance-tips.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/using-explain.html"
+  },
+  "planner-stats.html": {
+    "chapter": "performance-tips.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/planner-stats.html"
+  },
+  "explicit-joins.html": {
+    "chapter": "performance-tips.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/explicit-joins.html"
+  },
+  "populate.html": {
+    "chapter": "performance-tips.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/populate.html"
+  },
+  "non-durability.html": {
+    "chapter": "performance-tips.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/non-durability.html"
+  },
+  "indexes.html": {
+    "chapter": "indexes.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/indexes.html"
+  },
+  "indexes-intro.html": {
+    "chapter": "indexes.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/indexes-intro.html"
+  },
+  "indexes-types.html": {
+    "chapter": "indexes.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/indexes-types.html"
+  },
+  "indexes-multicolumn.html": {
+    "chapter": "indexes.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/indexes-multicolumn.html"
+  },
+  "indexes-ordering.html": {
+    "chapter": "indexes.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/indexes-ordering.html"
+  },
+  "indexes-bitmap-scans.html": {
+    "chapter": "indexes.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/indexes-bitmap-scans.html"
+  },
+  "indexes-unique.html": {
+    "chapter": "indexes.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/indexes-unique.html"
+  },
+  "indexes-expressional.html": {
+    "chapter": "indexes.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/indexes-expressional.html"
+  },
+  "indexes-partial.html": {
+    "chapter": "indexes.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/indexes-partial.html"
+  },
+  "indexes-index-only-scans.html": {
+    "chapter": "indexes.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/indexes-index-only-scans.html"
+  },
+  "indexes-opclass.html": {
+    "chapter": "indexes.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/indexes-opclass.html"
+  },
+  "indexes-collations.html": {
+    "chapter": "indexes.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/indexes-collations.html"
+  },
+  "indexes-examine.html": {
+    "chapter": "indexes.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/indexes-examine.html"
+  },
+  "maintenance.html": {
+    "chapter": "maintenance.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/maintenance.html"
+  },
+  "routine-vacuuming.html": {
+    "chapter": "maintenance.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/routine-vacuuming.html"
+  },
+  "routine-reindex.html": {
+    "chapter": "maintenance.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/routine-reindex.html"
+  },
+  "logfile-maintenance.html": {
+    "chapter": "maintenance.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/logfile-maintenance.html"
+  },
+  "monitoring.html": {
+    "chapter": "monitoring.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/monitoring.html"
+  },
+  "monitoring-ps.html": {
+    "chapter": "monitoring.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/monitoring-ps.html"
+  },
+  "monitoring-stats.html": {
+    "chapter": "monitoring.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+  },
+  "monitoring-locks.html": {
+    "chapter": "monitoring.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/monitoring-locks.html"
+  },
+  "progress-reporting.html": {
+    "chapter": "monitoring.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/progress-reporting.html"
+  },
+  "dynamic-trace.html": {
+    "chapter": "monitoring.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/dynamic-trace.html"
+  },
+  "diskusage.html": {
+    "chapter": "monitoring.html",
+    "group": "eval",
+    "url": "https://www.postgresql.org/docs/17/diskusage.html"
+  },
+  "mvcc.html": {
+    "chapter": "mvcc.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/mvcc.html"
+  },
+  "mvcc-intro.html": {
+    "chapter": "mvcc.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/mvcc-intro.html"
+  },
+  "transaction-iso.html": {
+    "chapter": "mvcc.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/transaction-iso.html"
+  },
+  "explicit-locking.html": {
+    "chapter": "mvcc.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/explicit-locking.html"
+  },
+  "applevel-consistency.html": {
+    "chapter": "mvcc.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/applevel-consistency.html"
+  },
+  "mvcc-serialization-failure-handling.html": {
+    "chapter": "mvcc.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/mvcc-serialization-failure-handling.html"
+  },
+  "mvcc-caveats.html": {
+    "chapter": "mvcc.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/mvcc-caveats.html"
+  },
+  "locking-indexes.html": {
+    "chapter": "mvcc.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/locking-indexes.html"
+  },
+  "wal.html": {
+    "chapter": "wal.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/wal.html"
+  },
+  "wal-reliability.html": {
+    "chapter": "wal.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/wal-reliability.html"
+  },
+  "checksums.html": {
+    "chapter": "wal.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/checksums.html"
+  },
+  "wal-intro.html": {
+    "chapter": "wal.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/wal-intro.html"
+  },
+  "wal-async-commit.html": {
+    "chapter": "wal.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/wal-async-commit.html"
+  },
+  "wal-configuration.html": {
+    "chapter": "wal.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/wal-configuration.html"
+  },
+  "wal-internals.html": {
+    "chapter": "wal.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/wal-internals.html"
+  },
+  "high-availability.html": {
+    "chapter": "high-availability.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/high-availability.html"
+  },
+  "different-replication-solutions.html": {
+    "chapter": "high-availability.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/different-replication-solutions.html"
+  },
+  "warm-standby.html": {
+    "chapter": "high-availability.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/warm-standby.html"
+  },
+  "warm-standby-failover.html": {
+    "chapter": "high-availability.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/warm-standby-failover.html"
+  },
+  "hot-standby.html": {
+    "chapter": "high-availability.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/hot-standby.html"
+  },
+  "queries.html": {
+    "chapter": "queries.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/queries.html"
+  },
+  "queries-overview.html": {
+    "chapter": "queries.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/queries-overview.html"
+  },
+  "queries-table-expressions.html": {
+    "chapter": "queries.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/queries-table-expressions.html"
+  },
+  "queries-select-lists.html": {
+    "chapter": "queries.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/queries-select-lists.html"
+  },
+  "queries-union.html": {
+    "chapter": "queries.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/queries-union.html"
+  },
+  "queries-order.html": {
+    "chapter": "queries.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/queries-order.html"
+  },
+  "queries-limit.html": {
+    "chapter": "queries.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/queries-limit.html"
+  },
+  "queries-values.html": {
+    "chapter": "queries.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/queries-values.html"
+  },
+  "queries-with.html": {
+    "chapter": "queries.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/queries-with.html"
+  },
+  "ddl.html": {
+    "chapter": "ddl.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/ddl.html"
+  },
+  "ddl-basics.html": {
+    "chapter": "ddl.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/ddl-basics.html"
+  },
+  "ddl-default.html": {
+    "chapter": "ddl.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/ddl-default.html"
+  },
+  "ddl-identity-columns.html": {
+    "chapter": "ddl.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/ddl-identity-columns.html"
+  },
+  "ddl-generated-columns.html": {
+    "chapter": "ddl.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/ddl-generated-columns.html"
+  },
+  "ddl-constraints.html": {
+    "chapter": "ddl.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/ddl-constraints.html"
+  },
+  "ddl-system-columns.html": {
+    "chapter": "ddl.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/ddl-system-columns.html"
+  },
+  "ddl-alter.html": {
+    "chapter": "ddl.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/ddl-alter.html"
+  },
+  "ddl-priv.html": {
+    "chapter": "ddl.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/ddl-priv.html"
+  },
+  "ddl-rowsecurity.html": {
+    "chapter": "ddl.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/ddl-rowsecurity.html"
+  },
+  "ddl-schemas.html": {
+    "chapter": "ddl.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/ddl-schemas.html"
+  },
+  "ddl-inherit.html": {
+    "chapter": "ddl.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/ddl-inherit.html"
+  },
+  "ddl-partitioning.html": {
+    "chapter": "ddl.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/ddl-partitioning.html"
+  },
+  "ddl-foreign-data.html": {
+    "chapter": "ddl.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/ddl-foreign-data.html"
+  },
+  "ddl-others.html": {
+    "chapter": "ddl.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/ddl-others.html"
+  },
+  "ddl-depend.html": {
+    "chapter": "ddl.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/ddl-depend.html"
+  },
+  "textsearch.html": {
+    "chapter": "textsearch.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/textsearch.html"
+  },
+  "textsearch-intro.html": {
+    "chapter": "textsearch.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/textsearch-intro.html"
+  },
+  "textsearch-tables.html": {
+    "chapter": "textsearch.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/textsearch-tables.html"
+  },
+  "textsearch-controls.html": {
+    "chapter": "textsearch.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/textsearch-controls.html"
+  },
+  "textsearch-features.html": {
+    "chapter": "textsearch.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/textsearch-features.html"
+  },
+  "textsearch-parsers.html": {
+    "chapter": "textsearch.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/textsearch-parsers.html"
+  },
+  "textsearch-dictionaries.html": {
+    "chapter": "textsearch.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/textsearch-dictionaries.html"
+  },
+  "textsearch-configuration.html": {
+    "chapter": "textsearch.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/textsearch-configuration.html"
+  },
+  "textsearch-debugging.html": {
+    "chapter": "textsearch.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/textsearch-debugging.html"
+  },
+  "textsearch-indexes.html": {
+    "chapter": "textsearch.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/textsearch-indexes.html"
+  },
+  "textsearch-psql.html": {
+    "chapter": "textsearch.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/textsearch-psql.html"
+  },
+  "textsearch-limitations.html": {
+    "chapter": "textsearch.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/textsearch-limitations.html"
+  },
+  "backup.html": {
+    "chapter": "backup.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/backup.html"
+  },
+  "backup-dump.html": {
+    "chapter": "backup.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/backup-dump.html"
+  },
+  "backup-file.html": {
+    "chapter": "backup.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/backup-file.html"
+  },
+  "continuous-archiving.html": {
+    "chapter": "backup.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/continuous-archiving.html"
+  },
+  "functions.html": {
+    "chapter": "functions.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/functions.html"
+  },
+  "functions-logical.html": {
+    "chapter": "functions.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/functions-logical.html"
+  },
+  "functions-comparison.html": {
+    "chapter": "functions.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/functions-comparison.html"
+  },
+  "functions-math.html": {
+    "chapter": "functions.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/functions-math.html"
+  },
+  "functions-string.html": {
+    "chapter": "functions.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/functions-string.html"
+  },
+  "functions-binarystring.html": {
+    "chapter": "functions.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/functions-binarystring.html"
+  },
+  "functions-bitstring.html": {
+    "chapter": "functions.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/functions-bitstring.html"
+  },
+  "functions-matching.html": {
+    "chapter": "functions.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/functions-matching.html"
+  },
+  "functions-formatting.html": {
+    "chapter": "functions.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/functions-formatting.html"
+  },
+  "functions-datetime.html": {
+    "chapter": "functions.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/functions-datetime.html"
+  },
+  "functions-enum.html": {
+    "chapter": "functions.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/functions-enum.html"
+  },
+  "functions-geometry.html": {
+    "chapter": "functions.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/functions-geometry.html"
+  },
+  "functions-net.html": {
+    "chapter": "functions.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/functions-net.html"
+  },
+  "functions-textsearch.html": {
+    "chapter": "functions.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/functions-textsearch.html"
+  },
+  "functions-uuid.html": {
+    "chapter": "functions.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/functions-uuid.html"
+  },
+  "functions-xml.html": {
+    "chapter": "functions.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/functions-xml.html"
+  },
+  "functions-json.html": {
+    "chapter": "functions.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/functions-json.html"
+  },
+  "functions-sequence.html": {
+    "chapter": "functions.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/functions-sequence.html"
+  },
+  "functions-conditional.html": {
+    "chapter": "functions.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/functions-conditional.html"
+  },
+  "functions-array.html": {
+    "chapter": "functions.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/functions-array.html"
+  },
+  "functions-range.html": {
+    "chapter": "functions.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/functions-range.html"
+  },
+  "functions-aggregate.html": {
+    "chapter": "functions.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/functions-aggregate.html"
+  },
+  "functions-window.html": {
+    "chapter": "functions.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/functions-window.html"
+  },
+  "functions-merge-support.html": {
+    "chapter": "functions.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/functions-merge-support.html"
+  },
+  "functions-subquery.html": {
+    "chapter": "functions.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/functions-subquery.html"
+  },
+  "functions-comparisons.html": {
+    "chapter": "functions.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/functions-comparisons.html"
+  },
+  "functions-srf.html": {
+    "chapter": "functions.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/functions-srf.html"
+  },
+  "functions-info.html": {
+    "chapter": "functions.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/functions-info.html"
+  },
+  "functions-admin.html": {
+    "chapter": "functions.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/functions-admin.html"
+  },
+  "functions-trigger.html": {
+    "chapter": "functions.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/functions-trigger.html"
+  },
+  "functions-event-triggers.html": {
+    "chapter": "functions.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/functions-event-triggers.html"
+  },
+  "functions-statistics.html": {
+    "chapter": "functions.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/functions-statistics.html"
+  },
+  "datatype.html": {
+    "chapter": "datatype.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/datatype.html"
+  },
+  "datatype-numeric.html": {
+    "chapter": "datatype.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/datatype-numeric.html"
+  },
+  "datatype-money.html": {
+    "chapter": "datatype.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/datatype-money.html"
+  },
+  "datatype-character.html": {
+    "chapter": "datatype.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/datatype-character.html"
+  },
+  "datatype-binary.html": {
+    "chapter": "datatype.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/datatype-binary.html"
+  },
+  "datatype-datetime.html": {
+    "chapter": "datatype.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/datatype-datetime.html"
+  },
+  "datatype-boolean.html": {
+    "chapter": "datatype.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/datatype-boolean.html"
+  },
+  "datatype-enum.html": {
+    "chapter": "datatype.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/datatype-enum.html"
+  },
+  "datatype-geometric.html": {
+    "chapter": "datatype.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/datatype-geometric.html"
+  },
+  "datatype-net-types.html": {
+    "chapter": "datatype.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/datatype-net-types.html"
+  },
+  "datatype-bit.html": {
+    "chapter": "datatype.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/datatype-bit.html"
+  },
+  "datatype-textsearch.html": {
+    "chapter": "datatype.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/datatype-textsearch.html"
+  },
+  "datatype-uuid.html": {
+    "chapter": "datatype.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/datatype-uuid.html"
+  },
+  "datatype-xml.html": {
+    "chapter": "datatype.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/datatype-xml.html"
+  },
+  "datatype-json.html": {
+    "chapter": "datatype.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/datatype-json.html"
+  },
+  "arrays.html": {
+    "chapter": "datatype.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/arrays.html"
+  },
+  "rowtypes.html": {
+    "chapter": "datatype.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/rowtypes.html"
+  },
+  "rangetypes.html": {
+    "chapter": "datatype.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/rangetypes.html"
+  },
+  "domains.html": {
+    "chapter": "datatype.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/domains.html"
+  },
+  "datatype-oid.html": {
+    "chapter": "datatype.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/datatype-oid.html"
+  },
+  "datatype-pg-lsn.html": {
+    "chapter": "datatype.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/datatype-pg-lsn.html"
+  },
+  "datatype-pseudo.html": {
+    "chapter": "datatype.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/datatype-pseudo.html"
+  },
+  "client-authentication.html": {
+    "chapter": "client-authentication.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/client-authentication.html"
+  },
+  "auth-pg-hba-conf.html": {
+    "chapter": "client-authentication.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/auth-pg-hba-conf.html"
+  },
+  "auth-username-maps.html": {
+    "chapter": "client-authentication.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/auth-username-maps.html"
+  },
+  "auth-methods.html": {
+    "chapter": "client-authentication.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/auth-methods.html"
+  },
+  "auth-trust.html": {
+    "chapter": "client-authentication.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/auth-trust.html"
+  },
+  "auth-password.html": {
+    "chapter": "client-authentication.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/auth-password.html"
+  },
+  "gssapi-auth.html": {
+    "chapter": "client-authentication.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/gssapi-auth.html"
+  },
+  "sspi-auth.html": {
+    "chapter": "client-authentication.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/sspi-auth.html"
+  },
+  "auth-ident.html": {
+    "chapter": "client-authentication.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/auth-ident.html"
+  },
+  "auth-peer.html": {
+    "chapter": "client-authentication.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/auth-peer.html"
+  },
+  "auth-ldap.html": {
+    "chapter": "client-authentication.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/auth-ldap.html"
+  },
+  "auth-radius.html": {
+    "chapter": "client-authentication.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/auth-radius.html"
+  },
+  "auth-cert.html": {
+    "chapter": "client-authentication.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/auth-cert.html"
+  },
+  "auth-pam.html": {
+    "chapter": "client-authentication.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/auth-pam.html"
+  },
+  "auth-bsd.html": {
+    "chapter": "client-authentication.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/auth-bsd.html"
+  },
+  "client-authentication-problems.html": {
+    "chapter": "client-authentication.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/client-authentication-problems.html"
+  },
+  "sql-syntax.html": {
+    "chapter": "sql-syntax.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/sql-syntax.html"
+  },
+  "sql-syntax-lexical.html": {
+    "chapter": "sql-syntax.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/sql-syntax-lexical.html"
+  },
+  "sql-expressions.html": {
+    "chapter": "sql-syntax.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/sql-expressions.html"
+  },
+  "sql-syntax-calling-funcs.html": {
+    "chapter": "sql-syntax.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/sql-syntax-calling-funcs.html"
+  },
+  "runtime.html": {
+    "chapter": "runtime.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/runtime.html"
+  },
+  "postgres-user.html": {
+    "chapter": "runtime.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/postgres-user.html"
+  },
+  "creating-cluster.html": {
+    "chapter": "runtime.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/creating-cluster.html"
+  },
+  "server-start.html": {
+    "chapter": "runtime.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/server-start.html"
+  },
+  "kernel-resources.html": {
+    "chapter": "runtime.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/kernel-resources.html"
+  },
+  "server-shutdown.html": {
+    "chapter": "runtime.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/server-shutdown.html"
+  },
+  "upgrading.html": {
+    "chapter": "runtime.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/upgrading.html"
+  },
+  "preventing-server-spoofing.html": {
+    "chapter": "runtime.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/preventing-server-spoofing.html"
+  },
+  "encryption-options.html": {
+    "chapter": "runtime.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/encryption-options.html"
+  },
+  "ssl-tcp.html": {
+    "chapter": "runtime.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/ssl-tcp.html"
+  },
+  "gssapi-enc.html": {
+    "chapter": "runtime.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/gssapi-enc.html"
+  },
+  "ssh-tunnels.html": {
+    "chapter": "runtime.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/ssh-tunnels.html"
+  },
+  "event-log-registration.html": {
+    "chapter": "runtime.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/event-log-registration.html"
+  },
+  "logical-replication.html": {
+    "chapter": "logical-replication.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/logical-replication.html"
+  },
+  "logical-replication-publication.html": {
+    "chapter": "logical-replication.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/logical-replication-publication.html"
+  },
+  "logical-replication-subscription.html": {
+    "chapter": "logical-replication.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/logical-replication-subscription.html"
+  },
+  "logical-replication-failover.html": {
+    "chapter": "logical-replication.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/logical-replication-failover.html"
+  },
+  "logical-replication-row-filter.html": {
+    "chapter": "logical-replication.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/logical-replication-row-filter.html"
+  },
+  "logical-replication-col-lists.html": {
+    "chapter": "logical-replication.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/logical-replication-col-lists.html"
+  },
+  "logical-replication-conflicts.html": {
+    "chapter": "logical-replication.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/logical-replication-conflicts.html"
+  },
+  "logical-replication-restrictions.html": {
+    "chapter": "logical-replication.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/logical-replication-restrictions.html"
+  },
+  "logical-replication-architecture.html": {
+    "chapter": "logical-replication.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/logical-replication-architecture.html"
+  },
+  "logical-replication-monitoring.html": {
+    "chapter": "logical-replication.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/logical-replication-monitoring.html"
+  },
+  "logical-replication-security.html": {
+    "chapter": "logical-replication.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/logical-replication-security.html"
+  },
+  "logical-replication-config.html": {
+    "chapter": "logical-replication.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/logical-replication-config.html"
+  },
+  "logical-replication-quick-setup.html": {
+    "chapter": "logical-replication.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/logical-replication-quick-setup.html"
+  },
+  "parallel-query.html": {
+    "chapter": "parallel-query.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/parallel-query.html"
+  },
+  "how-parallel-query-works.html": {
+    "chapter": "parallel-query.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/how-parallel-query-works.html"
+  },
+  "when-can-parallel-query-be-used.html": {
+    "chapter": "parallel-query.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/when-can-parallel-query-be-used.html"
+  },
+  "parallel-plans.html": {
+    "chapter": "parallel-query.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/parallel-plans.html"
+  },
+  "parallel-safety.html": {
+    "chapter": "parallel-query.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/parallel-safety.html"
+  },
+  "storage.html": {
+    "chapter": "storage.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/storage.html"
+  },
+  "storage-file-layout.html": {
+    "chapter": "storage.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/storage-file-layout.html"
+  },
+  "storage-toast.html": {
+    "chapter": "storage.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/storage-toast.html"
+  },
+  "storage-fsm.html": {
+    "chapter": "storage.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/storage-fsm.html"
+  },
+  "storage-vm.html": {
+    "chapter": "storage.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/storage-vm.html"
+  },
+  "storage-init.html": {
+    "chapter": "storage.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/storage-init.html"
+  },
+  "storage-page-layout.html": {
+    "chapter": "storage.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/storage-page-layout.html"
+  },
+  "storage-hot.html": {
+    "chapter": "storage.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/storage-hot.html"
+  },
+  "planner-optimizer.html": {
+    "chapter": "planner-optimizer.html",
+    "group": "distractor",
+    "url": "https://www.postgresql.org/docs/17/planner-optimizer.html"
+  }
+}
