@@ -24,7 +24,7 @@ interviewers ask about retrieval design and evaluation, not interface code.
 | Embedding | OpenAI `text-embedding-3-small` (1536d) |
 | Rerank | Cohere `rerank-v3.5` |
 | Generation | `gpt-4o-mini` |
-| Evaluation judges | `gpt-4o-mini` + `claude-haiku-4-5`, `claude-sonnet-4-5` as referee |
+| Evaluation judges | `gpt-5-mini` + `claude-haiku-4-5`, `claude-sonnet-5` as referee |
 | Corpus | PostgreSQL official documentation |
 | Framework | None — raw SDKs and SQL |
 
@@ -59,9 +59,10 @@ The minimum version that stands up to questioning.
 | Selection redesigned to remove self-selection bias; pooling at `RECALL_K` | *unplanned* | 0.5h | done |
 | Double-stemming fix in the lexical query | *unplanned* | 0.2h | done |
 | Pipeline verified end-to-end against a local Postgres instance | *unplanned* | 0.3h | done |
-| Golden set: two cross-vendor LLM judges + referee, calibration, set-valued any/all ground truth | **MUST** | 1.5h | built, not yet run |
-| Eval harness: Recall@5, MRR, distractor intrusion | **MUST** | 1.0h | |
-| Agentic layer: tool calling, relevance grading, query rewrite, retry | **MUST** | 2.0h | |
+| Golden set: two cross-vendor LLM judges + referee, calibration, set-valued any/all ground truth | **MUST** | 1.5h | done |
+| Eval harness: Recall@5, MRR, distractor intrusion, nine configurations | **MUST** | 1.0h | done |
+| Cited answer generation (strict tool schema, refusal flag) | *unplanned* | 0.5h | done |
+| Agentic layer: tool calling, rerank-score gate, query rewrite, retry with a cap | **MUST** | 2.0h | done |
 
 Items marked *unplanned* were added after measurement or review exposed
 problems the original scope did not anticipate. Retrieval items are documented

@@ -1,0 +1,2168 @@
+[
+  {
+    "qid": "g00",
+    "question": "which join uses a hash table in memory?",
+    "type": "generated",
+    "chapter": "performance-tips.html",
+    "match": "any",
+    "ground_truth": [
+      798,
+      808,
+      809,
+      1031,
+      1242,
+      1243,
+      1244,
+      1247,
+      1248
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 798,
+        "section_id": "PARALLEL-JOINS",
+        "group": "distractor",
+        "content_head": "Just as in a non-parallel plan, the driving table may be joined to one or more other tables using a nested loop, hash join, or merge join. The inner s"
+      },
+      {
+        "id": 808,
+        "section_id": "PLANNER-OPTIMIZER-GENERATING-POSSIBLE-PLANS",
+        "group": "distractor",
+        "content_head": "The planner/optimizer starts by generating plans for scanning each individual relation (table) used in the query. The possible plans are determined by"
+      },
+      {
+        "id": 809,
+        "section_id": "PLANNER-OPTIMIZER-GENERATING-POSSIBLE-PLANS",
+        "group": "distractor",
+        "content_head": " row found are used as hash keys to locate the matching rows in the table. When the query involves more than two relations, the final result must be b"
+      },
+      {
+        "id": 1031,
+        "section_id": "RUNTIME-CONFIG-RESOURCE-MEMORY",
+        "group": "eval",
+        "content_head": " time, with each operation generally being allowed to use as much memory as this value specifies before it starts to write data into temporary files. "
+      },
+      {
+        "id": 1242,
+        "section_id": "USING-EXPLAIN-BASICS",
+        "group": "eval",
+        "content_head": " once, even though the nested-loop join node needs to read that data ten times, once for each row from the outer relation. The Materialize node saves "
+      },
+      {
+        "id": 1243,
+        "section_id": "USING-EXPLAIN-BASICS",
+        "group": "eval",
+        "content_head": " to the Hash node, which constructs the hash table. That's then returned to the Hash Join node, which reads rows from its outer child plan and searche"
+      },
+      {
+        "id": 1244,
+        "section_id": "USING-EXPLAIN-BASICS",
+        "group": "eval",
+        "content_head": ") -> Seq Scan on onek t2 (cost=0.00..114.00 rows=1000 width=244) -> Hash (cost=224.98..224.98 rows=100 width=244) -> Bitmap Heap Scan on tenk1 t1 (cos"
+      },
+      {
+        "id": 1247,
+        "section_id": "USING-EXPLAIN-ANALYZE",
+        "group": "eval",
+        "content_head": " plans, it is possible for a subplan node to be executed more than once. For example, the inner index scan will be executed once per outer row in the "
+      },
+      {
+        "id": 1248,
+        "section_id": "USING-EXPLAIN-ANALYZE",
+        "group": "eval",
+        "content_head": " t1 (cost=5.06..224.98 rows=100 width=244) (actual time=0.030..0.450 rows=100 loops=1) Recheck Cond: (unique1 < 100) Heap Blocks: exact=90 -> Bitmap I"
+      }
+    ],
+    "source_chunk_id": 1242
+  },
+  {
+    "qid": "g01",
+    "question": "what kind of data works best with BRIN indexes?",
+    "type": "generated",
+    "chapter": "indexes.html",
+    "match": "any",
+    "ground_truth": [
+      670
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 670,
+        "section_id": "INDEXES-TYPES-BRIN",
+        "group": "eval",
+        "content_head": "BRIN indexes (a shorthand for Block Range INdexes) store summaries about the values stored in consecutive physical block ranges of a table. Thus, they"
+      }
+    ],
+    "source_chunk_id": 670
+  },
+  {
+    "qid": "g02",
+    "question": "how can I see disk space used by a specific table in PostgreSQL?",
+    "type": "generated",
+    "chapter": "monitoring.html",
+    "match": "any",
+    "ground_truth": [
+      280,
+      281,
+      331,
+      332,
+      810
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 280,
+        "section_id": "DISK-USAGE",
+        "group": "eval",
+        "content_head": "Each table has a primary heap disk file where most of the data is stored. If the table has any columns with potentially-wide values, there also might "
+      },
+      {
+        "id": 281,
+        "section_id": "DISK-USAGE",
+        "group": "eval",
+        "content_head": "_index | 1 You can easily display index sizes, too: SELECT c2.relname, c2.relpages FROM pg_class c, pg_class c2, pg_index i WHERE c.relname = 'custome"
+      },
+      {
+        "id": 331,
+        "section_id": "FUNCTIONS-ADMIN-DBOBJECT",
+        "group": "distractor",
+        "content_head": "The functions shown in Table 9.100 calculate the disk space usage of database objects, or assist in presentation or understanding of usage results. bi"
+      },
+      {
+        "id": 332,
+        "section_id": "FUNCTIONS-ADMIN-DBOBJECT",
+        "group": "distractor",
+        "content_head": " Section 65.4 ) associated with the relation. init returns the size of the initialization fork, if any, associated with the relation. pg_size_bytes ( "
+      },
+      {
+        "id": 810,
+        "section_id": "PLANNER-STATS-SINGLE-COLUMN",
+        "group": "eval",
+        "content_head": "As we saw in the previous section, the query planner needs to estimate the number of rows retrieved by a query in order to make good choices of query "
+      }
+    ],
+    "source_chunk_id": 280
+  },
+  {
+    "qid": "g03",
+    "question": "will more maintenance_work_mem speed up CREATE INDEX?",
+    "type": "generated",
+    "chapter": "performance-tips.html",
+    "match": "any",
+    "ground_truth": [
+      822,
+      827,
+      1031
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 822,
+        "section_id": "POPULATE-WORK-MEM",
+        "group": "eval",
+        "content_head": "Temporarily increasing the maintenance_work_mem configuration variable when loading large amounts of data can lead to improved performance. This will "
+      },
+      {
+        "id": 827,
+        "section_id": "POPULATE-PG-DUMP",
+        "group": "eval",
+        "content_head": " foreign keys. [14] So when loading a data-only dump, it is up to you to drop and recreate indexes and foreign keys if you wish to use those technique"
+      },
+      {
+        "id": 1031,
+        "section_id": "RUNTIME-CONFIG-RESOURCE-MEMORY",
+        "group": "eval",
+        "content_head": " time, with each operation generally being allowed to use as much memory as this value specifies before it starts to write data into temporary files. "
+      }
+    ],
+    "source_chunk_id": 822
+  },
+  {
+    "qid": "g04",
+    "question": "does max_wal_size change how fast I can load data?",
+    "type": "generated",
+    "chapter": "performance-tips.html",
+    "match": "any",
+    "ground_truth": [
+      823,
+      826,
+      827
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 823,
+        "section_id": "POPULATE-MAX-WAL-SIZE",
+        "group": "eval",
+        "content_head": "Temporarily increasing the max_wal_size configuration variable can also make large data loads faster. This is because loading a large amount of data i"
+      },
+      {
+        "id": 826,
+        "section_id": "POPULATE-PG-DUMP",
+        "group": "eval",
+        "content_head": "Dump scripts generated by pg_dump automatically apply several, but not all, of the above guidelines. To restore a pg_dump dump as quickly as possible,"
+      },
+      {
+        "id": 827,
+        "section_id": "POPULATE-PG-DUMP",
+        "group": "eval",
+        "content_head": " foreign keys. [14] So when loading a data-only dump, it is up to you to drop and recreate indexes and foreign keys if you wish to use those technique"
+      }
+    ],
+    "source_chunk_id": 823
+  },
+  {
+    "qid": "g05",
+    "question": "what's in pg_statio_all_sequences?",
+    "type": "generated",
+    "chapter": "monitoring.html",
+    "match": "any",
+    "ground_truth": [
+      783
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 783,
+        "section_id": "MONITORING-PG-STATIO-ALL-SEQUENCES-VIEW",
+        "group": "eval",
+        "content_head": "The pg_statio_all_sequences view will contain one row for each sequence in the current database, showing statistics about I/O on that specific sequenc"
+      }
+    ],
+    "source_chunk_id": 783
+  },
+  {
+    "qid": "g06",
+    "question": "What info does pg_stat_progress_create_index give me?",
+    "type": "generated",
+    "chapter": "monitoring.html",
+    "match": "any",
+    "ground_truth": [
+      834,
+      835
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 834,
+        "section_id": "CREATE-INDEX-PROGRESS-REPORTING",
+        "group": "eval",
+        "content_head": "Whenever CREATE INDEX or REINDEX is running, the pg_stat_progress_create_index view will contain one row for each backend that is currently creating i"
+      },
+      {
+        "id": 835,
+        "section_id": "CREATE-INDEX-PROGRESS-REPORTING",
+        "group": "eval",
+        "content_head": " to finish. This phase is skipped when not in concurrent mode. Columns lockers_total , lockers_done and current_locker_pid contain the progress inform"
+      }
+    ],
+    "source_chunk_id": 740
+  },
+  {
+    "qid": "g07",
+    "question": "how do I make a Hash index in PostgreSQL?",
+    "type": "generated",
+    "chapter": "indexes.html",
+    "match": "any",
+    "ground_truth": [
+      664
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 664,
+        "section_id": "INDEXES-TYPES",
+        "group": "eval",
+        "content_head": "PostgreSQL provides several index types: B-tree, Hash, GiST, SP-GiST, GIN, BRIN, and the extension bloom . Each index type uses a different algorithm "
+      }
+    ],
+    "source_chunk_id": 664
+  },
+  {
+    "qid": "g08",
+    "question": "what's the default setting for maintenance_work_mem?",
+    "type": "generated",
+    "chapter": "runtime-config.html",
+    "match": "any",
+    "ground_truth": [
+      1031
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 1031,
+        "section_id": "RUNTIME-CONFIG-RESOURCE-MEMORY",
+        "group": "eval",
+        "content_head": " time, with each operation generally being allowed to use as much memory as this value specifies before it starts to write data into temporary files. "
+      }
+    ],
+    "source_chunk_id": 1031
+  },
+  {
+    "qid": "g09",
+    "question": "how do I see all operator classes and which ones are default?",
+    "type": "generated",
+    "chapter": "indexes.html",
+    "match": "any",
+    "ground_truth": [
+      656
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 656,
+        "section_id": "INDEXES-OPCLASS",
+        "group": "eval",
+        "content_head": " index with the default operator class is usable for pattern-matching queries in the C locale. The following query shows all defined operator classes:"
+      }
+    ],
+    "source_chunk_id": 656
+  },
+  {
+    "qid": "g10",
+    "question": "what's the default for wal_writer_delay in PostgreSQL?",
+    "type": "generated",
+    "chapter": "runtime-config.html",
+    "match": "any",
+    "ground_truth": [
+      1055,
+      1056
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 1055,
+        "section_id": "RUNTIME-CONFIG-WAL-SETTINGS",
+        "group": "eval",
+        "content_head": " filled with zeroes. On some file systems, this ensures that space is allocated before we need to write WAL records. However, Copy-On-Write (COW) file"
+      },
+      {
+        "id": 1056,
+        "section_id": "RUNTIME-CONFIG-WAL-SETTINGS",
+        "group": "eval",
+        "content_head": " produced since, then WAL is only written to the operating system, not flushed to disk. If this value is specified without units, it is taken as milli"
+      }
+    ],
+    "source_chunk_id": 1055
+  },
+  {
+    "qid": "g11",
+    "question": "What happens when I use debug_discard_caches?",
+    "type": "generated",
+    "chapter": "runtime-config.html",
+    "match": "any",
+    "ground_truth": [
+      964
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 964,
+        "section_id": "RUNTIME-CONFIG-DEVELOPER",
+        "group": "eval",
+        "content_head": "The following parameters are intended for developer testing, and should never be used on a production database. However, some of them can be used to a"
+      }
+    ],
+    "source_chunk_id": 964
+  },
+  {
+    "qid": "g13",
+    "question": "What's arg0 in the buffer-sync-done probe?",
+    "type": "generated",
+    "chapter": "monitoring.html",
+    "match": "any",
+    "ground_truth": [
+      287
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 287,
+        "section_id": "TRACE-POINTS",
+        "group": "eval",
+        "content_head": " int, int, int, int) Probe that fires when a checkpoint is complete. (The probes listed next fire in sequence during checkpoint processing.) arg0 is t"
+      }
+    ],
+    "source_chunk_id": 287
+  },
+  {
+    "qid": "g14",
+    "question": "how to make a partial index to skip common values?",
+    "type": "generated",
+    "chapter": "indexes.html",
+    "match": "any",
+    "ground_truth": [
+      659,
+      660
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 659,
+        "section_id": "INDEXES-PARTIAL",
+        "group": "eval",
+        "content_head": "A partial index is an index built over a subset of a table; the subset is defined by a conditional expression (called the predicate of the partial ind"
+      },
+      {
+        "id": 660,
+        "section_id": "INDEXES-PARTIAL",
+        "group": "eval",
+        "content_head": " Observe that this kind of partial index requires that the common values be predetermined, so such partial indexes are best used for data distribution"
+      }
+    ],
+    "source_chunk_id": 659
+  },
+  {
+    "qid": "g15",
+    "question": "why is idx_scan count going up with lots of index scans?",
+    "type": "generated",
+    "chapter": "monitoring.html",
+    "match": "any",
+    "ground_truth": [
+      777,
+      779,
+      780
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 777,
+        "section_id": "MONITORING-PG-STAT-ALL-TABLES-VIEW",
+        "group": "eval",
+        "content_head": "The pg_stat_all_tables view will contain one row for each table in the current database (including TOAST tables), showing statistics about accesses to"
+      },
+      {
+        "id": 779,
+        "section_id": "MONITORING-PG-STAT-ALL-INDEXES-VIEW",
+        "group": "eval",
+        "content_head": "The pg_stat_all_indexes view will contain one row for each index in the current database, showing statistics about accesses to that specific index. Th"
+      },
+      {
+        "id": 780,
+        "section_id": "MONITORING-PG-STAT-ALL-INDEXES-VIEW",
+        "group": "eval",
+        "content_head": " for rows matching any value out of a list or array of multiple scalar values (see Section 9.25 ) perform multiple \u201c primitive \u201d index scans (up to on"
+      }
+    ],
+    "source_chunk_id": 780
+  },
+  {
+    "qid": "g16",
+    "question": "who has permission to run pg_stat_reset_shared?",
+    "type": "generated",
+    "chapter": "monitoring.html",
+    "match": "any",
+    "ground_truth": [
+      787
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 787,
+        "section_id": "MONITORING-STATS-FUNCTIONS",
+        "group": "eval",
+        "content_head": ". This function is restricted to superusers by default, but other users can be granted EXECUTE to run the function. pg_stat_reset_shared ( [ target te"
+      }
+    ],
+    "source_chunk_id": 787
+  },
+  {
+    "qid": "g17",
+    "question": "what's the default setting for geqo_effort?",
+    "type": "generated",
+    "chapter": "runtime-config.html",
+    "match": "any",
+    "ground_truth": [
+      1010
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 1010,
+        "section_id": "RUNTIME-CONFIG-QUERY-GEQO",
+        "group": "eval",
+        "content_head": "The genetic query optimizer (GEQO) is an algorithm that does query planning using heuristic searching. This reduces planning time for complex queries "
+      }
+    ],
+    "source_chunk_id": 1010
+  },
+  {
+    "qid": "g18",
+    "question": "What does recovery_prefetch do by default?",
+    "type": "generated",
+    "chapter": "runtime-config.html",
+    "match": "any",
+    "ground_truth": [
+      1062,
+      1264
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 1062,
+        "section_id": "RUNTIME-CONFIG-WAL-RECOVERY",
+        "group": "eval",
+        "content_head": "This section describes the settings that apply to recovery in general, affecting crash recovery, streaming replication and archive-based replication. "
+      },
+      {
+        "id": 1264,
+        "section_id": "WAL-CONFIGURATION",
+        "group": "distractor",
+        "content_head": " nothing. If wal_sync_method is either fdatasync , fsync , or fsync_writethrough , the write operation moves WAL buffers to kernel cache and issue_xlo"
+      }
+    ],
+    "source_chunk_id": 1062
+  },
+  {
+    "qid": "g19",
+    "question": "how to check index sizes in PostgreSQL?",
+    "type": "generated",
+    "chapter": "monitoring.html",
+    "match": "any",
+    "ground_truth": [
+      281,
+      331,
+      810
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 281,
+        "section_id": "DISK-USAGE",
+        "group": "eval",
+        "content_head": "_index | 1 You can easily display index sizes, too: SELECT c2.relname, c2.relpages FROM pg_class c, pg_class c2, pg_index i WHERE c.relname = 'custome"
+      },
+      {
+        "id": 331,
+        "section_id": "FUNCTIONS-ADMIN-DBOBJECT",
+        "group": "distractor",
+        "content_head": "The functions shown in Table 9.100 calculate the disk space usage of database objects, or assist in presentation or understanding of usage results. bi"
+      },
+      {
+        "id": 810,
+        "section_id": "PLANNER-STATS-SINGLE-COLUMN",
+        "group": "eval",
+        "content_head": "As we saw in the previous section, the query planner needs to estimate the number of rows retrieved by a query in order to make good choices of query "
+      }
+    ],
+    "source_chunk_id": 281
+  },
+  {
+    "qid": "g21",
+    "question": "when do I see non-zero I/O time for columns?",
+    "type": "generated",
+    "chapter": "monitoring.html",
+    "match": "any",
+    "ground_truth": [
+      759,
+      768,
+      769,
+      770
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 759,
+        "section_id": "MONITORING-PG-STAT-REPLICATION-VIEW",
+        "group": "eval",
+        "content_head": " The reported lag times are not predictions of how long it will take for the standby to catch up with the sending server assuming the current rate of "
+      },
+      {
+        "id": 768,
+        "section_id": "MONITORING-PG-STAT-IO-VIEW",
+        "group": "eval",
+        "content_head": "The pg_stat_io view will contain one row for each combination of backend type, target I/O object, and I/O context, showing cluster-wide I/O statistics"
+      },
+      {
+        "id": 769,
+        "section_id": "MONITORING-PG-STAT-IO-VIEW",
+        "group": "eval",
+        "content_head": " write out to permanent storage. writeback_time double precision Time spent in writeback operations in milliseconds (if track_io_timing is enabled, ot"
+      },
+      {
+        "id": 770,
+        "section_id": "MONITORING-PG-STAT-IO-VIEW",
+        "group": "eval",
+        "content_head": " I/O operations will never be performed either by certain backend types or on certain I/O objects and/or in certain I/O contexts. These cells will be "
+      }
+    ],
+    "source_chunk_id": 770
+  },
+  {
+    "qid": "g22",
+    "question": "how to find total time for a node from EXPLAIN ANALYZE?",
+    "type": "generated",
+    "chapter": "performance-tips.html",
+    "match": "any",
+    "ground_truth": [
+      1247
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 1247,
+        "section_id": "USING-EXPLAIN-ANALYZE",
+        "group": "eval",
+        "content_head": " plans, it is possible for a subplan node to be executed more than once. For example, the inner index scan will be executed once per outer row in the "
+      }
+    ],
+    "source_chunk_id": 1247
+  },
+  {
+    "qid": "g23",
+    "question": "When should I turn this setting on for Windows?",
+    "type": "generated",
+    "chapter": "runtime-config.html",
+    "match": "any",
+    "ground_truth": [
+      961,
+      962
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 961,
+        "section_id": "RUNTIME-CONFIG-CONNECTION-SSL",
+        "group": "eval",
+        "content_head": " if some component has issues working with a newer protocol. This parameter can only be set in the postgresql.conf file or on the server command line."
+      },
+      {
+        "id": 962,
+        "section_id": "RUNTIME-CONFIG-CONNECTION-SSL",
+        "group": "eval",
+        "content_head": " when the server is running. Setting this parameter to on might be appropriate if the passphrase is obtained from a file, for example. This parameter "
+      }
+    ],
+    "source_chunk_id": 962
+  },
+  {
+    "qid": "g24",
+    "question": "what stats does pg_statio_all_tables give for tables?",
+    "type": "generated",
+    "chapter": "monitoring.html",
+    "match": "any",
+    "ground_truth": [
+      781
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 781,
+        "section_id": "MONITORING-PG-STATIO-ALL-TABLES-VIEW",
+        "group": "eval",
+        "content_head": "The pg_statio_all_tables view will contain one row for each table in the current database (including TOAST tables), showing statistics about I/O on th"
+      }
+    ],
+    "source_chunk_id": 781
+  },
+  {
+    "qid": "g25",
+    "question": "what's the purpose of logging_collector in PostgreSQL?",
+    "type": "generated",
+    "chapter": "runtime-config.html",
+    "match": "any",
+    "ground_truth": [
+      90,
+      687,
+      980
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 90,
+        "section_id": "BACKUP-TIPS",
+        "group": "distractor",
+        "content_head": "Some tips for configuring continuous archiving are given here. It is possible to use PostgreSQL 's backup facilities to produce standalone hot backups"
+      },
+      {
+        "id": 687,
+        "section_id": "LOGFILE-MAINTENANCE",
+        "group": "eval",
+        "content_head": "It is a good idea to save the database server's log output somewhere, rather than just discarding it via /dev/null . The log output is invaluable when"
+      },
+      {
+        "id": 980,
+        "section_id": "RUNTIME-CONFIG-LOGGING-WHERE",
+        "group": "eval",
+        "content_head": " , you should register an event source and its library with the operating system so that the Windows Event Viewer can display event log messages clean"
+      }
+    ],
+    "source_chunk_id": 980
+  },
+  {
+    "qid": "g26",
+    "question": "What happens if I turn on wal_log_hints?",
+    "type": "generated",
+    "chapter": "runtime-config.html",
+    "match": "any",
+    "ground_truth": [
+      1054
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 1054,
+        "section_id": "RUNTIME-CONFIG-WAL-SETTINGS",
+        "group": "eval",
+        "content_head": " increase the checkpoint interval parameters.) Turning this parameter off speeds normal operation, but might lead to either unrecoverable data corrupt"
+      }
+    ],
+    "source_chunk_id": 1054
+  },
+  {
+    "qid": "g27",
+    "question": "what can I do to speed up pg_dump restores?",
+    "type": "generated",
+    "chapter": "performance-tips.html",
+    "match": "any",
+    "ground_truth": [
+      51,
+      826
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 51,
+        "section_id": "BACKUP-DUMP-LARGE",
+        "group": "distractor",
+        "content_head": "Some operating systems have maximum file size limits that cause problems when creating large pg_dump output files. Fortunately, pg_dump can write to t"
+      },
+      {
+        "id": 826,
+        "section_id": "POPULATE-PG-DUMP",
+        "group": "eval",
+        "content_head": "Dump scripts generated by pg_dump automatically apply several, but not all, of the above guidelines. To restore a pg_dump dump as quickly as possible,"
+      }
+    ],
+    "source_chunk_id": 826
+  },
+  {
+    "qid": "g28",
+    "question": "what memory sizes can I use for PostgreSQL settings?",
+    "type": "generated",
+    "chapter": "runtime-config.html",
+    "match": "any",
+    "ground_truth": [
+      60
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 60,
+        "section_id": "CONFIG-SETTING-NAMES-VALUES",
+        "group": "eval",
+        "content_head": "All parameter names are case-insensitive. Every parameter takes a value of one of five types: boolean, string, integer, floating point, or enumerated "
+      }
+    ],
+    "source_chunk_id": 60
+  },
+  {
+    "qid": "g29",
+    "question": "What is AppendReady waiting on?",
+    "type": "generated",
+    "chapter": "monitoring.html",
+    "match": "any",
+    "ground_truth": [
+      749,
+      750
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 749,
+        "section_id": "MONITORING-PG-STAT-ACTIVITY-VIEW",
+        "group": "eval",
+        "content_head": " a read of a serialized historical catalog snapshot. SnapbuildSync Waiting for a serialized historical catalog snapshot to reach durable storage. Snap"
+      },
+      {
+        "id": 750,
+        "section_id": "MONITORING-PG-STAT-ACTIVITY-VIEW",
+        "group": "eval",
+        "content_head": " Events of Type Ipc IPC Wait Event Description AppendReady Waiting for subplan nodes of an Append plan node to be ready. ArchiveCleanupCommand Waiting"
+      }
+    ],
+    "source_chunk_id": 750
+  },
+  {
+    "qid": "g30",
+    "question": "Does autovacuum work on partitioned tables?",
+    "type": "generated",
+    "chapter": "maintenance.html",
+    "match": "any",
+    "ground_truth": [
+      914,
+      915
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 914,
+        "section_id": "AUTOVACUUM",
+        "group": "eval",
+        "content_head": " are always vacuumed (this also applies to those tables whose freeze max age has been modified via storage parameters; see below). Otherwise, if the n"
+      },
+      {
+        "id": 915,
+        "section_id": "AUTOVACUUM",
+        "group": "eval",
+        "content_head": " do not directly store tuples and consequently are not processed by autovacuum. (Autovacuum does process table partitions just like other tables.) Unf"
+      }
+    ],
+    "source_chunk_id": 915
+  },
+  {
+    "qid": "g31",
+    "question": "What is LockFileCreateSync waiting on?",
+    "type": "generated",
+    "chapter": "monitoring.html",
+    "match": "any",
+    "ground_truth": [
+      747,
+      748
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 747,
+        "section_id": "MONITORING-PG-STAT-ACTIVITY-VIEW",
+        "group": "eval",
+        "content_head": " standby. WalSenderWaitForWal Waiting for WAL to be flushed in WAL sender process. WalSenderWriteData Waiting for any activity when processing replies"
+      },
+      {
+        "id": 748,
+        "section_id": "MONITORING-PG-STAT-ACTIVITY-VIEW",
+        "group": "eval",
+        "content_head": " for data to reach durable storage while adding a line to the data directory lock file. LockFileAddtodatadirWrite Waiting for a write while adding a l"
+      }
+    ],
+    "source_chunk_id": 748
+  },
+  {
+    "qid": "g32",
+    "question": "What does the idx_tup_read count show in pg_stat_all_indexes?",
+    "type": "generated",
+    "chapter": "monitoring.html",
+    "match": "any",
+    "ground_truth": [
+      779
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 779,
+        "section_id": "MONITORING-PG-STAT-ALL-INDEXES-VIEW",
+        "group": "eval",
+        "content_head": "The pg_stat_all_indexes view will contain one row for each index in the current database, showing statistics about accesses to that specific index. Th"
+      }
+    ],
+    "source_chunk_id": 779
+  },
+  {
+    "qid": "g33",
+    "question": "what makes autovacuum kick in for a table?",
+    "type": "generated",
+    "chapter": "maintenance.html",
+    "match": "any",
+    "ground_truth": [
+      914,
+      925,
+      926
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 914,
+        "section_id": "AUTOVACUUM",
+        "group": "eval",
+        "content_head": " are always vacuumed (this also applies to those tables whose freeze max age has been modified via storage parameters; see below). Otherwise, if the n"
+      },
+      {
+        "id": 925,
+        "section_id": "RUNTIME-CONFIG-AUTOVACUUM",
+        "group": "eval",
+        "content_head": "These settings control the behavior of the autovacuum feature. Refer to Section 24.1.6 for more information. Note that many of these settings can be o"
+      },
+      {
+        "id": 926,
+        "section_id": "RUNTIME-CONFIG-AUTOVACUUM",
+        "group": "eval",
+        "content_head": "ovacuum will not trigger a VACUUM operation on any tables based on the number of inserts. This parameter can only be set in the postgresql.conf file o"
+      }
+    ],
+    "source_chunk_id": 913
+  },
+  {
+    "qid": "g34",
+    "question": "who has permission to change session_preload_libraries?",
+    "type": "generated",
+    "chapter": "runtime-config.html",
+    "match": "any",
+    "ground_truth": [
+      944
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 944,
+        "section_id": "RUNTIME-CONFIG-CLIENT-PRELOAD",
+        "group": "eval",
+        "content_head": " load debugging or performance-measurement libraries into specific sessions without requiring an explicit LOAD command. To that end, it would be typic"
+      }
+    ],
+    "source_chunk_id": 944
+  },
+  {
+    "qid": "g35",
+    "question": "when is a partial index actually used in a query?",
+    "type": "generated",
+    "chapter": "indexes.html",
+    "match": "any",
+    "ground_truth": [
+      659,
+      660,
+      661
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 659,
+        "section_id": "INDEXES-PARTIAL",
+        "group": "eval",
+        "content_head": "A partial index is an index built over a subset of a table; the subset is defined by a conditional expression (called the predicate of the partial ind"
+      },
+      {
+        "id": 660,
+        "section_id": "INDEXES-PARTIAL",
+        "group": "eval",
+        "content_head": " Observe that this kind of partial index requires that the common values be predetermined, so such partial indexes are best used for data distribution"
+      },
+      {
+        "id": 661,
+        "section_id": "INDEXES-PARTIAL",
+        "group": "eval",
+        "content_head": " indexed are involved. However, keep in mind that the predicate must match the conditions used in the queries that are supposed to benefit from the in"
+      }
+    ],
+    "source_chunk_id": 661
+  },
+  {
+    "qid": "g36",
+    "question": "what if transaction_timeout is less than statement_timeout?",
+    "type": "generated",
+    "chapter": "runtime-config.html",
+    "match": "any",
+    "ground_truth": [
+      934
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 934,
+        "section_id": "RUNTIME-CONFIG-CLIENT-STATEMENT",
+        "group": "eval",
+        "content_head": " until it is completed by the server. If multiple SQL statements appear in a single simple-query message, the timeout is applied to each statement sep"
+      }
+    ],
+    "source_chunk_id": 934
+  },
+  {
+    "qid": "g37",
+    "question": "what's the default for autovacuum_analyze_threshold?",
+    "type": "generated",
+    "chapter": "runtime-config.html",
+    "match": "any",
+    "ground_truth": [
+      926
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 926,
+        "section_id": "RUNTIME-CONFIG-AUTOVACUUM",
+        "group": "eval",
+        "content_head": "ovacuum will not trigger a VACUUM operation on any tables based on the number of inserts. This parameter can only be set in the postgresql.conf file o"
+      }
+    ],
+    "source_chunk_id": 926
+  },
+  {
+    "qid": "g39",
+    "question": "What's the most popular city and state pair in stats?",
+    "type": "generated",
+    "chapter": "performance-tips.html",
+    "match": "any",
+    "ground_truth": [
+      817
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 817,
+        "section_id": "PLANNER-STATS-EXTENDED",
+        "group": "eval",
+        "content_head": "(stxdmcv) m WHERE stxname = 'stts3'; index | values | nulls | frequency | base_frequency -------+------------------------+-------+-----------+--------"
+      }
+    ],
+    "source_chunk_id": 817
+  },
+  {
+    "qid": "g40",
+    "question": "will slow down my tracing if functions are expensive?",
+    "type": "generated",
+    "chapter": "monitoring.html",
+    "match": "any",
+    "ground_truth": [
+      295,
+      878
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 295,
+        "section_id": "DEFINING-TRACE-POINTS",
+        "group": "eval",
+        "content_head": " the variables used in the macro. Otherwise, you will get compilation errors. On most platforms, if PostgreSQL is built with --enable-dtrace , the arg"
+      },
+      {
+        "id": 878,
+        "section_id": "QUERIES-WITH-CTE-MATERIALIZATION",
+        "group": "distractor",
+        "content_head": " big_table ) SELECT * FROM w AS w1 JOIN w AS w2 ON w1.key = w2.ref WHERE w2.key = 123; the WITH query will be materialized, producing a temporary copy"
+      }
+    ],
+    "source_chunk_id": 295
+  },
+  {
+    "qid": "g41",
+    "question": "What does log_min_duration_sample actually do?",
+    "type": "generated",
+    "chapter": "runtime-config.html",
+    "match": "any",
+    "ground_truth": [
+      986
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 986,
+        "section_id": "RUNTIME-CONFIG-LOGGING-WHEN",
+        "group": "eval",
+        "content_head": " statements that are logged because of log_statement will not be repeated in the duration log message. If you are not using syslog , it is recommended"
+      }
+    ],
+    "source_chunk_id": 986
+  },
+  {
+    "qid": "g42",
+    "question": "what issues come up if primary and standby clocks are out of sync?",
+    "type": "generated",
+    "chapter": "runtime-config.html",
+    "match": "any",
+    "ground_truth": [
+      1026
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 1026,
+        "section_id": "RUNTIME-CONFIG-REPLICATION-STANDBY",
+        "group": "eval",
+        "content_head": " 5min , the standby will replay each transaction commit only when the system time on the standby is at least five minutes past the commit time reporte"
+      }
+    ],
+    "source_chunk_id": 1026
+  },
+  {
+    "qid": "g43",
+    "question": "What database maintenance tasks can I automate?",
+    "type": "generated",
+    "chapter": "maintenance.html",
+    "match": "any",
+    "ground_truth": [
+      732,
+      913
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 732,
+        "section_id": "maintenance",
+        "group": "eval",
+        "content_head": "Home About Download Documentation Community Developers Support Donate Your account August 13, 2026: PostgreSQL 18.6, 17.11, 16.15, 15.19, 14.24 and 19"
+      },
+      {
+        "id": 913,
+        "section_id": "AUTOVACUUM",
+        "group": "eval",
+        "content_head": "PostgreSQL has an optional but highly recommended feature called autovacuum , whose purpose is to automate the execution of VACUUM and ANALYZE command"
+      }
+    ],
+    "source_chunk_id": 732
+  },
+  {
+    "qid": "g44",
+    "question": "who can change local_preload_libraries setting?",
+    "type": "generated",
+    "chapter": "runtime-config.html",
+    "match": "any",
+    "ground_truth": [
+      943
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 943,
+        "section_id": "RUNTIME-CONFIG-CLIENT-PRELOAD",
+        "group": "eval",
+        "content_head": "Several settings are available for preloading shared libraries into the server, in order to load additional functionality or achieve performance benef"
+      }
+    ],
+    "source_chunk_id": 943
+  },
+  {
+    "qid": "g45",
+    "question": "Can I still write to the database while making an index?",
+    "type": "generated",
+    "chapter": "indexes.html",
+    "match": "any",
+    "ground_truth": [
+      652
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 652,
+        "section_id": "INDEXES-INTRO",
+        "group": "eval",
+        "content_head": " can also benefit UPDATE and DELETE commands with search conditions. Indexes can moreover be used in join searches. Thus, an index defined on a column"
+      }
+    ],
+    "source_chunk_id": 652
+  },
+  {
+    "qid": "g46",
+    "question": "what's the default max_stack_depth value in PostgreSQL?",
+    "type": "generated",
+    "chapter": "runtime-config.html",
+    "match": "any",
+    "ground_truth": [
+      1034
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 1034,
+        "section_id": "RUNTIME-CONFIG-RESOURCE-MEMORY",
+        "group": "eval",
+        "content_head": " ) # Specifies the amount of shared memory to use to cache the contents of pg_subtrans (see Table 65.1 ). If this value is specified without units, it"
+      }
+    ],
+    "source_chunk_id": 1034
+  },
+  {
+    "qid": "g47",
+    "question": "what's indexes_total in vacuum progress status?",
+    "type": "generated",
+    "chapter": "monitoring.html",
+    "match": "any",
+    "ground_truth": [
+      836,
+      837
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 836,
+        "section_id": "VACUUM-PROGRESS-REPORTING",
+        "group": "eval",
+        "content_head": "Whenever VACUUM is running, the pg_stat_progress_vacuum view will contain one row for each backend (including autovacuum worker processes) that is cur"
+      },
+      {
+        "id": 837,
+        "section_id": "VACUUM-PROGRESS-REPORTING",
+        "group": "eval",
+        "content_head": " index vacuum cycle. indexes_total bigint Total number of indexes that will be vacuumed or cleaned up. This number is reported at the beginning of the"
+      }
+    ],
+    "source_chunk_id": 837
+  },
+  {
+    "qid": "g48",
+    "question": "how does using WHERE change cost estimates in EXPLAIN?",
+    "type": "generated",
+    "chapter": "performance-tips.html",
+    "match": "any",
+    "ground_truth": [
+      1236,
+      1237,
+      1240,
+      1241
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 1236,
+        "section_id": "USING-EXPLAIN-BASICS",
+        "group": "eval",
+        "content_head": " estimated cost is (345 * 1.0) + (10000 * 0.01) = 445. Now let's modify the query to add a WHERE condition: EXPLAIN SELECT * FROM tenk1 WHERE unique1 "
+      },
+      {
+        "id": 1237,
+        "section_id": "USING-EXPLAIN-BASICS",
+        "group": "eval",
+        "content_head": " Fetching rows separately is much more expensive than reading them sequentially, but because not all the pages of the table have to be visited, this i"
+      },
+      {
+        "id": 1240,
+        "section_id": "USING-EXPLAIN-BASICS",
+        "group": "eval",
+        "content_head": " try joining two tables, using the columns we have been discussing: EXPLAIN SELECT * FROM tenk1 t1, tenk2 t2 WHERE t1.unique1 < 10 AND t1.unique2 = t2"
+      },
+      {
+        "id": 1241,
+        "section_id": "USING-EXPLAIN-BASICS",
+        "group": "eval",
+        "content_head": " .) The costs of the loop node are then set on the basis of the cost of the outer scan, plus one repetition of the inner scan for each outer row (10 *"
+      }
+    ],
+    "source_chunk_id": 1236
+  },
+  {
+    "qid": "g50",
+    "question": "what does it mean if idle_session_timeout is zero?",
+    "type": "generated",
+    "chapter": "runtime-config.html",
+    "match": "any",
+    "ground_truth": [
+      935
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 935,
+        "section_id": "RUNTIME-CONFIG-CLIENT-STATEMENT",
+        "group": "eval",
+        "content_head": " (that is, waiting for a client query) within an open transaction for longer than the specified amount of time. If this value is specified without uni"
+      }
+    ],
+    "source_chunk_id": 935
+  },
+  {
+    "qid": "g51",
+    "question": "What's the default setting for track_functions in PostgreSQL?",
+    "type": "generated",
+    "chapter": "runtime-config.html",
+    "match": "any",
+    "ground_truth": [
+      1048
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 1048,
+        "section_id": "RUNTIME-CONFIG-CUMULATIVE-STATISTICS",
+        "group": "eval",
+        "content_head": " this setting. track_wal_io_timing ( boolean ) # Enables timing of WAL I/O calls. This parameter is off by default, as it will repeatedly query the op"
+      }
+    ],
+    "source_chunk_id": 1048
+  },
+  {
+    "qid": "g52",
+    "question": "what's archived_count in pg_stat_archiver mean?",
+    "type": "generated",
+    "chapter": "monitoring.html",
+    "match": "any",
+    "ground_truth": [
+      767
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 767,
+        "section_id": "MONITORING-PG-STAT-ARCHIVER-VIEW",
+        "group": "eval",
+        "content_head": "The pg_stat_archiver view will always have a single row, containing data about the archiver process of the cluster. Table 27.22. pg_stat_archiver View"
+      }
+    ],
+    "source_chunk_id": 767
+  },
+  {
+    "qid": "g53",
+    "question": "which index types allow for index-only scans?",
+    "type": "generated",
+    "chapter": "indexes.html",
+    "match": "any",
+    "ground_truth": [
+      646,
+      648
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 646,
+        "section_id": "INDEXES-INDEX-ONLY-SCANS",
+        "group": "eval",
+        "content_head": "All indexes in PostgreSQL are secondary indexes, meaning that each index is stored separately from the table's main data area (which is called the tab"
+      },
+      {
+        "id": 648,
+        "section_id": "INDEXES-INDEX-ONLY-SCANS",
+        "group": "eval",
+        "content_head": " search on, PostgreSQL allows you to create an index in which some columns are just \u201c payload \u201d and are not part of the search key. This is done by ad"
+      }
+    ],
+    "source_chunk_id": 646
+  },
+  {
+    "qid": "g54",
+    "question": "What's the geqo_threshold setting in PostgreSQL?",
+    "type": "generated",
+    "chapter": "performance-tips.html",
+    "match": "any",
+    "ground_truth": [
+      299,
+      809,
+      1010
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 299,
+        "section_id": "EXPLICIT-JOINS",
+        "group": "eval",
+        "content_head": "It is possible to control the query planner to some extent by using the explicit JOIN syntax. To see why this matters, we first need some background. "
+      },
+      {
+        "id": 809,
+        "section_id": "PLANNER-OPTIMIZER-GENERATING-POSSIBLE-PLANS",
+        "group": "distractor",
+        "content_head": " row found are used as hash keys to locate the matching rows in the table. When the query involves more than two relations, the final result must be b"
+      },
+      {
+        "id": 1010,
+        "section_id": "RUNTIME-CONFIG-QUERY-GEQO",
+        "group": "eval",
+        "content_head": "The genetic query optimizer (GEQO) is an algorithm that does query planning using heuristic searching. This reduces planning time for complex queries "
+      }
+    ],
+    "source_chunk_id": 299
+  },
+  {
+    "qid": "g55",
+    "question": "why does EXPLAIN show different row counts for merge joins?",
+    "type": "generated",
+    "chapter": "performance-tips.html",
+    "match": "any",
+    "ground_truth": [
+      1254
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 1254,
+        "section_id": "USING-EXPLAIN-CAVEATS",
+        "group": "eval",
+        "content_head": "unique1 < 100) Rows Removed by Filter: 287 Planning Time: 0.077 ms Execution Time: 0.086 ms the estimated cost and row count for the Index Scan node a"
+      }
+    ],
+    "source_chunk_id": 1254
+  },
+  {
+    "qid": "g56",
+    "question": "what does blks_hit mean in pg_stat_slru?",
+    "type": "generated",
+    "chapter": "monitoring.html",
+    "match": "any",
+    "ground_truth": [
+      785
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 785,
+        "section_id": "MONITORING-PG-STAT-SLRU-VIEW",
+        "group": "eval",
+        "content_head": "PostgreSQL accesses certain on-disk information via SLRU ( simple least-recently-used ) caches. The pg_stat_slru view will contain one row for each tr"
+      }
+    ],
+    "source_chunk_id": 785
+  },
+  {
+    "qid": "g57",
+    "question": "which columns show progress for CREATE INDEX CONCURRENTLY?",
+    "type": "generated",
+    "chapter": "monitoring.html",
+    "match": "any",
+    "ground_truth": [
+      834,
+      835
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 834,
+        "section_id": "CREATE-INDEX-PROGRESS-REPORTING",
+        "group": "eval",
+        "content_head": "Whenever CREATE INDEX or REINDEX is running, the pg_stat_progress_create_index view will contain one row for each backend that is currently creating i"
+      },
+      {
+        "id": 835,
+        "section_id": "CREATE-INDEX-PROGRESS-REPORTING",
+        "group": "eval",
+        "content_head": " to finish. This phase is skipped when not in concurrent mode. Columns lockers_total , lockers_done and current_locker_pid contain the progress inform"
+      }
+    ],
+    "source_chunk_id": 835
+  },
+  {
+    "qid": "g58",
+    "question": "When is using one index not a good choice?",
+    "type": "generated",
+    "chapter": "indexes.html",
+    "match": "any",
+    "ground_truth": [
+      640,
+      641,
+      642,
+      645,
+      653,
+      654,
+      659
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 640,
+        "section_id": "INDEXES-BITMAP-SCANS",
+        "group": "eval",
+        "content_head": "A single index scan can only use query clauses that use the index's columns with operators of its operator class and are joined with AND . For example"
+      },
+      {
+        "id": 641,
+        "section_id": "INDEXES-BITMAP-SCANS",
+        "group": "eval",
+        "content_head": " create separate indexes and rely on the index-combination feature. For example, if your workload includes a mix of queries that sometimes involve onl"
+      },
+      {
+        "id": 642,
+        "section_id": "INDEXES-COLLATIONS",
+        "group": "eval",
+        "content_head": "An index can support only one collation per index column. If multiple collations are of interest, multiple indexes may be needed. Consider these state"
+      },
+      {
+        "id": 645,
+        "section_id": "INDEXES-EXPRESSIONAL",
+        "group": "eval",
+        "content_head": "An index column need not be just a column of the underlying table, but can be a function or scalar expression computed from one or more columns of the"
+      },
+      {
+        "id": 653,
+        "section_id": "INDEXES-MULTICOLUMN",
+        "group": "eval",
+        "content_head": "An index can be defined on more than one column of a table. For example, if you have a table of this form: CREATE TABLE test2 ( major int, minor int, "
+      },
+      {
+        "id": 654,
+        "section_id": "INDEXES-MULTICOLUMN",
+        "group": "eval",
+        "content_head": " sequential table scan over using the index. A multicolumn GiST index can be used with query conditions that involve any subset of the index's columns"
+      },
+      {
+        "id": 659,
+        "section_id": "INDEXES-PARTIAL",
+        "group": "eval",
+        "content_head": "A partial index is an index built over a subset of a table; the subset is defined by a conditional expression (called the predicate of the partial ind"
+      }
+    ],
+    "source_chunk_id": 663
+  },
+  {
+    "qid": "g59",
+    "question": "what syslog facility does PostgreSQL use by default for logging?",
+    "type": "generated",
+    "chapter": "runtime-config.html",
+    "match": "any",
+    "ground_truth": [
+      983
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 983,
+        "section_id": "RUNTIME-CONFIG-LOGGING-WHERE",
+        "group": "eval",
+        "content_head": " but also rotate sooner if the log file size exceeds 1GB, set log_filename to server_log.%H%M , log_truncate_on_rotation to on , log_rotation_age to 6"
+      }
+    ],
+    "source_chunk_id": 983
+  },
+  {
+    "qid": "g61",
+    "question": "what's the default for vacuum_freeze_min_age?",
+    "type": "generated",
+    "chapter": "runtime-config.html",
+    "match": "any",
+    "ground_truth": [
+      935,
+      936
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 935,
+        "section_id": "RUNTIME-CONFIG-CLIENT-STATEMENT",
+        "group": "eval",
+        "content_head": " (that is, waiting for a client query) within an open transaction for longer than the specified amount of time. If this value is specified without uni"
+      },
+      {
+        "id": 936,
+        "section_id": "RUNTIME-CONFIG-CLIENT-STATEMENT",
+        "group": "eval",
+        "content_head": " the table. For more information see Section 24.1.5 . vacuum_freeze_min_age ( integer ) # Specifies the cutoff age (in transactions) that VACUUM shoul"
+      }
+    ],
+    "source_chunk_id": 936
+  },
+  {
+    "qid": "g62",
+    "question": "What does the 'advisory' wait event mean?",
+    "type": "generated",
+    "chapter": "monitoring.html",
+    "match": "any",
+    "ground_truth": [
+      751,
+      752
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 751,
+        "section_id": "MONITORING-PG-STAT-ACTIVITY-VIEW",
+        "group": "eval",
+        "content_head": "Reallocate Waiting for an elected Parallel Hash participant to finish allocating more buckets. HashGrowBucketsReinsert Waiting for other Parallel Hash"
+      },
+      {
+        "id": 752,
+        "section_id": "MONITORING-PG-STAT-ACTIVITY-VIEW",
+        "group": "eval",
+        "content_head": " replication. WalSummaryReady Waiting for a new WAL summary to be generated. XactGroupUpdate Waiting for the group leader to update transaction status"
+      }
+    ],
+    "source_chunk_id": 752
+  },
+  {
+    "qid": "g63",
+    "question": "What do event triggers default to in PostgreSQL?",
+    "type": "generated",
+    "chapter": "runtime-config.html",
+    "match": "any",
+    "ground_truth": [
+      939
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 939,
+        "section_id": "RUNTIME-CONFIG-CLIENT-STATEMENT",
+        "group": "eval",
+        "content_head": " creating user with the options specified. The value must be set , inherit , or a comma-separated list of these. The default value is an empty string,"
+      }
+    ],
+    "source_chunk_id": 939
+  },
+  {
+    "qid": "g64",
+    "question": "what's the default isolation level for transactions in PostgreSQL?",
+    "type": "generated",
+    "chapter": "runtime-config.html",
+    "match": "any",
+    "ground_truth": [
+      932,
+      1218
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 932,
+        "section_id": "RUNTIME-CONFIG-CLIENT-STATEMENT",
+        "group": "eval",
+        "content_head": " a tablespace for which the user does not have CREATE privilege. However, when using a previously set value, nonexistent tablespaces are ignored, as a"
+      },
+      {
+        "id": 1218,
+        "section_id": "XACT-READ-COMMITTED",
+        "group": "distractor",
+        "content_head": "Read Committed is the default isolation level in PostgreSQL . When a transaction uses this isolation level, a SELECT query (without a FOR UPDATE/SHARE"
+      }
+    ],
+    "source_chunk_id": 932
+  },
+  {
+    "qid": "g65",
+    "question": "What conflicts does pg_stat_database_conflicts show?",
+    "type": "generated",
+    "chapter": "monitoring.html",
+    "match": "any",
+    "ground_truth": [
+      740,
+      776
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 740,
+        "section_id": "MONITORING-STATS-VIEWS",
+        "group": "eval",
+        "content_head": " row for each backend (including autovacuum worker processes) running ANALYZE , showing current progress. See Section 27.4.1 . pg_stat_progress_create"
+      },
+      {
+        "id": 776,
+        "section_id": "MONITORING-PG-STAT-DATABASE-CONFLICTS-VIEW",
+        "group": "eval",
+        "content_head": "The pg_stat_database_conflicts view will contain one row per database, showing database-wide statistics about query cancels occurring due to conflicts"
+      }
+    ],
+    "source_chunk_id": 776
+  },
+  {
+    "qid": "g66",
+    "question": "how to turn off autocommit for bulk inserts in PostgreSQL?",
+    "type": "generated",
+    "chapter": "performance-tips.html",
+    "match": "any",
+    "ground_truth": [
+      818
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 818,
+        "section_id": "DISABLE-AUTOCOMMIT",
+        "group": "eval",
+        "content_head": "When using multiple INSERT s, turn off autocommit and just do one commit at the end. (In plain SQL, this means issuing BEGIN at the start and COMMIT a"
+      }
+    ],
+    "source_chunk_id": 818
+  },
+  {
+    "qid": "g67",
+    "question": "What does EXPLAIN ANALYZE tell me about row counts?",
+    "type": "generated",
+    "chapter": "performance-tips.html",
+    "match": "any",
+    "ground_truth": [
+      1246,
+      1247,
+      1248,
+      1249,
+      1250,
+      1251,
+      1254
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 1246,
+        "section_id": "USING-EXPLAIN-ANALYZE",
+        "group": "eval",
+        "content_head": "It is possible to check the accuracy of the planner's estimates by using EXPLAIN 's ANALYZE option. With this option, EXPLAIN actually executes the qu"
+      },
+      {
+        "id": 1247,
+        "section_id": "USING-EXPLAIN-ANALYZE",
+        "group": "eval",
+        "content_head": " plans, it is possible for a subplan node to be executed more than once. For example, the inner index scan will be executed once per outer row in the "
+      },
+      {
+        "id": 1248,
+        "section_id": "USING-EXPLAIN-ANALYZE",
+        "group": "eval",
+        "content_head": " t1 (cost=5.06..224.98 rows=100 width=244) (actual time=0.030..0.450 rows=100 loops=1) Recheck Cond: (unique1 < 100) Heap Blocks: exact=90 -> Bitmap I"
+      },
+      {
+        "id": 1249,
+        "section_id": "USING-EXPLAIN-ANALYZE",
+        "group": "eval",
+        "content_head": " Seq Scan on polygon_tbl (cost=0.00..1.09 rows=1 width=85) (actual time=0.023..0.023 rows=0 loops=1) Filter: (f1 @> '((0.5,2))'::polygon) Rows Removed"
+      },
+      {
+        "id": 1250,
+        "section_id": "USING-EXPLAIN-ANALYZE",
+        "group": "eval",
+        "content_head": " loops=1) Recheck Cond: ((unique1 < 100) AND (unique2 > 9000)) Heap Blocks: exact=10 Buffers: shared hit=14 read=3 -> BitmapAnd (cost=25.07..25.07 row"
+      },
+      {
+        "id": 1251,
+        "section_id": "USING-EXPLAIN-ANALYZE",
+        "group": "eval",
+        "content_head": "actual time=0.065..0.141 rows=100 loops=1) Recheck Cond: (unique1 < 100) Heap Blocks: exact=90 -> Bitmap Index Scan on tenk1_unique1 (cost=0.00..5.04 "
+      },
+      {
+        "id": 1254,
+        "section_id": "USING-EXPLAIN-CAVEATS",
+        "group": "eval",
+        "content_head": "unique1 < 100) Rows Removed by Filter: 287 Planning Time: 0.077 ms Execution Time: 0.086 ms the estimated cost and row count for the Index Scan node a"
+      }
+    ],
+    "source_chunk_id": 1246
+  },
+  {
+    "qid": "g68",
+    "question": "when should I use index-only scans in PostgreSQL?",
+    "type": "generated",
+    "chapter": "indexes.html",
+    "match": "any",
+    "ground_truth": [
+      646,
+      647,
+      648
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 646,
+        "section_id": "INDEXES-INDEX-ONLY-SCANS",
+        "group": "eval",
+        "content_head": "All indexes in PostgreSQL are secondary indexes, meaning that each index is stored separately from the table's main data area (which is called the tab"
+      },
+      {
+        "id": 647,
+        "section_id": "INDEXES-INDEX-ONLY-SCANS",
+        "group": "eval",
+        "content_head": " are met, then all the data values required by the query are available from the index, so an index-only scan is physically possible. But there is an a"
+      },
+      {
+        "id": 648,
+        "section_id": "INDEXES-INDEX-ONLY-SCANS",
+        "group": "eval",
+        "content_head": " search on, PostgreSQL allows you to create an index in which some columns are just \u201c payload \u201d and are not part of the search key. This is done by ad"
+      }
+    ],
+    "source_chunk_id": 647
+  },
+  {
+    "qid": "g69",
+    "question": "what does it mean if recovery_end_command doesn't work?",
+    "type": "generated",
+    "chapter": "runtime-config.html",
+    "match": "any",
+    "ground_truth": [
+      1065
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 1065,
+        "section_id": "RUNTIME-CONFIG-WAL-ARCHIVE-RECOVERY",
+        "group": "eval",
+        "content_head": " if the command was terminated by a signal or an error by the shell (such as command not found), a fatal error will be raised. This parameter can only"
+      }
+    ],
+    "source_chunk_id": 1065
+  },
+  {
+    "qid": "g70",
+    "question": "What does 'WALInitSync' mean in PostgreSQL?",
+    "type": "generated",
+    "chapter": "monitoring.html",
+    "match": "any",
+    "ground_truth": [
+      749,
+      755,
+      756
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 749,
+        "section_id": "MONITORING-PG-STAT-ACTIVITY-VIEW",
+        "group": "eval",
+        "content_head": " a read of a serialized historical catalog snapshot. SnapbuildSync Waiting for a serialized historical catalog snapshot to reach durable storage. Snap"
+      },
+      {
+        "id": 755,
+        "section_id": "MONITORING-PG-STAT-ACTIVITY-VIEW",
+        "group": "eval",
+        "content_head": " TablespaceCreate Waiting to create or drop a tablespace. TwoPhaseState Waiting to read or update the state of prepared transactions. WaitEventCustom "
+      },
+      {
+        "id": 756,
+        "section_id": "MONITORING-PG-STAT-ACTIVITY-VIEW",
+        "group": "eval",
+        "content_head": "_events w ON (a.wait_event_type = w.type AND a.wait_event = w.name) WHERE a.wait_event is NOT NULL and a.state = 'active'; -[ RECORD 1 ]--------------"
+      }
+    ],
+    "source_chunk_id": 756
+  },
+  {
+    "qid": "g71",
+    "question": "what's wal_receiver_timeout set to by default?",
+    "type": "generated",
+    "chapter": "runtime-config.html",
+    "match": "any",
+    "ground_truth": [
+      1025
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 1025,
+        "section_id": "RUNTIME-CONFIG-REPLICATION-STANDBY",
+        "group": "eval",
+        "content_head": " . This parameter can only be set in the postgresql.conf file or on the server command line. If cascaded replication is in use the feedback is passed "
+      }
+    ],
+    "source_chunk_id": 1025
+  },
+  {
+    "qid": "g72",
+    "question": "what's the default rate for logging transactions?",
+    "type": "generated",
+    "chapter": "runtime-config.html",
+    "match": "any",
+    "ground_truth": [
+      986,
+      987
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 986,
+        "section_id": "RUNTIME-CONFIG-LOGGING-WHEN",
+        "group": "eval",
+        "content_head": " statements that are logged because of log_statement will not be repeated in the duration log message. If you are not using syslog , it is recommended"
+      },
+      {
+        "id": 987,
+        "section_id": "RUNTIME-CONFIG-LOGGING-WHEN",
+        "group": "eval",
+        "content_head": " given transaction will be logged. log_transaction_sample_rate can be helpful to construct a sample of transactions. The default is 0 , meaning not to"
+      }
+    ],
+    "source_chunk_id": 987
+  },
+  {
+    "qid": "g73",
+    "question": "should I create indexes before or after loading data for better speed?",
+    "type": "generated",
+    "chapter": "performance-tips.html",
+    "match": "any",
+    "ground_truth": [
+      820,
+      826,
+      827
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 820,
+        "section_id": "POPULATE-RM-INDEXES",
+        "group": "eval",
+        "content_head": "If you are loading a freshly created table, the fastest method is to create the table, bulk load the table's data using COPY , then create any indexes"
+      },
+      {
+        "id": 826,
+        "section_id": "POPULATE-PG-DUMP",
+        "group": "eval",
+        "content_head": "Dump scripts generated by pg_dump automatically apply several, but not all, of the above guidelines. To restore a pg_dump dump as quickly as possible,"
+      },
+      {
+        "id": 827,
+        "section_id": "POPULATE-PG-DUMP",
+        "group": "eval",
+        "content_head": " foreign keys. [14] So when loading a data-only dump, it is up to you to drop and recreate indexes and foreign keys if you wish to use those technique"
+      }
+    ],
+    "source_chunk_id": 820
+  },
+  {
+    "qid": "g74",
+    "question": "what's the default for max files per process in PostgreSQL?",
+    "type": "generated",
+    "chapter": "runtime-config.html",
+    "match": "any",
+    "ground_truth": [
+      1037
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 1037,
+        "section_id": "RUNTIME-CONFIG-RESOURCE-KERNEL",
+        "group": "eval",
+        "content_head": "max_files_per_process ( integer ) # Sets the maximum number of simultaneously open files allowed to each server subprocess. The default is one thousan"
+      }
+    ],
+    "source_chunk_id": 1037
+  },
+  {
+    "qid": "g75",
+    "question": "What does vacuum_freeze_min_age do in PostgreSQL?",
+    "type": "generated",
+    "chapter": "maintenance.html",
+    "match": "any",
+    "ground_truth": [
+      905,
+      935,
+      936
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 905,
+        "section_id": "VACUUM-FOR-WRAPAROUND",
+        "group": "eval",
+        "content_head": " transactions regardless of wraparound issues, and so such row versions will be valid until deleted, no matter how long that is. In PostgreSQL version"
+      },
+      {
+        "id": 935,
+        "section_id": "RUNTIME-CONFIG-CLIENT-STATEMENT",
+        "group": "eval",
+        "content_head": " (that is, waiting for a client query) within an open transaction for longer than the specified amount of time. If this value is specified without uni"
+      },
+      {
+        "id": 936,
+        "section_id": "RUNTIME-CONFIG-CLIENT-STATEMENT",
+        "group": "eval",
+        "content_head": " the table. For more information see Section 24.1.5 . vacuum_freeze_min_age ( integer ) # Specifies the cutoff age (in transactions) that VACUUM shoul"
+      }
+    ],
+    "source_chunk_id": 905
+  },
+  {
+    "qid": "g76",
+    "question": "Can I use multiple indexes for OR queries?",
+    "type": "generated",
+    "chapter": "indexes.html",
+    "match": "any",
+    "ground_truth": [
+      640
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 640,
+        "section_id": "INDEXES-BITMAP-SCANS",
+        "group": "eval",
+        "content_head": "A single index scan can only use query clauses that use the index's columns with operators of its operator class and are joined with AND . For example"
+      }
+    ],
+    "source_chunk_id": 640
+  },
+  {
+    "qid": "g77",
+    "question": "How does syncfs help with PostgreSQL errors?",
+    "type": "generated",
+    "chapter": "runtime-config.html",
+    "match": "any",
+    "ground_truth": [
+      974
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 974,
+        "section_id": "RUNTIME-CONFIG-ERROR-HANDLING",
+        "group": "eval",
+        "content_head": " that did not shut down cleanly, including copies created with pg_basebackup . On Linux, syncfs may be used instead, to ask the operating system to sy"
+      }
+    ],
+    "source_chunk_id": 974
+  },
+  {
+    "qid": "g78",
+    "question": "What\u2019s a better way to handle periodic deletes than DELETE and VACUUM?",
+    "type": "generated",
+    "chapter": "maintenance.html",
+    "match": "any",
+    "ground_truth": [
+      230,
+      900
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 230,
+        "section_id": "DDL-PARTITIONING-DECLARATIVE",
+        "group": "distractor",
+        "content_head": "ed table is \u201c virtual \u201d in the same way that the partitioned table is: the actual data is in child indexes on the individual partition tables. CREATE "
+      },
+      {
+        "id": 900,
+        "section_id": "VACUUM-FOR-SPACE-RECOVERY",
+        "group": "eval",
+        "content_head": " example doing all the work at night when load is low. The difficulty with doing vacuuming according to a fixed schedule is that if a table has an une"
+      }
+    ],
+    "source_chunk_id": 900
+  },
+  {
+    "qid": "g79",
+    "question": "what does setting client_connection_check_interval to 0 do?",
+    "type": "generated",
+    "chapter": "runtime-config.html",
+    "match": "any",
+    "ground_truth": [
+      955
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 955,
+        "section_id": "RUNTIME-CONFIG-TCP-SETTINGS",
+        "group": "eval",
+        "content_head": " If this value is specified without units, it is taken as milliseconds. A value of 0 (the default) selects the operating system's default. This parame"
+      }
+    ],
+    "source_chunk_id": 955
+  },
+  {
+    "qid": "hw1",
+    "question": "In pg_stat_activity, what does a state of 'idle in transaction' mean?",
+    "type": "same_section",
+    "chapter": null,
+    "match": "any",
+    "ground_truth": [
+      735,
+      744
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 735,
+        "section_id": "MONITORING-PS",
+        "group": "eval",
+        "content_head": " Each such process sets its command line display in the form postgres: user database host activity The user, database, and (client) host items remain "
+      },
+      {
+        "id": 744,
+        "section_id": "MONITORING-PG-STAT-ACTIVITY-VIEW",
+        "group": "eval",
+        "content_head": " waiting, if any; otherwise NULL. See Table 27.4 . wait_event text Wait event name if backend is currently waiting, otherwise NULL. See Table 27.5 thr"
+      }
+    ],
+    "source_chunk_id": null
+  },
+  {
+    "qid": "hw11",
+    "question": "What do random_page_cost and effective_io_concurrency each control, and what are their defaults?",
+    "type": "multi_hop_parallel",
+    "chapter": null,
+    "match": "all",
+    "ground_truth": [
+      1006,
+      1042
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 1006,
+        "section_id": "RUNTIME-CONFIG-QUERY-CONSTANTS",
+        "group": "eval",
+        "content_head": "The cost variables described in this section are measured on an arbitrary scale. Only their relative values matter, hence scaling them all up or down "
+      },
+      {
+        "id": 1042,
+        "section_id": "RUNTIME-CONFIG-RESOURCE-ASYNC-BEHAVIOR",
+        "group": "eval",
+        "content_head": "backend_flush_after ( integer ) # Whenever more than this amount of data has been written by a single backend, attempt to force the OS to issue these "
+      }
+    ],
+    "source_chunk_id": null
+  },
+  {
+    "qid": "hw13",
+    "question": "Is log_checkpoints on by default, and by default how close together must checkpoints be before checkpoint_warning logs a warning?",
+    "type": "multi_hop_parallel",
+    "chapter": null,
+    "match": "all",
+    "ground_truth": [
+      989,
+      1059
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 989,
+        "section_id": "RUNTIME-CONFIG-LOGGING-WHAT",
+        "group": "eval",
+        "content_head": " default is 10min . Enabling this parameter can be helpful in tracking autovacuum activity. This parameter can only be set in the postgresql.conf file"
+      },
+      {
+        "id": 1059,
+        "section_id": "RUNTIME-CONFIG-WAL-CHECKPOINTS",
+        "group": "eval",
+        "content_head": " set in the postgresql.conf file or on the server command line. checkpoint_warning ( integer ) # Write a message to the server log if checkpoints caus"
+      }
+    ],
+    "source_chunk_id": null
+  },
+  {
+    "qid": "hw2",
+    "question": "In an EXPLAIN plan, what do the two numbers in cost=0.00..458.00 mean?",
+    "type": "same_section",
+    "chapter": null,
+    "match": "any",
+    "ground_truth": [
+      1234
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 1234,
+        "section_id": "USING-EXPLAIN-BASICS",
+        "group": "eval",
+        "content_head": "The structure of a query plan is a tree of plan nodes . Nodes at the bottom level of the tree are scan nodes: they return raw rows from a table. There"
+      }
+    ],
+    "source_chunk_id": null
+  },
+  {
+    "qid": "hw5",
+    "question": "EXPLAIN ANALYZE shows row estimates far from the actual rows -- what setting helps the planner estimate better?",
+    "type": "multi_hop_sequential",
+    "chapter": null,
+    "match": "any",
+    "ground_truth": [
+      643,
+      812,
+      813,
+      816,
+      1002,
+      1012
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 643,
+        "section_id": "INDEXES-EXAMINE",
+        "group": "eval",
+        "content_head": "Although indexes in PostgreSQL do not need maintenance or tuning, it is still important to check which indexes are actually used by the real-life quer"
+      },
+      {
+        "id": 812,
+        "section_id": "PLANNER-STATS-SINGLE-COLUMN",
+        "group": "eval",
+        "content_head": "0 | thepath | t | 0 | (4 rows) Note that two rows are displayed for the same column, one corresponding to the complete inheritance hierarchy starting "
+      },
+      {
+        "id": 813,
+        "section_id": "PLANNER-STATS-EXTENDED",
+        "group": "eval",
+        "content_head": "It is common to see slow queries running bad execution plans because multiple columns used in the query clauses are correlated. The planner normally a"
+      },
+      {
+        "id": 816,
+        "section_id": "PLANNER-STATS-EXTENDED",
+        "group": "eval",
+        "content_head": "xoid) WHERE stxname = 'stts2'; -[ RECORD 1 ]-------------------------------------------------------- k | 1 2 5 nd | {\"1, 2\": 33178, \"1, 5\": 33178, \"2,"
+      },
+      {
+        "id": 1002,
+        "section_id": "RUNTIME-CONFIG-QUERY-ENABLE",
+        "group": "eval",
+        "content_head": "These configuration parameters provide a crude method of influencing the query plans chosen by the query optimizer. If the default plan chosen by the "
+      },
+      {
+        "id": 1012,
+        "section_id": "RUNTIME-CONFIG-QUERY-OTHER",
+        "group": "eval",
+        "content_head": "default_statistics_target ( integer ) # Sets the default statistics target for table columns without a column-specific target set via ALTER TABLE SET "
+      }
+    ],
+    "source_chunk_id": null
+  },
+  {
+    "qid": "hw6",
+    "question": "Index-only scans aren't happening even with a covering index -- what maintenance affects whether they can be used?",
+    "type": "multi_hop_sequential",
+    "chapter": null,
+    "match": "any",
+    "ground_truth": [
+      898,
+      903
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 898,
+        "section_id": "VACUUM-BASICS",
+        "group": "eval",
+        "content_head": "PostgreSQL 's VACUUM command has to process each table on a regular basis for several reasons: To recover or reuse disk space occupied by updated or d"
+      },
+      {
+        "id": 903,
+        "section_id": "VACUUM-FOR-VISIBILITY-MAP",
+        "group": "eval",
+        "content_head": "Vacuum maintains a visibility map for each table to keep track of which pages contain only tuples that are known to be visible to all active transacti"
+      }
+    ],
+    "source_chunk_id": null
+  },
+  {
+    "qid": "hw7",
+    "question": "How do I shard tables across multiple servers with Citus?",
+    "type": "unanswerable",
+    "chapter": null,
+    "match": "none",
+    "ground_truth": [],
+    "ground_truth_detail": [],
+    "source_chunk_id": null
+  },
+  {
+    "qid": "hw8",
+    "question": "How do I enable query result caching in pgpool-II?",
+    "type": "unanswerable",
+    "chapter": null,
+    "match": "none",
+    "ground_truth": [],
+    "ground_truth_detail": [],
+    "source_chunk_id": null
+  },
+  {
+    "qid": "hw9",
+    "question": "How much RAM should I give shared_buffers, and what does effective_cache_size actually do?",
+    "type": "multi_hop_parallel",
+    "chapter": null,
+    "match": "all",
+    "ground_truth": [
+      1008,
+      1028
+    ],
+    "ground_truth_detail": [
+      {
+        "id": 1008,
+        "section_id": "RUNTIME-CONFIG-QUERY-CONSTANTS",
+        "group": "eval",
+        "content_head": " data scanned will normally be less. If this value is specified without units, it is taken as blocks, that is BLCKSZ bytes, typically 8kB. The default"
+      },
+      {
+        "id": 1028,
+        "section_id": "RUNTIME-CONFIG-RESOURCE-MEMORY",
+        "group": "eval",
+        "content_head": "shared_buffers ( integer ) # Sets the amount of memory the database server uses for shared memory buffers. The default is typically 128 megabytes ( 12"
+      }
+    ],
+    "source_chunk_id": null
+  }
+]

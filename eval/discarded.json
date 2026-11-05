@@ -1,0 +1,50 @@
+[
+  {
+    "qid": "g12",
+    "question": "what's arg1 in buffer-checkpoint-sync-start?",
+    "type": "generated",
+    "reason": "no chunk answers it"
+  },
+  {
+    "qid": "g20",
+    "question": "How long can vacuuming take in PostgreSQL?",
+    "type": "generated",
+    "reason": "no chunk answers it"
+  },
+  {
+    "qid": "g49",
+    "question": "how do I report a bug in PostgreSQL docs?",
+    "type": "generated",
+    "reason": "more than 3 partial pieces"
+  },
+  {
+    "qid": "g60",
+    "question": "how much is the nested loop join slowing this query down?",
+    "type": "generated",
+    "reason": "no chunk answers it"
+  },
+  {
+    "qid": "hw10",
+    "question": "What do wal_buffers and max_wal_size each control, and what are their defaults?",
+    "type": "multi_hop_parallel",
+    "reason": "more than 3 partial pieces"
+  },
+  {
+    "qid": "hw12",
+    "question": "Sorts keep spilling to temp files: what controls how much memory a sort gets before it spills, what is its default, and how do I cap the temp file space a process can use?",
+    "type": "multi_hop_parallel",
+    "reason": "judges did not agree on a combination"
+  },
+  {
+    "qid": "hw3",
+    "question": "What's the difference between log_min_duration_statement and log_statement?",
+    "type": "multi_hop_parallel",
+    "reason": "judges did not agree on a combination"
+  },
+  {
+    "qid": "hw4",
+    "question": "When would I use a partial index versus an index on an expression?",
+    "type": "multi_hop_parallel",
+    "reason": "judges did not agree on a combination"
+  }
+]

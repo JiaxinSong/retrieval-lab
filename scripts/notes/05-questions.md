@@ -1,10 +1,9 @@
 # 05 — Questions and Ground Truth
 
-Producing golden-dataset questions, the problems that surfaced along the way,
-and how the ground truth is labelled.
+Producing golden-dataset questions, and the problems that surfaced along the
+way. Labelling which chunks answer them is step 06 (`06-golden-set.md`).
 
 `scripts/05_generate_questions.py` → `eval/candidates.json`
-`scripts/06_build_golden.py` → `eval/golden.json`, `eval/discarded.json`, `eval/judge_report.json`
 
 ---
 
@@ -49,8 +48,8 @@ every question has an answer in the corpus, and guarantees you know which one.
 
 Only eval chunks are sampled, which is what the `group` tag from ingest is
 for. The 954 distractor chunks are never the source of a question — though one
-can still turn out to answer it, which the judges handle (*Building the golden
-set* below).
+can still turn out to answer it, which the judges handle
+(`06-golden-set.md`).
 
 ---
 
@@ -312,7 +311,7 @@ as moderately relevant, and nothing in the scores reveals that they are
 complementary.
 
 LLM judges make this call here, one passage per call, and see passages
-together only for the combination check (*Building the golden set* below). The
+together only for the combination check (`06-golden-set.md`). The
 golden dataset is the standard itself, so the judges are validated before they
 build it: they must pass hand-verified calibration cases, or the run stops.
 
@@ -328,6 +327,13 @@ was multi-hop; classified by reading it is not.
 ## Reproducibility
 
 ```python
+rows = await pool.fetch("""
+    SELECT id, content, metadata
+    FROM retrieval_lab_chunks
+    WHERE metadata->>'group' = 'eval'
+    ORDER BY id
+""")
+...
 random.seed(42)
 sample = random.sample(chunks, N_SAMPLE)
 ```
@@ -336,6 +342,18 @@ Re-running re-examines the same 80 chunks rather than drawing fresh ones.
 Without the seed, a second run produces a different candidate set and the two
 cannot be compared — which matters precisely when comparing a configuration
 change, the situation where this script gets re-run at all.
+
+**The seed alone is not enough.** `random.sample` picks positions in a list, so
+the same seed over a list in a different order picks different chunks. Without
+`ORDER BY`, Postgres does not guarantee row order; it usually returns rows in
+physical order, which matches id order here only because ingest inserts
+sequentially and nothing updates the table afterwards. The first version
+relied on that by accident. `ORDER BY id` makes the input order part of the
+contract, so the seed actually reproduces the sample.
+
+The existing `candidates.json` was generated before this fix. It was not
+regenerated: the fix changes what a future run is guaranteed to do, not what
+the past run produced.
 
 ---
 
@@ -404,21 +422,11 @@ that near-duplicate any development query (word-set Jaccard ≥ 0.5) are
 excluded automatically, and `discarded.json` lists each one with the query it
 matched.
 
-### Pooling, and why its depth is fixed
+### Pooling
 
-The judges label a pool of candidate chunks per question: the union of all
-three retrievers' results, plus the source chunk and its same-section
-neighbours whether retrieved or not, plus keyword matches on seed terms for the
-hand-written questions, which have no source chunk. Showing only one system's results would
-leave chunks it missed unjudged, and score any configuration that found them as
-wrong.
-
-Pool depth equals `RECALL_K` (20), because that is the depth every
-configuration draws from. An earlier version pooled at 10 — and the reranker
-demonstrably lifts chunks from rank 17 into the top-5. Pooling at `RECALL_K`
-makes every configuration's top-5 a subset of the pool by construction, which
-was verified by running all six configurations against a local Postgres
-instance. Building the pool needs no reranker calls.
+The judges see a pool of candidate chunks per question, not the whole corpus.
+How the pool is built — and why it must not depend on retrieval alone — is in
+`06-golden-set.md`.
 
 ### What each hand-written type measures
 
@@ -502,108 +510,11 @@ instead — which is a finding, not a failure.
 
 ---
 
-## Building the golden set: LLM judges
+## Labelling the ground truth
 
-Ground truth is labelled automatically by `scripts/06_build_golden.py`. No
-question is labelled by hand; hand work is limited to the calibration cases
-and an optional spot check.
-
-### Labels
-
-Each judge sees one question and one passage per call and answers: could a
-reader given only this passage answer completely?
-
-| Label | Meaning |
-| --- | --- |
-| `yes` | The passage alone answers the question completely |
-| `partial` | The passage holds part of the answer |
-| `no` | It does not help, even if it is on a related topic |
-
-One passage per call is deliberate. Shown several at once, a judge blends them,
-and "answers on its own" stops being what is measured.
-
-### Two judges, two vendors, one referee
-
-| Role | Model |
-| --- | --- |
-| Judge A | `gpt-4o-mini` |
-| Judge B | `claude-haiku-4-5` |
-| Judge C (referee) | `claude-sonnet-4-5` |
-
-Two runs of one model disagree only through sampling noise. Two vendors
-disagree when their standards differ, which is the disagreement worth
-catching. Temperature is zero for all three.
-
-Reconciliation keeps the **weaker** label: yes/partial becomes partial,
-partial/no becomes no. Only a direct contradiction — yes against no — goes to
-Judge C, whose label is final. Keeping the weaker label makes ground truth
-conservative. That lowers every configuration's recall a little and in the
-same direction, which leaves the comparison between configurations intact.
-
-### Question-level rules
-
-| Situation | Outcome |
-| --- | --- |
-| Unanswerable type, no `yes` | Accept, match `none` |
-| Unanswerable type, any `yes` | Discard — the question has an answer |
-| At least one `yes` | Accept, ground truth = every `yes`, match `any` |
-| No `yes`, no `partial` | Discard — nothing answers it |
-| No `yes`, exactly one `partial` | Discard — only half an answer exists |
-| No `yes`, two or three `partial` | Combination check |
-| No `yes`, four or more `partial` | Discard — too complex to label reliably |
-
-**Combination check:** both judges see the partial passages together and report
-whether they answer completely and which are necessary. Accepted as `all` only
-if both say complete and name the same necessary set of two or more.
-
-Overlap can make interchangeable passages — the same sentence in two adjacent
-chunks — so "A or A′, plus B" is possible. The judges will usually disagree on
-which of A and A′ is necessary, and the question is discarded. That trades a
-few multi-hop questions for a simple schema; the report counts the survivors so
-the cost is visible.
-
-### Calibration: the judges are tested before they label
-
-Before any real labelling, the judges run on cases whose answers were verified
-by reading the source. Any failure stops the run.
-
-| Case | Required |
-| --- | --- |
-| `work_mem` definition chunk, for *"Is work_mem a per-connection limit?"* | `yes` |
-| The next chunk, which repeats the key sentence through the overlap | not `no` |
-| The `autovacuum_work_mem` chunk, same question | not `yes` |
-| *"How do I enable TimescaleDB compression on a hypertable?"* against its pool | no `yes` anywhere |
-
-The continuation chunk only has to be "not no": it opens mid-sentence with
-"this value", so a strict judge may reasonably call it partial. Calibration
-questions are never part of the evaluation set.
-
-### Report
-
-`judge_report.json` records the confusion matrix between Judge A and Judge B,
-Cohen's kappa, how many contradictions went to the referee, discard reasons,
-and multi-hop survivors. The script also prints a fixed random sample of ten
-accepted questions with their ground-truth chunks, for an optional human
-glance of about five minutes.
-
-### Operation
-
-- Every judgment is cached in `eval/judgments.jsonl`, keyed by prompt version,
-  model, question, and chunk. An interrupted run resumes without paying twice;
-  a run after a retrieval change judges only chunks new to the pool.
-- Plain API calls with client-side rate limiting, bounded concurrency, and SDK
-  retries with exponential backoff. An authentication error aborts the run
-  rather than retrying.
-- `--dry-run` counts calls and spends nothing; `--reset` rebuilds pools and
-  keeps the cache; `--clear-cache` discards every judgment.
-
-### What this is not
-
-A human-verified benchmark. It is an LLM-judged evaluation set, suitable for
-comparing retrieval configurations against each other. One bias is worth
-stating: the judges' sense of "answers the question" may resemble a
-cross-encoder's sense of relevance, which could flatter the rerank
-configurations. Cross-vendor judging reduces that; it does not remove it.
+Step 06 labels which chunks answer each question, with LLM judges from two
+vendors, calibration on hand-verified cases, and Cohen's kappa. See
+`06-golden-set.md`.
 
 ---
 
@@ -612,8 +523,4 @@ configurations. Cross-vendor judging reduces that; it does not remove it.
 `candidates.json` is used as-is. Its question text, source ids, and leakage
 verdicts are independent of retrieval, and a check against the database found
 all 80 source ids still point at the same content. Its rank fields are stale
-and unused.
-
-`06_build_golden.py` is written and tested end to end against simulated
-judges. It has not yet been run on real data; accepted-question count, kappa,
-discard reasons, and multi-hop survivors go here once it has.
+and unused. Labelling status is in `06-golden-set.md`.

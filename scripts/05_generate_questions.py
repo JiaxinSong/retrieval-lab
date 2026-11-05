@@ -327,7 +327,7 @@ def report(results: list[dict]) -> None:
         examples = [r for r in results if r["verdict"] == verdict][:2]
         if not examples:
             continue
-        print(f"\n--- rejected: {verdict} ---")
+        print(f"\n--- flagged: {verdict} ---")
         for r in examples:
             print(f"  Q: {r['question']}")
             if r.get("question_original") and r["question_original"] != r["question"]:
@@ -371,6 +371,7 @@ async def main() -> None:
             SELECT id, content, metadata
             FROM retrieval_lab_chunks
             WHERE metadata->>'group' = 'eval'
+            ORDER BY id
             """
         )
         chunks = [
@@ -380,7 +381,8 @@ async def main() -> None:
 
         # Seeded so the sample is reproducible. Re-running should re-examine
         # the same chunks rather than a fresh draw, or two runs are not
-        # comparable.
+        # comparable. The seed only works because ORDER BY id fixes the input
+        # order: random.sample picks positions, not rows.
         random.seed(42)
         sample = random.sample(chunks, min(N_SAMPLE, len(chunks)))
         print(f"{len(chunks)} eval chunks, sampling {len(sample)}\n")

@@ -639,6 +639,34 @@ async def hybrid_plus_rerank(pool: asyncpg.Pool, query: str, top_n: int = RERANK
     return await hybrid_rerank_search(pool, query, top_n=top_n)
 
 
+async def hybrid_no_cap(pool: asyncpg.Pool, query: str, top_n: int = RERANK_TOP_N) -> list[Hit]:
+    """Fusion without the section cap. Against `vector`, this isolates fusion:
+    `hybrid` differs from `vector` in both fusion and the cap, so on its own
+    that comparison cannot say which one moved the result."""
+    return (await hybrid_search(pool, query, max_per_section=0))[:top_n]
+
+
+async def vector_rerank(pool: asyncpg.Pool, query: str, top_n: int = RERANK_TOP_N) -> list[Hit]:
+    """Vector search alone as the reranker's candidate source.
+
+    Against `hybrid+rerank`, this asks whether the lexical and identifier
+    retrievers still add anything once a cross-encoder reads the candidates.
+    The candidates are the vector top RECALL_K -- the same depth the judged
+    pool was built from, so every chunk this can return has a label. Rerank
+    then cap, matching `hybrid+rerank`.
+    """
+    hits = await vector_search(pool, query, RECALL_K)
+    reranked = await rerank(query, hits, top_n=len(hits))
+    return cap_per_section(reranked)[:top_n]
+
+
+async def hybrid_rerank_no_cap(pool: asyncpg.Pool, query: str, top_n: int = RERANK_TOP_N) -> list[Hit]:
+    """The full stack without the section cap. The cap trades depth within a
+    section for coverage across sections; this configuration measures what
+    that trade costs and what it buys."""
+    return await hybrid_rerank_search(pool, query, max_per_section=0, top_n=top_n)
+
+
 # The configurations the eval harness measures. Keeping them in the retrieval
 # module rather than the harness means a new configuration is added in one
 # place and every report picks it up.
@@ -649,6 +677,9 @@ CONFIGS = {
     "hybrid": hybrid_only,
     "hybrid+rerank": hybrid_plus_rerank,
     "hybrid+cap+rerank": hybrid_cap_then_rerank,
+    "hybrid+rerank+nocap": hybrid_rerank_no_cap,
+    "hybrid+nocap": hybrid_no_cap,
+    "vector+rerank": vector_rerank,
 }
 
 

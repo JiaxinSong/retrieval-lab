@@ -146,7 +146,7 @@ demonstrate nothing.
 ### 2. A domain where retrieval results can be judged
 
 Whether a result is correct has to be checkable by eye. The golden dataset is
-labelled by LLM judges (`05-questions.md`), but the judges are only trusted
+labelled by LLM judges (`06-golden-set.md`), but the judges are only trusted
 after passing calibration cases verified by hand, and a fixed sample of
 accepted questions is printed for a human spot check. Both require knowing the
 answer. That is impossible in

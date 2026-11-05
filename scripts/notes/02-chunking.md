@@ -342,7 +342,7 @@ The `group` field is read from the fetch manifest and has two downstream uses:
 `group` does not exclude distractors from ground truth. The golden-set judges
 label every chunk in a question's pool, distractors included, and a distractor
 judged a correct answer counts as correct rather than as an intrusion
-(`05-questions.md`).
+(`06-golden-set.md`).
 
 A missing manifest is tolerated rather than fatal — chunking still runs, every
 chunk tagged `unknown`, with a warning. That keeps a partial re-run from

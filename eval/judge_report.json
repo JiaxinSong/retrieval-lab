@@ -1,0 +1,50 @@
+{
+  "prompt_version": "v2",
+  "judges": {
+    "a": "gpt-5-mini",
+    "b": "claude-haiku-4-5-20251001",
+    "c": "claude-sonnet-5"
+  },
+  "confusion_a_by_b": {
+    "no": {
+      "no": 2488,
+      "partial": 18,
+      "yes": 5
+    },
+    "partial": {
+      "no": 136,
+      "partial": 62,
+      "yes": 10
+    },
+    "yes": {
+      "no": 65,
+      "partial": 70,
+      "yes": 159
+    }
+  },
+  "kappa": 0.5917733563782516,
+  "referred": 70,
+  "accepted": 84,
+  "discarded": 8,
+  "pending": 0,
+  "accepted_by_type": {
+    "generated": 75,
+    "same_section": 2,
+    "multi_hop_sequential": 2,
+    "unanswerable": 2,
+    "multi_hop_parallel": 3
+  },
+  "accepted_by_match": {
+    "any": 79,
+    "none": 2,
+    "all": 3
+  },
+  "discard_reasons": {
+    "no chunk answers it": 3,
+    "more than 3 partial pieces": 2,
+    "judges did not agree on a combination": 3
+  },
+  "multi_hop_surviving": 5,
+  "gt_distractor_chunks": 13,
+  "errors": {}
+}

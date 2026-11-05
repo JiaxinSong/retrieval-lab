@@ -861,7 +861,7 @@ that twice:
 - **Four tuned-by-eye parameters** — `RECALL_K`, `RRF_K`, `MAX_DOC_FRACTION`,
   `MAX_PER_SECTION`
 
-Six configurations are registered for the harness:
+Seven configurations are registered for the harness:
 
 | Config | Pipeline |
 | --- | --- |
@@ -871,6 +871,12 @@ Six configurations are registered for the harness:
 | `hybrid` | fuse → cap |
 | `hybrid+rerank` | fuse → rerank → cap |
 | `hybrid+cap+rerank` | fuse → cap → rerank |
+| `hybrid+rerank+nocap` | fuse → rerank, no cap |
+
+The last one was added after the evaluation design was settled. The cap keeps
+at most two chunks per section, so an answer that needs three chunks of one
+section loses one. Without a configuration that skips the cap, the evaluation
+could compare cap orders but never say whether the cap itself helps.
 
 **One ranking error worth watching.** Under the current order, the top result
 for *"Is work_mem a per-connection limit?"* is chunk 1032 — the passage saying

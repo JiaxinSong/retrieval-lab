@@ -1,0 +1,6592 @@
+{
+  "summary": {
+    "questions": 84,
+    "direct": 82,
+    "agentic": 2,
+    "agentic_searches_mean": 1.5,
+    "answerable": 82,
+    "found_first": 80,
+    "found_any_search": 80,
+    "agentic_answerable": 0,
+    "agentic_recovered": 0,
+    "cites_ground_truth": 80,
+    "false_refusals": 0,
+    "unanswerable": 2,
+    "correct_refusals": 2,
+    "invalid_citations": 0,
+    "unjudged_citations": 0,
+    "rerank_calls_this_run": 0,
+    "threshold": 0.5
+  },
+  "rows": [
+    {
+      "qid": "g00",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.7378,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g01",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.8007,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g02",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.8878,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g03",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.9219,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g04",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.7801,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g05",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.8368,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g06",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.8329,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g07",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.8501,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g08",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.8368,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g09",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.7785,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g10",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.874,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g11",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.7427,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g13",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.8798,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g14",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.882,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g15",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.8299,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g16",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.7881,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g17",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.8711,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g18",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.8355,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g19",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.7896,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g21",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.7775,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g22",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.7672,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g23",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.5204,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g24",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.8658,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g25",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.8077,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g26",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.8536,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g27",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.8184,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g28",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.6589,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": false,
+      "found_any_search": false,
+      "cites_ground_truth": false,
+      "false_refusal": false
+    },
+    {
+      "qid": "g29",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.8299,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g30",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.9185,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g31",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.7525,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g32",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.9025,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g33",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.6293,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g34",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.8029,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g35",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.856,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g36",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.7542,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g37",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.8793,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g39",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.7902,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g40",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.5371,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g41",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.8201,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g42",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.7505,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g43",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.8495,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g44",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.7863,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g45",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.5943,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g46",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.8519,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g47",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.8296,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g48",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.8103,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g50",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.8044,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g51",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.828,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g52",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.8616,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g53",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.893,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g54",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.8303,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g55",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.8577,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g56",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.8611,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g57",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.8565,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g58",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.6819,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g59",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.8387,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g61",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.8636,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g62",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.6432,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g63",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.6877,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g64",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.9309,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g65",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.9021,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g66",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.8801,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g67",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.8384,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g68",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.9021,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g69",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.8016,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g70",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.5111,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g71",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.8181,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g72",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.6475,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g73",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.7947,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g74",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.8243,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g75",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.8859,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g76",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.8005,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g77",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.8355,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g78",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.685,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "g79",
+      "type": "generated",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.8946,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "hw1",
+      "type": "same_section",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.8671,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "hw11",
+      "type": "multi_hop_parallel",
+      "match": "all",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.6517,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "hw13",
+      "type": "multi_hop_parallel",
+      "match": "all",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.6652,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "hw2",
+      "type": "same_section",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.7607,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "hw5",
+      "type": "multi_hop_sequential",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.7619,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": false,
+      "found_any_search": false,
+      "cites_ground_truth": false,
+      "false_refusal": false
+    },
+    {
+      "qid": "hw6",
+      "type": "multi_hop_sequential",
+      "match": "any",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.7668,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    },
+    {
+      "qid": "hw7",
+      "type": "unanswerable",
+      "match": "none",
+      "path": "agentic",
+      "searches": 2,
+      "top1": 0.3603,
+      "answerable_pred": false,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "correct_refusal": true
+    },
+    {
+      "qid": "hw8",
+      "type": "unanswerable",
+      "match": "none",
+      "path": "agentic",
+      "searches": 1,
+      "top1": 0.4812,
+      "answerable_pred": false,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "correct_refusal": true
+    },
+    {
+      "qid": "hw9",
+      "type": "multi_hop_parallel",
+      "match": "all",
+      "path": "direct",
+      "searches": 1,
+      "top1": 0.5903,
+      "answerable_pred": true,
+      "invalid_citations": 0,
+      "unjudged_citations": 0,
+      "found_first": true,
+      "found_any_search": true,
+      "cites_ground_truth": true,
+      "false_refusal": false
+    }
+  ],
+  "answers": {
+    "g00": {
+      "answer": "A hash join uses an in-memory hash table: rows of one input are entered into an in-memory hash table which is then probed by scanning the other input (Hash Join / Hash node) [1][4]. The docs also note that hash tables are used in hash joins and are memory-sensitive [2].",
+      "answerable": true,
+      "citations": [
+        1,
+        4,
+        2
+      ],
+      "cited_ids": [
+        1242,
+        1243,
+        1031
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "which join uses a hash table in memory?",
+          "top1": 0.7378,
+          "ids": [
+            1242,
+            1031,
+            798,
+            1243,
+            1248
+          ]
+        }
+      ],
+      "shown_ids": [
+        1242,
+        1031,
+        798,
+        1243,
+        1248
+      ],
+      "sources": {
+        "1": {
+          "id": 1242,
+          "heading": "14.1.1. EXPLAIN Basics",
+          "url": "https://www.postgresql.org/docs/17/using-explain.html"
+        },
+        "2": {
+          "id": 1031,
+          "heading": "19.4.1. Memory",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-resource.html"
+        },
+        "3": {
+          "id": 798,
+          "heading": "15.3.2. Parallel Joins",
+          "url": "https://www.postgresql.org/docs/17/parallel-plans.html"
+        },
+        "4": {
+          "id": 1243,
+          "heading": "14.1.1. EXPLAIN Basics",
+          "url": "https://www.postgresql.org/docs/17/using-explain.html"
+        },
+        "5": {
+          "id": 1248,
+          "heading": "14.1.2. EXPLAIN ANALYZE",
+          "url": "https://www.postgresql.org/docs/17/using-explain.html"
+        }
+      }
+    },
+    "g01": {
+      "answer": "BRIN is most effective for columns whose values are well-correlated with the table\u2019s physical row order (e.g., data that is naturally clustered/ordered). For data types with a linear sort order, BRIN stores per-block-range min/max and supports range and equality operators (<, <=, =, >=, >) [1].",
+      "answerable": true,
+      "citations": [
+        1
+      ],
+      "cited_ids": [
+        670
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "what kind of data works best with BRIN indexes?",
+          "top1": 0.8007,
+          "ids": [
+            670,
+            664,
+            654,
+            653,
+            686
+          ]
+        }
+      ],
+      "shown_ids": [
+        670,
+        664,
+        654,
+        653,
+        686
+      ],
+      "sources": {
+        "1": {
+          "id": 670,
+          "heading": "11.2.6. BRIN",
+          "url": "https://www.postgresql.org/docs/17/indexes-types.html"
+        },
+        "2": {
+          "id": 664,
+          "heading": "11.2. Index Types",
+          "url": "https://www.postgresql.org/docs/17/indexes-types.html"
+        },
+        "3": {
+          "id": 654,
+          "heading": "11.3. Multicolumn Indexes",
+          "url": "https://www.postgresql.org/docs/17/indexes-multicolumn.html"
+        },
+        "4": {
+          "id": 653,
+          "heading": "11.3. Multicolumn Indexes",
+          "url": "https://www.postgresql.org/docs/17/indexes-multicolumn.html"
+        },
+        "5": {
+          "id": 686,
+          "heading": "13.7. Locking and Indexes",
+          "url": "https://www.postgresql.org/docs/17/locking-indexes.html"
+        }
+      }
+    },
+    "g02": {
+      "answer": "Use the built-in size functions. For example: SELECT pg_table_size('myschema.mytable'); -- table only (includes TOAST, FSM, VM) SELECT pg_indexes_size('myschema.mytable'); -- indexes only SELECT pg_total_relation_size('myschema.mytable'); -- table + indexes (equivalent to pg_table_size + pg_indexes_size) You can also use pg_relation_size to get a specific fork (main, fsm, vm) and pg_size_pretty(...) to format the bytes. These functions take a regclass and return sizes in bytes [2][3].",
+      "answerable": true,
+      "citations": [
+        2,
+        3
+      ],
+      "cited_ids": [
+        332,
+        331
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "how can I see disk space used by a specific table in PostgreSQL?",
+          "top1": 0.8878,
+          "ids": [
+            280,
+            332,
+            331,
+            781,
+            281
+          ]
+        }
+      ],
+      "shown_ids": [
+        280,
+        332,
+        331,
+        781,
+        281
+      ],
+      "sources": {
+        "1": {
+          "id": 280,
+          "heading": "27.6.1. Determining Disk Usage",
+          "url": "https://www.postgresql.org/docs/17/diskusage.html"
+        },
+        "2": {
+          "id": 332,
+          "heading": "9.28.7. Database Object Management Functions",
+          "url": "https://www.postgresql.org/docs/17/functions-admin.html"
+        },
+        "3": {
+          "id": 331,
+          "heading": "9.28.7. Database Object Management Functions",
+          "url": "https://www.postgresql.org/docs/17/functions-admin.html"
+        },
+        "4": {
+          "id": 781,
+          "heading": "27.2.21. pg_statio_all_tables",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "5": {
+          "id": 281,
+          "heading": "27.6.1. Determining Disk Usage",
+          "url": "https://www.postgresql.org/docs/17/diskusage.html"
+        }
+      }
+    },
+    "g03": {
+      "answer": "Yes. Increasing maintenance_work_mem can speed up CREATE INDEX; the docs explicitly say doing so can lead to improved performance for CREATE INDEX [1], and maintenance_work_mem is the memory limit used by CREATE INDEX and similar operations [2]. Note that the default is 64MB and autovacuum may allocate up to autovacuum_max_workers times this value, so be cautious about setting it too high [2]. For parallel index builds, maintenance_work_mem is treated as the memory limit for the entire utility command regardless of worker count [5].",
+      "answerable": true,
+      "citations": [
+        1,
+        2,
+        5
+      ],
+      "cited_ids": [
+        822,
+        1031,
+        1044
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "will more maintenance_work_mem speed up CREATE INDEX?",
+          "top1": 0.9219,
+          "ids": [
+            822,
+            1031,
+            826,
+            827,
+            1044
+          ]
+        }
+      ],
+      "shown_ids": [
+        822,
+        1031,
+        826,
+        827,
+        1044
+      ],
+      "sources": {
+        "1": {
+          "id": 822,
+          "heading": "14.4.5. Increase maintenance_work_mem",
+          "url": "https://www.postgresql.org/docs/17/populate.html"
+        },
+        "2": {
+          "id": 1031,
+          "heading": "19.4.1. Memory",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-resource.html"
+        },
+        "3": {
+          "id": 826,
+          "heading": "14.4.9. Some Notes about pg_dump",
+          "url": "https://www.postgresql.org/docs/17/populate.html"
+        },
+        "4": {
+          "id": 827,
+          "heading": "14.4.9. Some Notes about pg_dump",
+          "url": "https://www.postgresql.org/docs/17/populate.html"
+        },
+        "5": {
+          "id": 1044,
+          "heading": "19.4.6. Asynchronous Behavior",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-resource.html"
+        }
+      }
+    },
+    "g04": {
+      "answer": "Yes. Increasing max_wal_size temporarily during large/bulk loads can reduce how often checkpoints are forced (which require flushing all dirty pages) and so can make loads faster [1][4]. Note that max_wal_size is a soft limit and can be exceeded; increasing it may lengthen crash recovery time [3]. The docs also recommend increasing max_wal_size when restoring dumps to speed restores [5].",
+      "answerable": true,
+      "citations": [
+        1,
+        4,
+        3,
+        5
+      ],
+      "cited_ids": [
+        823,
+        1257,
+        1059,
+        826
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "does max_wal_size change how fast I can load data?",
+          "top1": 0.7801,
+          "ids": [
+            823,
+            1260,
+            1059,
+            1257,
+            826
+          ]
+        }
+      ],
+      "shown_ids": [
+        823,
+        1260,
+        1059,
+        1257,
+        826
+      ],
+      "sources": {
+        "1": {
+          "id": 823,
+          "heading": "14.4.6. Increase max_wal_size",
+          "url": "https://www.postgresql.org/docs/17/populate.html"
+        },
+        "2": {
+          "id": 1260,
+          "heading": "28.5. WAL Configuration",
+          "url": "https://www.postgresql.org/docs/17/wal-configuration.html"
+        },
+        "3": {
+          "id": 1059,
+          "heading": "19.5.2. Checkpoints",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-wal.html"
+        },
+        "4": {
+          "id": 1257,
+          "heading": "28.5. WAL Configuration",
+          "url": "https://www.postgresql.org/docs/17/wal-configuration.html"
+        },
+        "5": {
+          "id": 826,
+          "heading": "14.4.9. Some Notes about pg_dump",
+          "url": "https://www.postgresql.org/docs/17/populate.html"
+        }
+      }
+    },
+    "g05": {
+      "answer": "pg_statio_all_sequences contains one row per sequence in the current database and shows I/O statistics for that sequence. Columns are: relid (sequence OID), schemaname (schema name), relname (sequence name), blks_read (number of disk blocks read) and blks_hit (number of buffer hits) [1]. It reports I/O statistics for each specific sequence [1][2].",
+      "answerable": true,
+      "citations": [
+        1,
+        2
+      ],
+      "cited_ids": [
+        783,
+        742
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "what's in pg_statio_all_sequences?",
+          "top1": 0.8368,
+          "ids": [
+            783,
+            742,
+            782,
+            781,
+            741
+          ]
+        }
+      ],
+      "shown_ids": [
+        783,
+        742,
+        782,
+        781,
+        741
+      ],
+      "sources": {
+        "1": {
+          "id": 783,
+          "heading": "27.2.23. pg_statio_all_sequences",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "2": {
+          "id": 742,
+          "heading": "27.2.2. Viewing Statistics",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "3": {
+          "id": 782,
+          "heading": "27.2.22. pg_statio_all_indexes",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "4": {
+          "id": 781,
+          "heading": "27.2.21. pg_statio_all_tables",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "5": {
+          "id": 741,
+          "heading": "27.2.2. Viewing Statistics",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        }
+      }
+    },
+    "g06": {
+      "answer": "pg_stat_progress_create_index shows one row per backend running CREATE INDEX or REINDEX and reports: backend PID, database OID/name, table OID (relid), index OID (index_relid; zero for non-concurrent CREATE), command type, current phase, locker wait counts and current locker PID (when applicable), block and tuple progress counters for the current phase, and partition counts/progress [1]. It also documents the possible phases (initializing; various concurrent-mode waiting/validation phases; building index) and which columns are meaningful in each phase (e.g. lockers_total/lockers_done/current_locker_pid for locker-wait phases; blocks_total/blocks_done and tuples_total/tuples_done for build/scan phases) [1][5]. See also that the view is one row per backend running those commands (summary listing) [2].",
+      "answerable": true,
+      "citations": [
+        1,
+        5,
+        2
+      ],
+      "cited_ids": [
+        834,
+        835,
+        740
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "What info does pg_stat_progress_create_index give me?",
+          "top1": 0.8329,
+          "ids": [
+            834,
+            740,
+            739,
+            832,
+            835
+          ]
+        }
+      ],
+      "shown_ids": [
+        834,
+        740,
+        739,
+        832,
+        835
+      ],
+      "sources": {
+        "1": {
+          "id": 834,
+          "heading": "27.4.4. CREATE INDEX Progress Reporting",
+          "url": "https://www.postgresql.org/docs/17/progress-reporting.html"
+        },
+        "2": {
+          "id": 740,
+          "heading": "27.2.2. Viewing Statistics",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "3": {
+          "id": 739,
+          "heading": "27.2.2. Viewing Statistics",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "4": {
+          "id": 832,
+          "heading": "27.4.2. CLUSTER Progress Reporting",
+          "url": "https://www.postgresql.org/docs/17/progress-reporting.html"
+        },
+        "5": {
+          "id": 835,
+          "heading": "27.4.4. CREATE INDEX Progress Reporting",
+          "url": "https://www.postgresql.org/docs/17/progress-reporting.html"
+        }
+      }
+    },
+    "g07": {
+      "answer": "Create it with CREATE INDEX using USING HASH. Example: CREATE INDEX name ON table USING HASH (column); Note: hash indexes store a 32-bit hash and are only useful for simple equality (=) comparisons [1][2].",
+      "answerable": true,
+      "citations": [
+        1,
+        2
+      ],
+      "cited_ids": [
+        664,
+        666
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "how do I make a Hash index in PostgreSQL?",
+          "top1": 0.8501,
+          "ids": [
+            664,
+            666,
+            893,
+            1213,
+            651
+          ]
+        }
+      ],
+      "shown_ids": [
+        664,
+        666,
+        893,
+        1213,
+        651
+      ],
+      "sources": {
+        "1": {
+          "id": 664,
+          "heading": "11.2. Index Types",
+          "url": "https://www.postgresql.org/docs/17/indexes-types.html"
+        },
+        "2": {
+          "id": 666,
+          "heading": "11.2.2. Hash",
+          "url": "https://www.postgresql.org/docs/17/indexes-types.html"
+        },
+        "3": {
+          "id": 893,
+          "heading": "8.17.9. Indexing",
+          "url": "https://www.postgresql.org/docs/17/rangetypes.html"
+        },
+        "4": {
+          "id": 1213,
+          "heading": "12.2.2. Creating Indexes",
+          "url": "https://www.postgresql.org/docs/17/textsearch-tables.html"
+        },
+        "5": {
+          "id": 651,
+          "heading": "11.1. Introduction",
+          "url": "https://www.postgresql.org/docs/17/indexes-intro.html"
+        }
+      }
+    },
+    "g08": {
+      "answer": "The default for maintenance_work_mem is 64 megabytes (64MB) [1].",
+      "answerable": true,
+      "citations": [
+        1
+      ],
+      "cited_ids": [
+        1031
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "what's the default setting for maintenance_work_mem?",
+          "top1": 0.8368,
+          "ids": [
+            1031,
+            1032,
+            1044,
+            1043,
+            826
+          ]
+        }
+      ],
+      "shown_ids": [
+        1031,
+        1032,
+        1044,
+        1043,
+        826
+      ],
+      "sources": {
+        "1": {
+          "id": 1031,
+          "heading": "19.4.1. Memory",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-resource.html"
+        },
+        "2": {
+          "id": 1032,
+          "heading": "19.4.1. Memory",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-resource.html"
+        },
+        "3": {
+          "id": 1044,
+          "heading": "19.4.6. Asynchronous Behavior",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-resource.html"
+        },
+        "4": {
+          "id": 1043,
+          "heading": "19.4.6. Asynchronous Behavior",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-resource.html"
+        },
+        "5": {
+          "id": 826,
+          "heading": "14.4.9. Some Notes about pg_dump",
+          "url": "https://www.postgresql.org/docs/17/populate.html"
+        }
+      }
+    },
+    "g09": {
+      "answer": "Run the provided SQL that lists operator classes and shows the is_default flag. For example: SELECT am.amname AS index_method, opc.opcname AS opclass_name, opc.opcintype::regtype AS indexed_type, opc.opcdefault AS is_default FROM pg_am am, pg_opclass opc WHERE opc.opcmethod = am.oid ORDER BY index_method, opclass_name; To see families too use the extended query with pg_opfamily, and psql provides \\dAc, \\dAf and \\dAo commands as convenient alternatives [1][2].",
+      "answerable": true,
+      "citations": [
+        1,
+        2
+      ],
+      "cited_ids": [
+        656,
+        655
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "how do I see all operator classes and which ones are default?",
+          "top1": 0.7785,
+          "ids": [
+            656,
+            655,
+            438,
+            143,
+            668
+          ]
+        }
+      ],
+      "shown_ids": [
+        656,
+        655,
+        438,
+        143,
+        668
+      ],
+      "sources": {
+        "1": {
+          "id": 656,
+          "heading": "11.10. Operator Classes and Operator Families",
+          "url": "https://www.postgresql.org/docs/17/indexes-opclass.html"
+        },
+        "2": {
+          "id": 655,
+          "heading": "11.10. Operator Classes and Operator Families",
+          "url": "https://www.postgresql.org/docs/17/indexes-opclass.html"
+        },
+        "3": {
+          "id": 438,
+          "heading": "9.27.3. Schema Visibility Inquiry Functions",
+          "url": "https://www.postgresql.org/docs/17/functions-info.html"
+        },
+        "4": {
+          "id": 143,
+          "heading": "8.14.4. jsonb Indexing",
+          "url": "https://www.postgresql.org/docs/17/datatype-json.html"
+        },
+        "5": {
+          "id": 668,
+          "heading": "11.2.4. SP-GiST",
+          "url": "https://www.postgresql.org/docs/17/indexes-types.html"
+        }
+      }
+    },
+    "g10": {
+      "answer": "The default for wal_writer_delay is 200 milliseconds (200ms) [1][2].",
+      "answerable": true,
+      "citations": [
+        1,
+        2
+      ],
+      "cited_ids": [
+        1056,
+        1055
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "what's the default for wal_writer_delay in PostgreSQL?",
+          "top1": 0.874,
+          "ids": [
+            1056,
+            1055,
+            1026,
+            1025,
+            1258
+          ]
+        }
+      ],
+      "shown_ids": [
+        1056,
+        1055,
+        1026,
+        1025,
+        1258
+      ],
+      "sources": {
+        "1": {
+          "id": 1056,
+          "heading": "19.5.1. Settings",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-wal.html"
+        },
+        "2": {
+          "id": 1055,
+          "heading": "19.5.1. Settings",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-wal.html"
+        },
+        "3": {
+          "id": 1026,
+          "heading": "19.6.3. Standby Servers",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-replication.html"
+        },
+        "4": {
+          "id": 1025,
+          "heading": "19.6.3. Standby Servers",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-replication.html"
+        },
+        "5": {
+          "id": 1258,
+          "heading": "28.5. WAL Configuration",
+          "url": "https://www.postgresql.org/docs/17/wal-configuration.html"
+        }
+      }
+    },
+    "g11": {
+      "answer": "Setting debug_discard_caches to 1 causes each system catalog cache entry to be invalidated at the first possible opportunity (effectively disabling catalog caching and making the server run extremely slowly). Higher values force recursive invalidation (even slower) and are intended to test caching logic; the default 0 uses normal caching. This option is only available when compiled with DISCARD_CACHES_ENABLED (e.g. --enable-cassert); in production builds it remains 0 and attempts to change it will error [1][2].",
+      "answerable": true,
+      "citations": [
+        1,
+        2
+      ],
+      "cited_ids": [
+        964,
+        965
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "What happens when I use debug_discard_caches?",
+          "top1": 0.7427,
+          "ids": [
+            964,
+            965,
+            786,
+            988,
+            1033
+          ]
+        }
+      ],
+      "shown_ids": [
+        964,
+        965,
+        786,
+        988,
+        1033
+      ],
+      "sources": {
+        "1": {
+          "id": 964,
+          "heading": "19.17. Developer Options",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-developer.html"
+        },
+        "2": {
+          "id": 965,
+          "heading": "19.17. Developer Options",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-developer.html"
+        },
+        "3": {
+          "id": 786,
+          "heading": "27.2.26. Statistics Functions",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "4": {
+          "id": 988,
+          "heading": "19.8.3. What to Log",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-logging.html"
+        },
+        "5": {
+          "id": 1033,
+          "heading": "19.4.1. Memory",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-resource.html"
+        }
+      }
+    },
+    "g13": {
+      "answer": "arg0 is the total number of buffers.",
+      "answerable": true,
+      "citations": [
+        1,
+        2
+      ],
+      "cited_ids": [
+        287,
+        288
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "What's arg0 in the buffer-sync-done probe?",
+          "top1": 0.8798,
+          "ids": [
+            287,
+            288,
+            295,
+            773,
+            294
+          ]
+        }
+      ],
+      "shown_ids": [
+        287,
+        288,
+        295,
+        773,
+        294
+      ],
+      "sources": {
+        "1": {
+          "id": 287,
+          "heading": "27.5.2. Built-in Probes",
+          "url": "https://www.postgresql.org/docs/17/dynamic-trace.html"
+        },
+        "2": {
+          "id": 288,
+          "heading": "27.5.2. Built-in Probes",
+          "url": "https://www.postgresql.org/docs/17/dynamic-trace.html"
+        },
+        "3": {
+          "id": 295,
+          "heading": "27.5.4. Defining New Probes",
+          "url": "https://www.postgresql.org/docs/17/dynamic-trace.html"
+        },
+        "4": {
+          "id": 773,
+          "heading": "27.2.16. pg_stat_wal",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "5": {
+          "id": 294,
+          "heading": "27.5.4. Defining New Probes",
+          "url": "https://www.postgresql.org/docs/17/dynamic-trace.html"
+        }
+      }
+    },
+    "g14": {
+      "answer": "Create a partial index with a WHERE predicate that excludes the common values so those rows are not indexed. For example, to skip an internal IP subnet: CREATE INDEX access_log_client_ip_ix ON access_log (client_ip) WHERE NOT (client_ip > inet '192.168.100.0' AND client_ip < inet '192.168.100.255'); This reduces index size and update cost; note the excluded common values must be predetermined and the index is usable only when the query\u2019s WHERE condition implies the index predicate [1][2].",
+      "answerable": true,
+      "citations": [
+        1,
+        2
+      ],
+      "cited_ids": [
+        659,
+        660
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "how to make a partial index to skip common values?",
+          "top1": 0.882,
+          "ids": [
+            659,
+            660,
+            650,
+            653,
+            641
+          ]
+        }
+      ],
+      "shown_ids": [
+        659,
+        660,
+        650,
+        653,
+        641
+      ],
+      "sources": {
+        "1": {
+          "id": 659,
+          "heading": "11.8. Partial Indexes",
+          "url": "https://www.postgresql.org/docs/17/indexes-partial.html"
+        },
+        "2": {
+          "id": 660,
+          "heading": "11.8. Partial Indexes",
+          "url": "https://www.postgresql.org/docs/17/indexes-partial.html"
+        },
+        "3": {
+          "id": 650,
+          "heading": "11.9. Index-Only Scans and Covering Indexes",
+          "url": "https://www.postgresql.org/docs/17/indexes-index-only-scans.html"
+        },
+        "4": {
+          "id": 653,
+          "heading": "11.3. Multicolumn Indexes",
+          "url": "https://www.postgresql.org/docs/17/indexes-multicolumn.html"
+        },
+        "5": {
+          "id": 641,
+          "heading": "11.5. Combining Multiple Indexes",
+          "url": "https://www.postgresql.org/docs/17/indexes-bitmap-scans.html"
+        }
+      }
+    },
+    "g15": {
+      "answer": "Because pg_stat_all_indexes.idx_scan counts every internal \u201cprimitive\u201d index scan, queries that search for multiple scalar values (e.g. IN/lists/arrays) can cause many primitive scans (one per value), so idx_scan rises much faster than the number of top-level executor index-scan nodes. Also bitmap index usage is counted differently (it increments idx_tup_read rather than heap fetch counters), so different scan types affect different stats columns [1][2].",
+      "answerable": true,
+      "citations": [
+        1,
+        2
+      ],
+      "cited_ids": [
+        780,
+        779
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "why is idx_scan count going up with lots of index scans?",
+          "top1": 0.8299,
+          "ids": [
+            780,
+            779,
+            1237,
+            777,
+            640
+          ]
+        }
+      ],
+      "shown_ids": [
+        780,
+        779,
+        1237,
+        777,
+        640
+      ],
+      "sources": {
+        "1": {
+          "id": 780,
+          "heading": "27.2.20. pg_stat_all_indexes",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "2": {
+          "id": 779,
+          "heading": "27.2.20. pg_stat_all_indexes",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "3": {
+          "id": 1237,
+          "heading": "14.1.1. EXPLAIN Basics",
+          "url": "https://www.postgresql.org/docs/17/using-explain.html"
+        },
+        "4": {
+          "id": 777,
+          "heading": "27.2.19. pg_stat_all_tables",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "5": {
+          "id": 640,
+          "heading": "11.5. Combining Multiple Indexes",
+          "url": "https://www.postgresql.org/docs/17/indexes-bitmap-scans.html"
+        }
+      }
+    },
+    "g16": {
+      "answer": "The function is restricted to superusers by default; other users can be allowed by granting them EXECUTE on the function [1][2].",
+      "answerable": true,
+      "citations": [
+        1,
+        2
+      ],
+      "cited_ids": [
+        786,
+        787
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "who has permission to run pg_stat_reset_shared?",
+          "top1": 0.7881,
+          "ids": [
+            786,
+            787,
+            737,
+            739,
+            431
+          ]
+        }
+      ],
+      "shown_ids": [
+        786,
+        787,
+        737,
+        739,
+        431
+      ],
+      "sources": {
+        "1": {
+          "id": 786,
+          "heading": "27.2.26. Statistics Functions",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "2": {
+          "id": 787,
+          "heading": "27.2.26. Statistics Functions",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "3": {
+          "id": 737,
+          "heading": "27.2.1. Statistics Collection Configuration",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "4": {
+          "id": 739,
+          "heading": "27.2.2. Viewing Statistics",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "5": {
+          "id": 431,
+          "heading": "9.27.1. Session Information Functions",
+          "url": "https://www.postgresql.org/docs/17/functions-info.html"
+        }
+      }
+    },
+    "g17": {
+      "answer": "The geqo_effort setting defaults to 5 [1].",
+      "answerable": true,
+      "citations": [
+        1
+      ],
+      "cited_ids": [
+        1010
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "what's the default setting for geqo_effort?",
+          "top1": 0.8711,
+          "ids": [
+            1010,
+            1011,
+            1013,
+            65,
+            299
+          ]
+        }
+      ],
+      "shown_ids": [
+        1010,
+        1011,
+        1013,
+        65,
+        299
+      ],
+      "sources": {
+        "1": {
+          "id": 1010,
+          "heading": "19.7.3. Genetic Query Optimizer",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-query.html"
+        },
+        "2": {
+          "id": 1011,
+          "heading": "19.7.3. Genetic Query Optimizer",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-query.html"
+        },
+        "3": {
+          "id": 1013,
+          "heading": "19.7.4. Other Planner Options",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-query.html"
+        },
+        "4": {
+          "id": 65,
+          "heading": "19.1.4. Parameter Interaction via the Shell",
+          "url": "https://www.postgresql.org/docs/17/config-setting.html"
+        },
+        "5": {
+          "id": 299,
+          "heading": "14.3. Controlling the Planner with Explicit JOIN Clauses",
+          "url": "https://www.postgresql.org/docs/17/explicit-joins.html"
+        }
+      }
+    },
+    "g18": {
+      "answer": "By default recovery_prefetch is set to try. That enables prefetching only on systems where the OS provides posix_fadvise; prefetching instructs the kernel to start reading disk blocks referenced in WAL that are not yet in PostgreSQL\u2019s buffer pool to reduce I/O wait during recovery [2][1].",
+      "answerable": true,
+      "citations": [
+        2,
+        1
+      ],
+      "cited_ids": [
+        1062,
+        1264
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "What does recovery_prefetch do by default?",
+          "top1": 0.8355,
+          "ids": [
+            1264,
+            1062,
+            787,
+            739,
+            762
+          ]
+        }
+      ],
+      "shown_ids": [
+        1264,
+        1062,
+        787,
+        739,
+        762
+      ],
+      "sources": {
+        "1": {
+          "id": 1264,
+          "heading": "28.5. WAL Configuration",
+          "url": "https://www.postgresql.org/docs/17/wal-configuration.html"
+        },
+        "2": {
+          "id": 1062,
+          "heading": "19.5.4. Recovery",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-wal.html"
+        },
+        "3": {
+          "id": 787,
+          "heading": "27.2.26. Statistics Functions",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "4": {
+          "id": 739,
+          "heading": "27.2.2. Viewing Statistics",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "5": {
+          "id": 762,
+          "heading": "27.2.7. pg_stat_recovery_prefetch",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        }
+      }
+    },
+    "g19": {
+      "answer": "Two ways shown in the docs:\n\n- Use the size functions: pg_relation_size, pg_indexes_size and pg_total_relation_size (optionally formatted with pg_size_pretty) to get index/table sizes; e.g. SELECT pg_indexes_size('your_table'); SELECT pg_relation_size('your_index'); SELECT pg_total_relation_size('your_table'); [3][4]\n\n- Inspect system catalogs: query pg_class/pg_index to see relpages for indexes, e.g.\nSELECT c2.relname, c2.relpages\nFROM pg_class c, pg_class c2, pg_index i\nWHERE c.relname = 'customer' AND c.oid = i.indrelid AND c2.oid = i.indexrelid\nORDER BY c2.relname; [1][2]\n\nEither approach is supported by the cited documentation passages.",
+      "answerable": true,
+      "citations": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "cited_ids": [
+        281,
+        280,
+        331,
+        332
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "how to check index sizes in PostgreSQL?",
+          "top1": 0.7896,
+          "ids": [
+            281,
+            280,
+            331,
+            332,
+            643
+          ]
+        }
+      ],
+      "shown_ids": [
+        281,
+        280,
+        331,
+        332,
+        643
+      ],
+      "sources": {
+        "1": {
+          "id": 281,
+          "heading": "27.6.1. Determining Disk Usage",
+          "url": "https://www.postgresql.org/docs/17/diskusage.html"
+        },
+        "2": {
+          "id": 280,
+          "heading": "27.6.1. Determining Disk Usage",
+          "url": "https://www.postgresql.org/docs/17/diskusage.html"
+        },
+        "3": {
+          "id": 331,
+          "heading": "9.28.7. Database Object Management Functions",
+          "url": "https://www.postgresql.org/docs/17/functions-admin.html"
+        },
+        "4": {
+          "id": 332,
+          "heading": "9.28.7. Database Object Management Functions",
+          "url": "https://www.postgresql.org/docs/17/functions-admin.html"
+        },
+        "5": {
+          "id": 643,
+          "heading": "11.12. Examining Index Usage",
+          "url": "https://www.postgresql.org/docs/17/indexes-examine.html"
+        }
+      }
+    },
+    "g21": {
+      "answer": "Columns that track I/O time (e.g. read_time, write_time, writeback_time) will be non\u2011zero only when track_io_timing is enabled; otherwise they show zero. Be careful when comparing those timing columns to the corresponding I/O counts if track_io_timing wasn\u2019t enabled for the entire period since the last stats reset [1][3].",
+      "answerable": true,
+      "citations": [
+        1,
+        3
+      ],
+      "cited_ids": [
+        770,
+        768
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "when do I see non-zero I/O time for columns?",
+          "top1": 0.7775,
+          "ids": [
+            770,
+            759,
+            768,
+            273,
+            742
+          ]
+        }
+      ],
+      "shown_ids": [
+        770,
+        759,
+        768,
+        273,
+        742
+      ],
+      "sources": {
+        "1": {
+          "id": 770,
+          "heading": "27.2.13. pg_stat_io",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "2": {
+          "id": 759,
+          "heading": "27.2.4. pg_stat_replication",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "3": {
+          "id": 768,
+          "heading": "27.2.13. pg_stat_io",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "4": {
+          "id": 273,
+          "heading": "5.6. System Columns",
+          "url": "https://www.postgresql.org/docs/17/ddl-system-columns.html"
+        },
+        "5": {
+          "id": 742,
+          "heading": "27.2.2. Viewing Statistics",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        }
+      }
+    },
+    "g22": {
+      "answer": "EXPLAIN ANALYZE reports the node\u2019s (actual) time as an average per execution; multiply that time by the node\u2019s loops value to get the total time spent in that node [1].",
+      "answerable": true,
+      "citations": [
+        1
+      ],
+      "cited_ids": [
+        1247
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "how to find total time for a node from EXPLAIN ANALYZE?",
+          "top1": 0.7672,
+          "ids": [
+            1247,
+            1252,
+            1253,
+            1234,
+            1254
+          ]
+        }
+      ],
+      "shown_ids": [
+        1247,
+        1252,
+        1253,
+        1234,
+        1254
+      ],
+      "sources": {
+        "1": {
+          "id": 1247,
+          "heading": "14.1.2. EXPLAIN ANALYZE",
+          "url": "https://www.postgresql.org/docs/17/using-explain.html"
+        },
+        "2": {
+          "id": 1252,
+          "heading": "14.1.2. EXPLAIN ANALYZE",
+          "url": "https://www.postgresql.org/docs/17/using-explain.html"
+        },
+        "3": {
+          "id": 1253,
+          "heading": "14.1.3. Caveats",
+          "url": "https://www.postgresql.org/docs/17/using-explain.html"
+        },
+        "4": {
+          "id": 1234,
+          "heading": "14.1.1. EXPLAIN Basics",
+          "url": "https://www.postgresql.org/docs/17/using-explain.html"
+        },
+        "5": {
+          "id": 1254,
+          "heading": "14.1.3. Caveats",
+          "url": "https://www.postgresql.org/docs/17/using-explain.html"
+        }
+      }
+    },
+    "g23": {
+      "answer": "According to the docs, you must set this parameter to on when running PostgreSQL on Windows (because all connections perform a configuration reload due to Windows\u2019 different process model). The docs also note turning it on may be appropriate when the passphrase is obtained from a file [1].",
+      "answerable": true,
+      "citations": [
+        1
+      ],
+      "cited_ids": [
+        962
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "When should I turn this setting on for Windows?",
+          "top1": 0.5204,
+          "ids": [
+            962,
+            969,
+            1053,
+            1054,
+            1134
+          ]
+        }
+      ],
+      "shown_ids": [
+        962,
+        969,
+        1053,
+        1054,
+        1134
+      ],
+      "sources": {
+        "1": {
+          "id": 962,
+          "heading": "19.3.4. SSL",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-connection.html"
+        },
+        "2": {
+          "id": 969,
+          "heading": "19.17. Developer Options",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-developer.html"
+        },
+        "3": {
+          "id": 1053,
+          "heading": "19.5.1. Settings",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-wal.html"
+        },
+        "4": {
+          "id": 1054,
+          "heading": "19.5.1. Settings",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-wal.html"
+        },
+        "5": {
+          "id": 1134,
+          "heading": "20.7. SSPI Authentication",
+          "url": "https://www.postgresql.org/docs/17/sspi-auth.html"
+        }
+      }
+    },
+    "g24": {
+      "answer": "pg_statio_all_tables shows one row per table with I/O statistics: relid, schemaname, relname, heap_blks_read, heap_blks_hit, idx_blks_read, idx_blks_hit, toast_blks_read, toast_blks_hit, tidx_blks_read, and tidx_blks_hit [1].",
+      "answerable": true,
+      "citations": [
+        1
+      ],
+      "cited_ids": [
+        781
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "what stats does pg_statio_all_tables give for tables?",
+          "top1": 0.8658,
+          "ids": [
+            781,
+            741,
+            777,
+            778,
+            740
+          ]
+        }
+      ],
+      "shown_ids": [
+        781,
+        741,
+        777,
+        778,
+        740
+      ],
+      "sources": {
+        "1": {
+          "id": 781,
+          "heading": "27.2.21. pg_statio_all_tables",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "2": {
+          "id": 741,
+          "heading": "27.2.2. Viewing Statistics",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "3": {
+          "id": 777,
+          "heading": "27.2.19. pg_stat_all_tables",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "4": {
+          "id": 778,
+          "heading": "27.2.19. pg_stat_all_tables",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "5": {
+          "id": 740,
+          "heading": "27.2.2. Viewing Statistics",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        }
+      }
+    },
+    "g25": {
+      "answer": "logging_collector enables a background process that captures server log messages sent to stderr and redirects them into log files, providing built-in log file creation and rotation (and avoiding lost/garbled output from multiple processes); it must be set at server start and is needed for csvlog/jsonlog output [1][2][3][4].",
+      "answerable": true,
+      "citations": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "cited_ids": [
+        980,
+        979,
+        687,
+        90
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "what's the purpose of logging_collector in PostgreSQL?",
+          "top1": 0.8077,
+          "ids": [
+            980,
+            979,
+            687,
+            90,
+            430
+          ]
+        }
+      ],
+      "shown_ids": [
+        980,
+        979,
+        687,
+        90,
+        430
+      ],
+      "sources": {
+        "1": {
+          "id": 980,
+          "heading": "19.8.1. Where to Log",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-logging.html"
+        },
+        "2": {
+          "id": 979,
+          "heading": "19.8.1. Where to Log",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-logging.html"
+        },
+        "3": {
+          "id": 687,
+          "heading": "24.3. Log File Maintenance",
+          "url": "https://www.postgresql.org/docs/17/logfile-maintenance.html"
+        },
+        "4": {
+          "id": 90,
+          "heading": "25.3.7. Tips and Examples",
+          "url": "https://www.postgresql.org/docs/17/continuous-archiving.html"
+        },
+        "5": {
+          "id": 430,
+          "heading": "9.27.1. Session Information Functions",
+          "url": "https://www.postgresql.org/docs/17/functions-info.html"
+        }
+      }
+    },
+    "g26": {
+      "answer": "Turning wal_log_hints on causes PostgreSQL to write the entire content of each disk page to WAL on the first modification of that page after a checkpoint, including non-critical hint-bit updates; this increases WAL volume and can be used to measure extra WAL if data checksums were enabled. If data checksums are enabled, hint-bit updates are already WAL-logged and this setting is ignored. The setting can only be set at server start and the default is off [1].",
+      "answerable": true,
+      "citations": [
+        1
+      ],
+      "cited_ids": [
+        1054
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "What happens if I turn on wal_log_hints?",
+          "top1": 0.8536,
+          "ids": [
+            1054,
+            968,
+            969,
+            1265,
+            632
+          ]
+        }
+      ],
+      "shown_ids": [
+        1054,
+        968,
+        969,
+        1265,
+        632
+      ],
+      "sources": {
+        "1": {
+          "id": 1054,
+          "heading": "19.5.1. Settings",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-wal.html"
+        },
+        "2": {
+          "id": 968,
+          "heading": "19.17. Developer Options",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-developer.html"
+        },
+        "3": {
+          "id": 969,
+          "heading": "19.17. Developer Options",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-developer.html"
+        },
+        "4": {
+          "id": 1265,
+          "heading": "28.6. WAL Internals",
+          "url": "https://www.postgresql.org/docs/17/wal-internals.html"
+        },
+        "5": {
+          "id": 632,
+          "heading": "26.4.3. Administrator's Overview",
+          "url": "https://www.postgresql.org/docs/17/hot-standby.html"
+        }
+      }
+    },
+    "g27": {
+      "answer": "To speed up pg_dump restores: increase maintenance_work_mem and max_wal_size during the restore; if using WAL archiving/replication, consider disabling them (archive_mode=off, wal_level=minimal, max_wal_senders=0) while loading and re-enable after taking a fresh base backup [1]. Use pg_dump/pg_restore parallel modes (-j) and experiment with job count for best throughput; parallel restores need custom/directory formats for dumping and can significantly improve speed [1][2]. Consider restoring the whole dump in a single transaction (-1/--single-transaction) and note COPY runs fastest with a single transaction and WAL archiving off; run ANALYZE after the restore [1][3][4]. For data-only dumps you may need to drop/recreate indexes and foreign keys yourself; still increase max_wal_size while loading data [1].",
+      "answerable": true,
+      "citations": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "cited_ids": [
+        826,
+        51,
+        49,
+        48
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "what can I do to speed up pg_dump restores?",
+          "top1": 0.8184,
+          "ids": [
+            826,
+            51,
+            49,
+            48,
+            90
+          ]
+        }
+      ],
+      "shown_ids": [
+        826,
+        51,
+        49,
+        48,
+        90
+      ],
+      "sources": {
+        "1": {
+          "id": 826,
+          "heading": "14.4.9. Some Notes about pg_dump",
+          "url": "https://www.postgresql.org/docs/17/populate.html"
+        },
+        "2": {
+          "id": 51,
+          "heading": "25.1.3. Handling Large Databases",
+          "url": "https://www.postgresql.org/docs/17/backup-dump.html"
+        },
+        "3": {
+          "id": 49,
+          "heading": "25.1.1. Restoring the Dump",
+          "url": "https://www.postgresql.org/docs/17/backup-dump.html"
+        },
+        "4": {
+          "id": 48,
+          "heading": "25.1.1. Restoring the Dump",
+          "url": "https://www.postgresql.org/docs/17/backup-dump.html"
+        },
+        "5": {
+          "id": 90,
+          "heading": "25.3.7. Tips and Examples",
+          "url": "https://www.postgresql.org/docs/17/continuous-archiving.html"
+        }
+      }
+    },
+    "g28": {
+      "answer": "You can specify sizes in kilobytes, megabytes and gigabytes (examples in the docs show kB, MB and GB). Some parameters treat unspecified units as kilobytes (e.g. autovacuum_work_mem, vacuum_buffer_usage_limit) and vacuum_buffer_usage_limit accepts values from 128 kB to 16 GB. Huge-page sizes are commonly 64kB, 2MB, 32MB, 1GB, 16MB, 16GB on various architectures and huge_page_size accepts 0 (use system default) or those concrete sizes on supported systems [2][3].",
+      "answerable": true,
+      "citations": [
+        2,
+        3
+      ],
+      "cited_ids": [
+        1029,
+        1032
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "what memory sizes can I use for PostgreSQL settings?",
+          "top1": 0.6589,
+          "ids": [
+            684,
+            1029,
+            1032,
+            677,
+            678
+          ]
+        }
+      ],
+      "shown_ids": [
+        684,
+        1029,
+        1032,
+        677,
+        678
+      ],
+      "sources": {
+        "1": {
+          "id": 684,
+          "heading": "18.4.5. Linux Huge Pages",
+          "url": "https://www.postgresql.org/docs/17/kernel-resources.html"
+        },
+        "2": {
+          "id": 1029,
+          "heading": "19.4.1. Memory",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-resource.html"
+        },
+        "3": {
+          "id": 1032,
+          "heading": "19.4.1. Memory",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-resource.html"
+        },
+        "4": {
+          "id": 677,
+          "heading": "18.4.1. Shared Memory and Semaphores",
+          "url": "https://www.postgresql.org/docs/17/kernel-resources.html"
+        },
+        "5": {
+          "id": 678,
+          "heading": "18.4.1. Shared Memory and Semaphores",
+          "url": "https://www.postgresql.org/docs/17/kernel-resources.html"
+        }
+      }
+    },
+    "g29": {
+      "answer": "AppendReady means the backend is waiting for the subplan nodes of an Append plan node to be ready [1][2].",
+      "answerable": true,
+      "citations": [
+        1,
+        2
+      ],
+      "cited_ids": [
+        750,
+        749
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "What is AppendReady waiting on?",
+          "top1": 0.8299,
+          "ids": [
+            750,
+            749,
+            835,
+            789,
+            800
+          ]
+        }
+      ],
+      "shown_ids": [
+        750,
+        749,
+        835,
+        789,
+        800
+      ],
+      "sources": {
+        "1": {
+          "id": 750,
+          "heading": "27.2.3. pg_stat_activity",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "2": {
+          "id": 749,
+          "heading": "27.2.3. pg_stat_activity",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "3": {
+          "id": 835,
+          "heading": "27.4.4. CREATE INDEX Progress Reporting",
+          "url": "https://www.postgresql.org/docs/17/progress-reporting.html"
+        },
+        "4": {
+          "id": 789,
+          "heading": "27.2.26. Statistics Functions",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "5": {
+          "id": 800,
+          "heading": "15.3.4. Parallel Append",
+          "url": "https://www.postgresql.org/docs/17/parallel-plans.html"
+        }
+      }
+    },
+    "g30": {
+      "answer": "No \u2014 autovacuum does not process partitioned parent tables because they don\u2019t store tuples, although autovacuum does process the individual partitions like normal tables. Consequently autovacuum will not run ANALYZE on the partitioned parent table [1][2][3].",
+      "answerable": true,
+      "citations": [
+        1,
+        2,
+        3
+      ],
+      "cited_ids": [
+        915,
+        914,
+        902
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "Does autovacuum work on partitioned tables?",
+          "top1": 0.9185,
+          "ids": [
+            915,
+            914,
+            902,
+            901,
+            928
+          ]
+        }
+      ],
+      "shown_ids": [
+        915,
+        914,
+        902,
+        901,
+        928
+      ],
+      "sources": {
+        "1": {
+          "id": 915,
+          "heading": "24.1.6. The Autovacuum Daemon",
+          "url": "https://www.postgresql.org/docs/17/routine-vacuuming.html"
+        },
+        "2": {
+          "id": 914,
+          "heading": "24.1.6. The Autovacuum Daemon",
+          "url": "https://www.postgresql.org/docs/17/routine-vacuuming.html"
+        },
+        "3": {
+          "id": 902,
+          "heading": "24.1.3. Updating Planner Statistics",
+          "url": "https://www.postgresql.org/docs/17/routine-vacuuming.html"
+        },
+        "4": {
+          "id": 901,
+          "heading": "24.1.3. Updating Planner Statistics",
+          "url": "https://www.postgresql.org/docs/17/routine-vacuuming.html"
+        },
+        "5": {
+          "id": 928,
+          "heading": "19.10. Automatic Vacuuming",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-autovacuum.html"
+        }
+      }
+    },
+    "g31": {
+      "answer": "LockFileCreateSync is \"waiting for data to reach durable storage while creating the data directory lock file.\" [1][2]",
+      "answerable": true,
+      "citations": [
+        1,
+        2
+      ],
+      "cited_ids": [
+        748,
+        747
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "What is LockFileCreateSync waiting on?",
+          "top1": 0.7525,
+          "ids": [
+            748,
+            747,
+            967,
+            835,
+            789
+          ]
+        }
+      ],
+      "shown_ids": [
+        748,
+        747,
+        967,
+        835,
+        789
+      ],
+      "sources": {
+        "1": {
+          "id": 748,
+          "heading": "27.2.3. pg_stat_activity",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "2": {
+          "id": 747,
+          "heading": "27.2.3. pg_stat_activity",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "3": {
+          "id": 967,
+          "heading": "19.17. Developer Options",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-developer.html"
+        },
+        "4": {
+          "id": 835,
+          "heading": "27.4.4. CREATE INDEX Progress Reporting",
+          "url": "https://www.postgresql.org/docs/17/progress-reporting.html"
+        },
+        "5": {
+          "id": 789,
+          "heading": "27.2.26. Statistics Functions",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        }
+      }
+    },
+    "g32": {
+      "answer": "idx_tup_read is the cumulative number of index entries returned by scans on that index (i.e., index entries retrieved from the index). It therefore counts index entries even when a bitmap scan supplies them, and may differ from idx_tup_fetch (which counts live heap rows fetched) [1].",
+      "answerable": true,
+      "citations": [
+        1
+      ],
+      "cited_ids": [
+        779
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "What does the idx_tup_read count show in pg_stat_all_indexes?",
+          "top1": 0.9025,
+          "ids": [
+            779,
+            777,
+            782,
+            780,
+            741
+          ]
+        }
+      ],
+      "shown_ids": [
+        779,
+        777,
+        782,
+        780,
+        741
+      ],
+      "sources": {
+        "1": {
+          "id": 779,
+          "heading": "27.2.20. pg_stat_all_indexes",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "2": {
+          "id": 777,
+          "heading": "27.2.19. pg_stat_all_tables",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "3": {
+          "id": 782,
+          "heading": "27.2.22. pg_statio_all_indexes",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "4": {
+          "id": 780,
+          "heading": "27.2.20. pg_stat_all_indexes",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "5": {
+          "id": 741,
+          "heading": "27.2.2. Viewing Statistics",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        }
+      }
+    },
+    "g33": {
+      "answer": "Autovacuum runs for a table when either: (1) the table\u2019s relfrozenxid is older than autovacuum_freeze_max_age (forced vacuum to prevent XID wraparound), or (2) the number of tuples obsoleted since the last VACUUM exceeds the vacuum threshold computed from autovacuum_vacuum_threshold plus autovacuum_vacuum_scale_factor * table_size (there are also separate insert thresholds/scale factors for insert-driven vacuums). Autovacuum requires track_counts to be enabled and the autovacuum launcher to be on (though wraparound-protection vacuums will run even if autovacuum is otherwise disabled). [5][3][4]",
+      "answerable": true,
+      "citations": [
+        5,
+        3,
+        4
+      ],
+      "cited_ids": [
+        913,
+        925,
+        926
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "what makes autovacuum kick in for a table?",
+          "top1": 0.6293,
+          "ids": [
+            908,
+            909,
+            925,
+            926,
+            913
+          ]
+        }
+      ],
+      "shown_ids": [
+        908,
+        909,
+        925,
+        926,
+        913
+      ],
+      "sources": {
+        "1": {
+          "id": 908,
+          "heading": "24.1.5. Preventing Transaction ID Wraparound Failures",
+          "url": "https://www.postgresql.org/docs/17/routine-vacuuming.html"
+        },
+        "2": {
+          "id": 909,
+          "heading": "24.1.5. Preventing Transaction ID Wraparound Failures",
+          "url": "https://www.postgresql.org/docs/17/routine-vacuuming.html"
+        },
+        "3": {
+          "id": 925,
+          "heading": "19.10. Automatic Vacuuming",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-autovacuum.html"
+        },
+        "4": {
+          "id": 926,
+          "heading": "19.10. Automatic Vacuuming",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-autovacuum.html"
+        },
+        "5": {
+          "id": 913,
+          "heading": "24.1.6. The Autovacuum Daemon",
+          "url": "https://www.postgresql.org/docs/17/routine-vacuuming.html"
+        }
+      }
+    },
+    "g34": {
+      "answer": "Only superusers and users holding the appropriate SET privilege can change session_preload_libraries [1].",
+      "answerable": true,
+      "citations": [
+        1
+      ],
+      "cited_ids": [
+        944
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "who has permission to change session_preload_libraries?",
+          "top1": 0.8029,
+          "ids": [
+            944,
+            943,
+            946,
+            964,
+            65
+          ]
+        }
+      ],
+      "shown_ids": [
+        944,
+        943,
+        946,
+        964,
+        65
+      ],
+      "sources": {
+        "1": {
+          "id": 944,
+          "heading": "19.11.3. Shared Library Preloading",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-client.html"
+        },
+        "2": {
+          "id": 943,
+          "heading": "19.11.3. Shared Library Preloading",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-client.html"
+        },
+        "3": {
+          "id": 946,
+          "heading": "19.11.4. Other Defaults",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-client.html"
+        },
+        "4": {
+          "id": 964,
+          "heading": "19.17. Developer Options",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-developer.html"
+        },
+        "5": {
+          "id": 65,
+          "heading": "19.1.4. Parameter Interaction via the Shell",
+          "url": "https://www.postgresql.org/docs/17/config-setting.html"
+        }
+      }
+    },
+    "g35": {
+      "answer": "A partial index is usable only when the planner can determine at planning time that the query\u2019s WHERE clause mathematically implies the index predicate; the predicate must either match exactly (or be a simple inequality implication that PostgreSQL recognizes, e.g. x < 1 implies x < 2). Parameterized clauses won\u2019t work because implication must be known at plan time. Example: a query with client_ip equal to a value covered by the partial-index predicate can use it, while a query with a client_ip excluded by the predicate cannot [1][2].",
+      "answerable": true,
+      "citations": [
+        1,
+        2
+      ],
+      "cited_ids": [
+        661,
+        659
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "when is a partial index actually used in a query?",
+          "top1": 0.856,
+          "ids": [
+            661,
+            659,
+            650,
+            649,
+            643
+          ]
+        }
+      ],
+      "shown_ids": [
+        661,
+        659,
+        650,
+        649,
+        643
+      ],
+      "sources": {
+        "1": {
+          "id": 661,
+          "heading": "11.8. Partial Indexes",
+          "url": "https://www.postgresql.org/docs/17/indexes-partial.html"
+        },
+        "2": {
+          "id": 659,
+          "heading": "11.8. Partial Indexes",
+          "url": "https://www.postgresql.org/docs/17/indexes-partial.html"
+        },
+        "3": {
+          "id": 650,
+          "heading": "11.9. Index-Only Scans and Covering Indexes",
+          "url": "https://www.postgresql.org/docs/17/indexes-index-only-scans.html"
+        },
+        "4": {
+          "id": 649,
+          "heading": "11.9. Index-Only Scans and Covering Indexes",
+          "url": "https://www.postgresql.org/docs/17/indexes-index-only-scans.html"
+        },
+        "5": {
+          "id": 643,
+          "heading": "11.12. Examining Index Usage",
+          "url": "https://www.postgresql.org/docs/17/indexes-examine.html"
+        }
+      }
+    },
+    "g36": {
+      "answer": "If transaction_timeout is shorter than statement_timeout, the longer timeout (statement_timeout) is ignored; the transaction_timeout will apply and can terminate the session/transaction earlier. [1]",
+      "answerable": true,
+      "citations": [
+        1
+      ],
+      "cited_ids": [
+        934
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "what if transaction_timeout is less than statement_timeout?",
+          "top1": 0.7542,
+          "ids": [
+            934,
+            933,
+            65,
+            629,
+            316
+          ]
+        }
+      ],
+      "shown_ids": [
+        934,
+        933,
+        65,
+        629,
+        316
+      ],
+      "sources": {
+        "1": {
+          "id": 934,
+          "heading": "19.11.1. Statement Behavior",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-client.html"
+        },
+        "2": {
+          "id": 933,
+          "heading": "19.11.1. Statement Behavior",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-client.html"
+        },
+        "3": {
+          "id": 65,
+          "heading": "19.1.4. Parameter Interaction via the Shell",
+          "url": "https://www.postgresql.org/docs/17/config-setting.html"
+        },
+        "4": {
+          "id": 629,
+          "heading": "26.4.2. Handling Query Conflicts",
+          "url": "https://www.postgresql.org/docs/17/hot-standby.html"
+        },
+        "5": {
+          "id": 316,
+          "heading": "9.28.2. Server Signaling Functions",
+          "url": "https://www.postgresql.org/docs/17/functions-admin.html"
+        }
+      }
+    },
+    "g37": {
+      "answer": "The default for autovacuum_analyze_threshold is 50 tuples [1].",
+      "answerable": true,
+      "citations": [
+        1
+      ],
+      "cited_ids": [
+        926
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "what's the default for autovacuum_analyze_threshold?",
+          "top1": 0.8793,
+          "ids": [
+            926,
+            925,
+            915,
+            913,
+            1032
+          ]
+        }
+      ],
+      "shown_ids": [
+        926,
+        925,
+        915,
+        913,
+        1032
+      ],
+      "sources": {
+        "1": {
+          "id": 926,
+          "heading": "19.10. Automatic Vacuuming",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-autovacuum.html"
+        },
+        "2": {
+          "id": 925,
+          "heading": "19.10. Automatic Vacuuming",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-autovacuum.html"
+        },
+        "3": {
+          "id": 915,
+          "heading": "24.1.6. The Autovacuum Daemon",
+          "url": "https://www.postgresql.org/docs/17/routine-vacuuming.html"
+        },
+        "4": {
+          "id": 913,
+          "heading": "24.1.6. The Autovacuum Daemon",
+          "url": "https://www.postgresql.org/docs/17/routine-vacuuming.html"
+        },
+        "5": {
+          "id": 1032,
+          "heading": "19.4.1. Memory",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-resource.html"
+        }
+      }
+    },
+    "g39": {
+      "answer": "The most popular city/state pair is Washington, DC (most common combination, ~0.3467% sample frequency). [1][2]",
+      "answerable": true,
+      "citations": [
+        1,
+        2
+      ],
+      "cited_ids": [
+        817,
+        816
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "What's the most popular city and state pair in stats?",
+          "top1": 0.7902,
+          "ids": [
+            817,
+            816,
+            1096,
+            811,
+            220
+          ]
+        }
+      ],
+      "shown_ids": [
+        817,
+        816,
+        1096,
+        811,
+        220
+      ],
+      "sources": {
+        "1": {
+          "id": 817,
+          "heading": "14.2.2. Extended Statistics",
+          "url": "https://www.postgresql.org/docs/17/planner-stats.html"
+        },
+        "2": {
+          "id": 816,
+          "heading": "14.2.2. Extended Statistics",
+          "url": "https://www.postgresql.org/docs/17/planner-stats.html"
+        },
+        "3": {
+          "id": 1096,
+          "heading": "4.2.11. Scalar Subqueries",
+          "url": "https://www.postgresql.org/docs/17/sql-expressions.html"
+        },
+        "4": {
+          "id": 811,
+          "heading": "14.2.1. Single-Column Statistics",
+          "url": "https://www.postgresql.org/docs/17/planner-stats.html"
+        },
+        "5": {
+          "id": 220,
+          "heading": "5.11. Inheritance",
+          "url": "https://www.postgresql.org/docs/17/ddl-inherit.html"
+        }
+      }
+    },
+    "g40": {
+      "answer": "Yes. On most platforms, arguments to a trace macro are evaluated whenever control passes through the macro even if no tracing is active, so putting expensive function calls there can slow execution; protect them with the corresponding ENABLED check (e.g. if (TRACE_..._ENABLED()) TRACE_...(expensive_call())); [1]",
+      "answerable": true,
+      "citations": [
+        1
+      ],
+      "cited_ids": [
+        295
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "will slow down my tracing if functions are expensive?",
+          "top1": 0.5371,
+          "ids": [
+            295,
+            804,
+            878,
+            1009,
+            289
+          ]
+        }
+      ],
+      "shown_ids": [
+        295,
+        804,
+        878,
+        1009,
+        289
+      ],
+      "sources": {
+        "1": {
+          "id": 295,
+          "heading": "27.5.4. Defining New Probes",
+          "url": "https://www.postgresql.org/docs/17/dynamic-trace.html"
+        },
+        "2": {
+          "id": 804,
+          "heading": "15.4.1. Parallel Labeling for Functions and Aggregates",
+          "url": "https://www.postgresql.org/docs/17/parallel-safety.html"
+        },
+        "3": {
+          "id": 878,
+          "heading": "7.8.3. Common Table Expression Materialization",
+          "url": "https://www.postgresql.org/docs/17/queries-with.html"
+        },
+        "4": {
+          "id": 1009,
+          "heading": "19.7.2. Planner Cost Constants",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-query.html"
+        },
+        "5": {
+          "id": 289,
+          "heading": "27.5.2. Built-in Probes",
+          "url": "https://www.postgresql.org/docs/17/dynamic-trace.html"
+        }
+      }
+    },
+    "g41": {
+      "answer": "log_min_duration_sample causes PostgreSQL to sample and log the durations of completed statements that ran at least the specified time. It produces the same kind of duration log entries as log_min_duration_statement but only for a subset of statements; the sampled fraction is controlled by log_statement_sample_rate. If specified without units the value is milliseconds; 0 samples all statement durations; -1 (default) disables sampling. This setting is overridden by log_min_duration_statement \u2014 statements exceeding that threshold are always logged and not subject to sampling [1].",
+      "answerable": true,
+      "citations": [
+        1
+      ],
+      "cited_ids": [
+        986
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "What does log_min_duration_sample actually do?",
+          "top1": 0.8201,
+          "ids": [
+            986,
+            985,
+            989,
+            988,
+            913
+          ]
+        }
+      ],
+      "shown_ids": [
+        986,
+        985,
+        989,
+        988,
+        913
+      ],
+      "sources": {
+        "1": {
+          "id": 986,
+          "heading": "19.8.2. When to Log",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-logging.html"
+        },
+        "2": {
+          "id": 985,
+          "heading": "19.8.2. When to Log",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-logging.html"
+        },
+        "3": {
+          "id": 989,
+          "heading": "19.8.3. What to Log",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-logging.html"
+        },
+        "4": {
+          "id": 988,
+          "heading": "19.8.3. What to Log",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-logging.html"
+        },
+        "5": {
+          "id": 913,
+          "heading": "24.1.6. The Autovacuum Daemon",
+          "url": "https://www.postgresql.org/docs/17/routine-vacuuming.html"
+        }
+      }
+    },
+    "g42": {
+      "answer": "If primary and standby system clocks are not synchronized, the standby\u2019s calculation of WAL-apply delay (it compares the WAL commit timestamp written on the primary with the standby\u2019s current time) can be wrong and cause recovery to apply records earlier than you expect; this can affect any configured apply delay and interacts with synchronous_commit=remote_apply (so commits may wait to be applied) and will increase WAL accumulation on the standby when delays are used. This is noted as not a major issue for typical clock deviations, but it can change when records are applied and increase pg_wal disk usage when long delays are configured [1].",
+      "answerable": true,
+      "citations": [
+        1
+      ],
+      "cited_ids": [
+        1026
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "what issues come up if primary and standby clocks are out of sync?",
+          "top1": 0.7505,
+          "ids": [
+            1026,
+            627,
+            634,
+            631,
+            1289
+          ]
+        }
+      ],
+      "shown_ids": [
+        1026,
+        627,
+        634,
+        631,
+        1289
+      ],
+      "sources": {
+        "1": {
+          "id": 1026,
+          "heading": "19.6.3. Standby Servers",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-replication.html"
+        },
+        "2": {
+          "id": 627,
+          "heading": "26.4.2. Handling Query Conflicts",
+          "url": "https://www.postgresql.org/docs/17/hot-standby.html"
+        },
+        "3": {
+          "id": 634,
+          "heading": "26.4.3. Administrator's Overview",
+          "url": "https://www.postgresql.org/docs/17/hot-standby.html"
+        },
+        "4": {
+          "id": 631,
+          "heading": "26.4.3. Administrator's Overview",
+          "url": "https://www.postgresql.org/docs/17/hot-standby.html"
+        },
+        "5": {
+          "id": 1289,
+          "heading": "26.2.8. Synchronous Replication",
+          "url": "https://www.postgresql.org/docs/17/warm-standby.html"
+        }
+      }
+    },
+    "g43": {
+      "answer": "You can/should automate: regular backups; VACUUM (and VACUUM FULL/CLUSTER when needed) and ANALYZE (statistics updates) \u2014 either via the autovacuum daemon or scheduled jobs; log-file rotation/archival and deletion (e.g. logrotate or logging-collector/syslog); monitoring/health checks (check_postgres); and, in special cases, index maintenance functions (usually autovacuum handles these) [1][3][5][4][2].",
+      "answerable": true,
+      "citations": [
+        1,
+        3,
+        5,
+        4,
+        2
+      ],
+      "cited_ids": [
+        732,
+        913,
+        900,
+        688,
+        335
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "What database maintenance tasks can I automate?",
+          "top1": 0.8495,
+          "ids": [
+            732,
+            335,
+            913,
+            688,
+            900
+          ]
+        }
+      ],
+      "shown_ids": [
+        732,
+        335,
+        913,
+        688,
+        900
+      ],
+      "sources": {
+        "1": {
+          "id": 732,
+          "heading": "Chapter 24. Routine Database Maintenance Tasks",
+          "url": "https://www.postgresql.org/docs/17/maintenance.html"
+        },
+        "2": {
+          "id": 335,
+          "heading": "9.28.8. Index Maintenance Functions",
+          "url": "https://www.postgresql.org/docs/17/functions-admin.html"
+        },
+        "3": {
+          "id": 913,
+          "heading": "24.1.6. The Autovacuum Daemon",
+          "url": "https://www.postgresql.org/docs/17/routine-vacuuming.html"
+        },
+        "4": {
+          "id": 688,
+          "heading": "24.3. Log File Maintenance",
+          "url": "https://www.postgresql.org/docs/17/logfile-maintenance.html"
+        },
+        "5": {
+          "id": 900,
+          "heading": "24.1.2. Recovering Disk Space",
+          "url": "https://www.postgresql.org/docs/17/routine-vacuuming.html"
+        }
+      }
+    },
+    "g44": {
+      "answer": "The local_preload_libraries setting can be set by any user. The documentation also notes libraries are restricted to the installation's plugins subdirectory and it's the DBA\u2019s responsibility to ensure only safe libraries are installed there [1].",
+      "answerable": true,
+      "citations": [
+        1
+      ],
+      "cited_ids": [
+        943
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "who can change local_preload_libraries setting?",
+          "top1": 0.7863,
+          "ids": [
+            943,
+            944,
+            946,
+            964,
+            1016
+          ]
+        }
+      ],
+      "shown_ids": [
+        943,
+        944,
+        946,
+        964,
+        1016
+      ],
+      "sources": {
+        "1": {
+          "id": 943,
+          "heading": "19.11.3. Shared Library Preloading",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-client.html"
+        },
+        "2": {
+          "id": 944,
+          "heading": "19.11.3. Shared Library Preloading",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-client.html"
+        },
+        "3": {
+          "id": 946,
+          "heading": "19.11.4. Other Defaults",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-client.html"
+        },
+        "4": {
+          "id": 964,
+          "heading": "19.17. Developer Options",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-developer.html"
+        },
+        "5": {
+          "id": 1016,
+          "heading": "19.6.1. Sending Servers",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-replication.html"
+        }
+      }
+    },
+    "g45": {
+      "answer": "By default, no: regular CREATE INDEX allows SELECTs but blocks writes (INSERT/UPDATE/DELETE) until the build finishes. You can allow writes by using CREATE INDEX CONCURRENTLY (with several caveats and extra internal phases during its build/validation) [1][2].",
+      "answerable": true,
+      "citations": [
+        1,
+        2
+      ],
+      "cited_ids": [
+        652,
+        835
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "Can I still write to the database while making an index?",
+          "top1": 0.5943,
+          "ids": [
+            652,
+            835,
+            686,
+            633,
+            826
+          ]
+        }
+      ],
+      "shown_ids": [
+        652,
+        835,
+        686,
+        633,
+        826
+      ],
+      "sources": {
+        "1": {
+          "id": 652,
+          "heading": "11.1. Introduction",
+          "url": "https://www.postgresql.org/docs/17/indexes-intro.html"
+        },
+        "2": {
+          "id": 835,
+          "heading": "27.4.4. CREATE INDEX Progress Reporting",
+          "url": "https://www.postgresql.org/docs/17/progress-reporting.html"
+        },
+        "3": {
+          "id": 686,
+          "heading": "13.7. Locking and Indexes",
+          "url": "https://www.postgresql.org/docs/17/locking-indexes.html"
+        },
+        "4": {
+          "id": 633,
+          "heading": "26.4.3. Administrator's Overview",
+          "url": "https://www.postgresql.org/docs/17/hot-standby.html"
+        },
+        "5": {
+          "id": 826,
+          "heading": "14.4.9. Some Notes about pg_dump",
+          "url": "https://www.postgresql.org/docs/17/populate.html"
+        }
+      }
+    },
+    "g46": {
+      "answer": "The default max_stack_depth is two megabytes (2MB). [1]",
+      "answerable": true,
+      "citations": [
+        1
+      ],
+      "cited_ids": [
+        1034
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "what's the default max_stack_depth value in PostgreSQL?",
+          "top1": 0.8519,
+          "ids": [
+            1034,
+            999,
+            1000,
+            1027,
+            1032
+          ]
+        }
+      ],
+      "shown_ids": [
+        1034,
+        999,
+        1000,
+        1027,
+        1032
+      ],
+      "sources": {
+        "1": {
+          "id": 1034,
+          "heading": "19.4.1. Memory",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-resource.html"
+        },
+        "2": {
+          "id": 999,
+          "heading": "19.15. Preset Options",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-preset.html"
+        },
+        "3": {
+          "id": 1000,
+          "heading": "19.15. Preset Options",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-preset.html"
+        },
+        "4": {
+          "id": 1027,
+          "heading": "19.6.4. Subscribers",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-replication.html"
+        },
+        "5": {
+          "id": 1032,
+          "heading": "19.4.1. Memory",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-resource.html"
+        }
+      }
+    },
+    "g47": {
+      "answer": "indexes_total is the total number of indexes that will be vacuumed or cleaned up; it is reported at the beginning of the vacuuming indexes phase or the cleaning up indexes phase [1][2].",
+      "answerable": true,
+      "citations": [
+        1,
+        2
+      ],
+      "cited_ids": [
+        837,
+        836
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "what's indexes_total in vacuum progress status?",
+          "top1": 0.8296,
+          "ids": [
+            837,
+            836,
+            832,
+            740,
+            777
+          ]
+        }
+      ],
+      "shown_ids": [
+        837,
+        836,
+        832,
+        740,
+        777
+      ],
+      "sources": {
+        "1": {
+          "id": 837,
+          "heading": "27.4.5. VACUUM Progress Reporting",
+          "url": "https://www.postgresql.org/docs/17/progress-reporting.html"
+        },
+        "2": {
+          "id": 836,
+          "heading": "27.4.5. VACUUM Progress Reporting",
+          "url": "https://www.postgresql.org/docs/17/progress-reporting.html"
+        },
+        "3": {
+          "id": 832,
+          "heading": "27.4.2. CLUSTER Progress Reporting",
+          "url": "https://www.postgresql.org/docs/17/progress-reporting.html"
+        },
+        "4": {
+          "id": 740,
+          "heading": "27.2.2. Viewing Statistics",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "5": {
+          "id": 777,
+          "heading": "27.2.19. pg_stat_all_tables",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        }
+      }
+    },
+    "g48": {
+      "answer": "Adding a WHERE clause is shown as a Filter on the scan node and reduces the planner\u2019s estimated output rows (rows emitted) because rows failing the condition are excluded, but the scan often still has to visit all table rows so the total cost may not drop and can even rise slightly to account for CPU work checking the condition; if the condition is selective enough the planner may instead choose an index/bitmap scan and then the estimated cost can fall because fewer pages must be read. [1][3]",
+      "answerable": true,
+      "citations": [
+        1,
+        3
+      ],
+      "cited_ids": [
+        1236,
+        1235
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "how does using WHERE change cost estimates in EXPLAIN?",
+          "top1": 0.8103,
+          "ids": [
+            1236,
+            1251,
+            1235,
+            1246,
+            1233
+          ]
+        }
+      ],
+      "shown_ids": [
+        1236,
+        1251,
+        1235,
+        1246,
+        1233
+      ],
+      "sources": {
+        "1": {
+          "id": 1236,
+          "heading": "14.1.1. EXPLAIN Basics",
+          "url": "https://www.postgresql.org/docs/17/using-explain.html"
+        },
+        "2": {
+          "id": 1251,
+          "heading": "14.1.2. EXPLAIN ANALYZE",
+          "url": "https://www.postgresql.org/docs/17/using-explain.html"
+        },
+        "3": {
+          "id": 1235,
+          "heading": "14.1.1. EXPLAIN Basics",
+          "url": "https://www.postgresql.org/docs/17/using-explain.html"
+        },
+        "4": {
+          "id": 1246,
+          "heading": "14.1.2. EXPLAIN ANALYZE",
+          "url": "https://www.postgresql.org/docs/17/using-explain.html"
+        },
+        "5": {
+          "id": 1233,
+          "heading": "14.1. Using EXPLAIN",
+          "url": "https://www.postgresql.org/docs/17/using-explain.html"
+        }
+      }
+    },
+    "g50": {
+      "answer": "If idle_session_timeout is set to zero (the default), the idle-session timeout is disabled \u2014 sessions that are idle (waiting for a client query) but not in a transaction will not be terminated. [1] It also notes that idle sessions without a transaction impose no large costs on the server and so this timeout is less necessary, and that enforcing it can be problematic for connection-pooling/middleware. [1]",
+      "answerable": true,
+      "citations": [
+        1
+      ],
+      "cited_ids": [
+        935
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "what does it mean if idle_session_timeout is zero?",
+          "top1": 0.8044,
+          "ids": [
+            935,
+            934,
+            955,
+            954,
+            775
+          ]
+        }
+      ],
+      "shown_ids": [
+        935,
+        934,
+        955,
+        954,
+        775
+      ],
+      "sources": {
+        "1": {
+          "id": 935,
+          "heading": "19.11.1. Statement Behavior",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-client.html"
+        },
+        "2": {
+          "id": 934,
+          "heading": "19.11.1. Statement Behavior",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-client.html"
+        },
+        "3": {
+          "id": 955,
+          "heading": "19.3.2. TCP Settings",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-connection.html"
+        },
+        "4": {
+          "id": 954,
+          "heading": "19.3.2. TCP Settings",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-connection.html"
+        },
+        "5": {
+          "id": 775,
+          "heading": "27.2.17. pg_stat_database",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        }
+      }
+    },
+    "g51": {
+      "answer": "The default for track_functions is none (function statistics tracking is disabled) [1].",
+      "answerable": true,
+      "citations": [
+        1
+      ],
+      "cited_ids": [
+        1048
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "What's the default setting for track_functions in PostgreSQL?",
+          "top1": 0.828,
+          "ids": [
+            1048,
+            737,
+            784,
+            1047,
+            964
+          ]
+        }
+      ],
+      "shown_ids": [
+        1048,
+        737,
+        784,
+        1047,
+        964
+      ],
+      "sources": {
+        "1": {
+          "id": 1048,
+          "heading": "19.9.1. Cumulative Query and Index Statistics",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-statistics.html"
+        },
+        "2": {
+          "id": 737,
+          "heading": "27.2.1. Statistics Collection Configuration",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "3": {
+          "id": 784,
+          "heading": "27.2.24. pg_stat_user_functions",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "4": {
+          "id": 1047,
+          "heading": "19.9.1. Cumulative Query and Index Statistics",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-statistics.html"
+        },
+        "5": {
+          "id": 964,
+          "heading": "19.17. Developer Options",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-developer.html"
+        }
+      }
+    },
+    "g52": {
+      "answer": "In pg_stat_archiver, archived_count is the number of WAL files that have been successfully archived [1].",
+      "answerable": true,
+      "citations": [
+        1
+      ],
+      "cited_ids": [
+        767
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "what's archived_count in pg_stat_archiver mean?",
+          "top1": 0.8616,
+          "ids": [
+            767,
+            740,
+            72,
+            786,
+            787
+          ]
+        }
+      ],
+      "shown_ids": [
+        767,
+        740,
+        72,
+        786,
+        787
+      ],
+      "sources": {
+        "1": {
+          "id": 767,
+          "heading": "27.2.12. pg_stat_archiver",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "2": {
+          "id": 740,
+          "heading": "27.2.2. Viewing Statistics",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "3": {
+          "id": 72,
+          "heading": "25.3.1. Setting Up WAL Archiving",
+          "url": "https://www.postgresql.org/docs/17/continuous-archiving.html"
+        },
+        "4": {
+          "id": 786,
+          "heading": "27.2.26. Statistics Functions",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "5": {
+          "id": 787,
+          "heading": "27.2.26. Statistics Functions",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        }
+      }
+    },
+    "g53": {
+      "answer": "PostgreSQL supports index-only scans for B-tree indexes (always), and for some operator classes of GiST and SP-GiST; other index types do not support index-only scans (for example, GIN cannot) [1][3].",
+      "answerable": true,
+      "citations": [
+        1,
+        3
+      ],
+      "cited_ids": [
+        646,
+        797
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "which index types allow for index-only scans?",
+          "top1": 0.893,
+          "ids": [
+            646,
+            650,
+            797,
+            779,
+            903
+          ]
+        }
+      ],
+      "shown_ids": [
+        646,
+        650,
+        797,
+        779,
+        903
+      ],
+      "sources": {
+        "1": {
+          "id": 646,
+          "heading": "11.9. Index-Only Scans and Covering Indexes",
+          "url": "https://www.postgresql.org/docs/17/indexes-index-only-scans.html"
+        },
+        "2": {
+          "id": 650,
+          "heading": "11.9. Index-Only Scans and Covering Indexes",
+          "url": "https://www.postgresql.org/docs/17/indexes-index-only-scans.html"
+        },
+        "3": {
+          "id": 797,
+          "heading": "15.3.1. Parallel Scans",
+          "url": "https://www.postgresql.org/docs/17/parallel-plans.html"
+        },
+        "4": {
+          "id": 779,
+          "heading": "27.2.20. pg_stat_all_indexes",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "5": {
+          "id": 903,
+          "heading": "24.1.4. Updating the Visibility Map",
+          "url": "https://www.postgresql.org/docs/17/routine-vacuuming.html"
+        }
+      }
+    },
+    "g54": {
+      "answer": "geqo_threshold is an integer run-time parameter that tells PostgreSQL to use the genetic query optimizer (GEQO) for planning queries that involve at least that many FROM items (a FULL OUTER JOIN counts as one). The default value is 12; for simpler queries the exhaustive-search planner is usually preferred, while GEQO is used to avoid excessive planning time for very large joins [1][4].",
+      "answerable": true,
+      "citations": [
+        1,
+        4
+      ],
+      "cited_ids": [
+        1010,
+        299
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "What's the geqo_threshold setting in PostgreSQL?",
+          "top1": 0.8303,
+          "ids": [
+            1010,
+            1013,
+            807,
+            299,
+            1011
+          ]
+        }
+      ],
+      "shown_ids": [
+        1010,
+        1013,
+        807,
+        299,
+        1011
+      ],
+      "sources": {
+        "1": {
+          "id": 1010,
+          "heading": "19.7.3. Genetic Query Optimizer",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-query.html"
+        },
+        "2": {
+          "id": 1013,
+          "heading": "19.7.4. Other Planner Options",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-query.html"
+        },
+        "3": {
+          "id": 807,
+          "heading": "50.5. Planner/Optimizer",
+          "url": "https://www.postgresql.org/docs/17/planner-optimizer.html"
+        },
+        "4": {
+          "id": 299,
+          "heading": "14.3. Controlling the Planner with Explicit JOIN Clauses",
+          "url": "https://www.postgresql.org/docs/17/explicit-joins.html"
+        },
+        "5": {
+          "id": 1011,
+          "heading": "19.7.3. Genetic Query Optimizer",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-query.html"
+        }
+      }
+    },
+    "g55": {
+      "answer": "EXPLAIN/EXPLAIN ANALYZE can report \u201codd\u201d row counts for merge joins because of executor measurement artifacts: a merge join may stop reading the remainder of one input once it determines there can be no more matches, so not all child rows are read (similar to LIMIT), and if the outer side has duplicate join-key values the inner side is backed up and rescanned for each duplicate; EXPLAIN ANALYZE counts those repeated emissions as extra actual rows for the inner child, so the inner node\u2019s reported actual rows can exceed the number of rows in the relation [1].",
+      "answerable": true,
+      "citations": [
+        1
+      ],
+      "cited_ids": [
+        1254
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "why does EXPLAIN show different row counts for merge joins?",
+          "top1": 0.8577,
+          "ids": [
+            1254,
+            1241,
+            1240,
+            1248,
+            1251
+          ]
+        }
+      ],
+      "shown_ids": [
+        1254,
+        1241,
+        1240,
+        1248,
+        1251
+      ],
+      "sources": {
+        "1": {
+          "id": 1254,
+          "heading": "14.1.3. Caveats",
+          "url": "https://www.postgresql.org/docs/17/using-explain.html"
+        },
+        "2": {
+          "id": 1241,
+          "heading": "14.1.1. EXPLAIN Basics",
+          "url": "https://www.postgresql.org/docs/17/using-explain.html"
+        },
+        "3": {
+          "id": 1240,
+          "heading": "14.1.1. EXPLAIN Basics",
+          "url": "https://www.postgresql.org/docs/17/using-explain.html"
+        },
+        "4": {
+          "id": 1248,
+          "heading": "14.1.2. EXPLAIN ANALYZE",
+          "url": "https://www.postgresql.org/docs/17/using-explain.html"
+        },
+        "5": {
+          "id": 1251,
+          "heading": "14.1.2. EXPLAIN ANALYZE",
+          "url": "https://www.postgresql.org/docs/17/using-explain.html"
+        }
+      }
+    },
+    "g56": {
+      "answer": "In pg_stat_slru, blks_hit is the number of times disk blocks were found already in the SLRU cache so a read from disk was not necessary (this counts hits in the SLRU only, not the OS file system cache) [1].",
+      "answerable": true,
+      "citations": [
+        1
+      ],
+      "cited_ids": [
+        785
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "what does blks_hit mean in pg_stat_slru?",
+          "top1": 0.8611,
+          "ids": [
+            785,
+            783,
+            774,
+            782,
+            781
+          ]
+        }
+      ],
+      "shown_ids": [
+        785,
+        783,
+        774,
+        782,
+        781
+      ],
+      "sources": {
+        "1": {
+          "id": 785,
+          "heading": "27.2.25. pg_stat_slru",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "2": {
+          "id": 783,
+          "heading": "27.2.23. pg_statio_all_sequences",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "3": {
+          "id": 774,
+          "heading": "27.2.17. pg_stat_database",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "4": {
+          "id": 782,
+          "heading": "27.2.22. pg_statio_all_indexes",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "5": {
+          "id": 781,
+          "heading": "27.2.21. pg_statio_all_tables",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        }
+      }
+    },
+    "g57": {
+      "answer": "Columns that report CREATE INDEX CONCURRENTLY progress include lockers_total, lockers_done, current_locker_pid (for the various \u201cwaiting\u201d phases), blocks_total and blocks_done (for index/table scanning and some build phases), tuples_total and tuples_done (when the access method provides tuple-level progress), and partitions_total and partitions_done (for partitioned indexes) [2][1].",
+      "answerable": true,
+      "citations": [
+        2,
+        1
+      ],
+      "cited_ids": [
+        834,
+        835
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "which columns show progress for CREATE INDEX CONCURRENTLY?",
+          "top1": 0.8565,
+          "ids": [
+            835,
+            834,
+            740,
+            739,
+            652
+          ]
+        }
+      ],
+      "shown_ids": [
+        835,
+        834,
+        740,
+        739,
+        652
+      ],
+      "sources": {
+        "1": {
+          "id": 835,
+          "heading": "27.4.4. CREATE INDEX Progress Reporting",
+          "url": "https://www.postgresql.org/docs/17/progress-reporting.html"
+        },
+        "2": {
+          "id": 834,
+          "heading": "27.4.4. CREATE INDEX Progress Reporting",
+          "url": "https://www.postgresql.org/docs/17/progress-reporting.html"
+        },
+        "3": {
+          "id": 740,
+          "heading": "27.2.2. Viewing Statistics",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "4": {
+          "id": 739,
+          "heading": "27.2.2. Viewing Statistics",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "5": {
+          "id": 652,
+          "heading": "11.1. Introduction",
+          "url": "https://www.postgresql.org/docs/17/indexes-intro.html"
+        }
+      }
+    },
+    "g58": {
+      "answer": "Using a single index is not a good choice when: \n- You try to replace many non-overlapping partial indexes with separate partial indexes per value (better to use one index on (category,data) or partitioning) [1][2].\n- For GiST indexes, if the first index column has only a few distinct values the index will be relatively ineffective, so a single multicolumn GiST may be a poor choice [5].\n- If queries need different collations for the same column, a single index can\u2019t serve them and additional indexes are required [4].\n- In general, multicolumn indexes should be used sparingly; more than three columns is unlikely to help unless usage is very specialized [5].",
+      "answerable": true,
+      "citations": [
+        1,
+        2,
+        5,
+        4
+      ],
+      "cited_ids": [
+        662,
+        663,
+        654,
+        642
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "When is using one index not a good choice?",
+          "top1": 0.6819,
+          "ids": [
+            662,
+            663,
+            644,
+            642,
+            654
+          ]
+        }
+      ],
+      "shown_ids": [
+        662,
+        663,
+        644,
+        642,
+        654
+      ],
+      "sources": {
+        "1": {
+          "id": 662,
+          "heading": "11.8. Partial Indexes",
+          "url": "https://www.postgresql.org/docs/17/indexes-partial.html"
+        },
+        "2": {
+          "id": 663,
+          "heading": "11.8. Partial Indexes",
+          "url": "https://www.postgresql.org/docs/17/indexes-partial.html"
+        },
+        "3": {
+          "id": 644,
+          "heading": "11.12. Examining Index Usage",
+          "url": "https://www.postgresql.org/docs/17/indexes-examine.html"
+        },
+        "4": {
+          "id": 642,
+          "heading": "11.11. Indexes and Collations",
+          "url": "https://www.postgresql.org/docs/17/indexes-collations.html"
+        },
+        "5": {
+          "id": 654,
+          "heading": "11.3. Multicolumn Indexes",
+          "url": "https://www.postgresql.org/docs/17/indexes-multicolumn.html"
+        }
+      }
+    },
+    "g59": {
+      "answer": "PostgreSQL\u2019s syslog_facility default is LOCAL0 [1].",
+      "answerable": true,
+      "citations": [
+        1
+      ],
+      "cited_ids": [
+        983
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "what syslog facility does PostgreSQL use by default for logging?",
+          "top1": 0.8387,
+          "ids": [
+            983,
+            979,
+            987,
+            989,
+            988
+          ]
+        }
+      ],
+      "shown_ids": [
+        983,
+        979,
+        987,
+        989,
+        988
+      ],
+      "sources": {
+        "1": {
+          "id": 983,
+          "heading": "19.8.1. Where to Log",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-logging.html"
+        },
+        "2": {
+          "id": 979,
+          "heading": "19.8.1. Where to Log",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-logging.html"
+        },
+        "3": {
+          "id": 987,
+          "heading": "19.8.2. When to Log",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-logging.html"
+        },
+        "4": {
+          "id": 989,
+          "heading": "19.8.3. What to Log",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-logging.html"
+        },
+        "5": {
+          "id": 988,
+          "heading": "19.8.3. What to Log",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-logging.html"
+        }
+      }
+    },
+    "g61": {
+      "answer": "The default for vacuum_freeze_min_age is 50 million transactions [1][2][5].",
+      "answerable": true,
+      "citations": [
+        1,
+        2,
+        5
+      ],
+      "cited_ids": [
+        936,
+        935,
+        905
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "what's the default for vacuum_freeze_min_age?",
+          "top1": 0.8636,
+          "ids": [
+            936,
+            935,
+            907,
+            926,
+            905
+          ]
+        }
+      ],
+      "shown_ids": [
+        936,
+        935,
+        907,
+        926,
+        905
+      ],
+      "sources": {
+        "1": {
+          "id": 936,
+          "heading": "19.11.1. Statement Behavior",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-client.html"
+        },
+        "2": {
+          "id": 935,
+          "heading": "19.11.1. Statement Behavior",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-client.html"
+        },
+        "3": {
+          "id": 907,
+          "heading": "24.1.5. Preventing Transaction ID Wraparound Failures",
+          "url": "https://www.postgresql.org/docs/17/routine-vacuuming.html"
+        },
+        "4": {
+          "id": 926,
+          "heading": "19.10. Automatic Vacuuming",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-autovacuum.html"
+        },
+        "5": {
+          "id": 905,
+          "heading": "24.1.5. Preventing Transaction ID Wraparound Failures",
+          "url": "https://www.postgresql.org/docs/17/routine-vacuuming.html"
+        }
+      }
+    },
+    "g62": {
+      "answer": "The advisory wait event means the backend is waiting to acquire an advisory user lock. [1][2]",
+      "answerable": true,
+      "citations": [
+        1,
+        2
+      ],
+      "cited_ids": [
+        752,
+        751
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "What does the 'advisory' wait event mean?",
+          "top1": 0.6432,
+          "ids": [
+            752,
+            751,
+            789,
+            341,
+            312
+          ]
+        }
+      ],
+      "shown_ids": [
+        752,
+        751,
+        789,
+        341,
+        312
+      ],
+      "sources": {
+        "1": {
+          "id": 752,
+          "heading": "27.2.3. pg_stat_activity",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "2": {
+          "id": 751,
+          "heading": "27.2.3. pg_stat_activity",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "3": {
+          "id": 789,
+          "heading": "27.2.26. Statistics Functions",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "4": {
+          "id": 341,
+          "heading": "9.28.10. Advisory Lock Functions",
+          "url": "https://www.postgresql.org/docs/17/functions-admin.html"
+        },
+        "5": {
+          "id": 312,
+          "heading": "13.3.5. Advisory Locks",
+          "url": "https://www.postgresql.org/docs/17/explicit-locking.html"
+        }
+      }
+    },
+    "g63": {
+      "answer": "Event triggers are enabled by default (event_triggers = true). [1]",
+      "answerable": true,
+      "citations": [
+        1
+      ],
+      "cited_ids": [
+        939
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "What do event triggers default to in PostgreSQL?",
+          "top1": 0.6877,
+          "ids": [
+            939,
+            406,
+            404,
+            405,
+            933
+          ]
+        }
+      ],
+      "shown_ids": [
+        939,
+        406,
+        404,
+        405,
+        933
+      ],
+      "sources": {
+        "1": {
+          "id": 939,
+          "heading": "19.11.1. Statement Behavior",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-client.html"
+        },
+        "2": {
+          "id": 406,
+          "heading": "9.30.3. Handling a Table Rewrite Event",
+          "url": "https://www.postgresql.org/docs/17/functions-event-triggers.html"
+        },
+        "3": {
+          "id": 404,
+          "heading": "9.30.1. Capturing Changes at Command End",
+          "url": "https://www.postgresql.org/docs/17/functions-event-triggers.html"
+        },
+        "4": {
+          "id": 405,
+          "heading": "9.30.2. Processing Objects Dropped by a DDL Command",
+          "url": "https://www.postgresql.org/docs/17/functions-event-triggers.html"
+        },
+        "5": {
+          "id": 933,
+          "heading": "19.11.1. Statement Behavior",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-client.html"
+        }
+      }
+    },
+    "g64": {
+      "answer": "The default transaction isolation level in PostgreSQL is Read Committed [1][2].",
+      "answerable": true,
+      "citations": [
+        1,
+        2
+      ],
+      "cited_ids": [
+        1218,
+        932
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "what's the default isolation level for transactions in PostgreSQL?",
+          "top1": 0.9309,
+          "ids": [
+            1218,
+            932,
+            1216,
+            2,
+            933
+          ]
+        }
+      ],
+      "shown_ids": [
+        1218,
+        932,
+        1216,
+        2,
+        933
+      ],
+      "sources": {
+        "1": {
+          "id": 1218,
+          "heading": "13.2.1. Read Committed Isolation Level",
+          "url": "https://www.postgresql.org/docs/17/transaction-iso.html"
+        },
+        "2": {
+          "id": 932,
+          "heading": "19.11.1. Statement Behavior",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-client.html"
+        },
+        "3": {
+          "id": 1216,
+          "heading": "13.2. Transaction Isolation",
+          "url": "https://www.postgresql.org/docs/17/transaction-iso.html"
+        },
+        "4": {
+          "id": 2,
+          "heading": "13.4.1. Enforcing Consistency with Serializable Transactions",
+          "url": "https://www.postgresql.org/docs/17/applevel-consistency.html"
+        },
+        "5": {
+          "id": 933,
+          "heading": "19.11.1. Statement Behavior",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-client.html"
+        }
+      }
+    },
+    "g65": {
+      "answer": "pg_stat_database_conflicts shows, per database on a standby, counts of queries canceled due to recovery conflicts: dropped tablespaces (confl_tablespace), lock timeouts (confl_lock), old snapshots (confl_snapshot), pinned buffers (confl_bufferpin), deadlocks (confl_deadlock), and canceled uses of logical slots due to old snapshots or too-low wal_level on the primary (confl_active_logicalslot) [1]. It only contains info for standby servers (conflicts don\u2019t occur on primaries) [1][4].",
+      "answerable": true,
+      "citations": [
+        1,
+        4
+      ],
+      "cited_ids": [
+        776,
+        630
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "What conflicts does pg_stat_database_conflicts show?",
+          "top1": 0.9021,
+          "ids": [
+            776,
+            774,
+            740,
+            630,
+            754
+          ]
+        }
+      ],
+      "shown_ids": [
+        776,
+        774,
+        740,
+        630,
+        754
+      ],
+      "sources": {
+        "1": {
+          "id": 776,
+          "heading": "27.2.18. pg_stat_database_conflicts",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "2": {
+          "id": 774,
+          "heading": "27.2.17. pg_stat_database",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "3": {
+          "id": 740,
+          "heading": "27.2.2. Viewing Statistics",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "4": {
+          "id": 630,
+          "heading": "26.4.2. Handling Query Conflicts",
+          "url": "https://www.postgresql.org/docs/17/hot-standby.html"
+        },
+        "5": {
+          "id": 754,
+          "heading": "27.2.3. pg_stat_activity",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        }
+      }
+    },
+    "g66": {
+      "answer": "Turn off autocommit by wrapping your multiple INSERTs in a single transaction: issue BEGIN at the start and COMMIT at the end (or use your client library\u2019s transaction control) so all rows are committed once [1]. Alternatively, use COPY which is a single command and doesn\u2019t require disabling autocommit [2].",
+      "answerable": true,
+      "citations": [
+        1,
+        2
+      ],
+      "cited_ids": [
+        818,
+        819
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "how to turn off autocommit for bulk inserts in PostgreSQL?",
+          "top1": 0.8801,
+          "ids": [
+            818,
+            819,
+            1051,
+            1052,
+            716
+          ]
+        }
+      ],
+      "shown_ids": [
+        818,
+        819,
+        1051,
+        1052,
+        716
+      ],
+      "sources": {
+        "1": {
+          "id": 818,
+          "heading": "14.4.1. Disable Autocommit",
+          "url": "https://www.postgresql.org/docs/17/populate.html"
+        },
+        "2": {
+          "id": 819,
+          "heading": "14.4.2. Use COPY",
+          "url": "https://www.postgresql.org/docs/17/populate.html"
+        },
+        "3": {
+          "id": 1051,
+          "heading": "19.5.1. Settings",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-wal.html"
+        },
+        "4": {
+          "id": 1052,
+          "heading": "19.5.1. Settings",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-wal.html"
+        },
+        "5": {
+          "id": 716,
+          "heading": "29.4.7. Examples",
+          "url": "https://www.postgresql.org/docs/17/logical-replication-row-filter.html"
+        }
+      }
+    },
+    "g67": {
+      "answer": "EXPLAIN ANALYZE shows both the planner\u2019s estimated row counts (the \"rows=\" values) and the true row counts observed during execution (the \"actual ... rows=\" values) for each plan node, so you can compare estimates to reality. When a node is executed multiple times (e.g. inner index scan of a nested loop) the output shows a loops count and the actual time/rows are per-execution averages (multiply by loops to get totals). Be aware of caveats: LIMIT, merge joins, and other behaviors can make actual counts differ from what estimates imply (e.g. nodes stopped early, inner-child rows counted multiple times, BitmapAnd/BitmapOr report zero) [1][3][2].",
+      "answerable": true,
+      "citations": [
+        1,
+        3,
+        2
+      ],
+      "cited_ids": [
+        1246,
+        1247,
+        1254
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "What does EXPLAIN ANALYZE tell me about row counts?",
+          "top1": 0.8384,
+          "ids": [
+            1246,
+            1254,
+            1247,
+            1233,
+            1253
+          ]
+        }
+      ],
+      "shown_ids": [
+        1246,
+        1254,
+        1247,
+        1233,
+        1253
+      ],
+      "sources": {
+        "1": {
+          "id": 1246,
+          "heading": "14.1.2. EXPLAIN ANALYZE",
+          "url": "https://www.postgresql.org/docs/17/using-explain.html"
+        },
+        "2": {
+          "id": 1254,
+          "heading": "14.1.3. Caveats",
+          "url": "https://www.postgresql.org/docs/17/using-explain.html"
+        },
+        "3": {
+          "id": 1247,
+          "heading": "14.1.2. EXPLAIN ANALYZE",
+          "url": "https://www.postgresql.org/docs/17/using-explain.html"
+        },
+        "4": {
+          "id": 1233,
+          "heading": "14.1. Using EXPLAIN",
+          "url": "https://www.postgresql.org/docs/17/using-explain.html"
+        },
+        "5": {
+          "id": 1253,
+          "heading": "14.1.3. Caveats",
+          "url": "https://www.postgresql.org/docs/17/using-explain.html"
+        }
+      }
+    },
+    "g68": {
+      "answer": "Use index-only scans when: 1) the index type supports index-only scans (B-tree always; GiST/SP\u2011GiST only for some operator classes; GIN doesn\u2019t) [1]; 2) the query only needs columns that are stored in the index (you can use INCLUDE to make a \u201ccovering index\u201d) [1][2]; and 3) a substantial fraction of heap pages are marked all-visible in the visibility map (otherwise heap checks are required and you gain no benefit) [2][3]. In practice, create a covering index for frequently run queries that retrieve stable (seldom\u2011changing) rows so the visibility map bits will be set and index-only scans will pay off [2][3].",
+      "answerable": true,
+      "citations": [
+        1,
+        2,
+        3
+      ],
+      "cited_ids": [
+        646,
+        647,
+        903
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "when should I use index-only scans in PostgreSQL?",
+          "top1": 0.9021,
+          "ids": [
+            646,
+            647,
+            903,
+            779,
+            651
+          ]
+        }
+      ],
+      "shown_ids": [
+        646,
+        647,
+        903,
+        779,
+        651
+      ],
+      "sources": {
+        "1": {
+          "id": 646,
+          "heading": "11.9. Index-Only Scans and Covering Indexes",
+          "url": "https://www.postgresql.org/docs/17/indexes-index-only-scans.html"
+        },
+        "2": {
+          "id": 647,
+          "heading": "11.9. Index-Only Scans and Covering Indexes",
+          "url": "https://www.postgresql.org/docs/17/indexes-index-only-scans.html"
+        },
+        "3": {
+          "id": 903,
+          "heading": "24.1.4. Updating the Visibility Map",
+          "url": "https://www.postgresql.org/docs/17/routine-vacuuming.html"
+        },
+        "4": {
+          "id": 779,
+          "heading": "27.2.20. pg_stat_all_indexes",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "5": {
+          "id": 651,
+          "heading": "11.1. Introduction",
+          "url": "https://www.postgresql.org/docs/17/indexes-intro.html"
+        }
+      }
+    },
+    "g69": {
+      "answer": "If recovery_end_command returns a nonzero exit status, PostgreSQL will write a warning to the log and proceed to start up anyway. However, if the command was terminated by a signal or failed due to a shell error (for example \u201ccommand not found\u201d), recovery will abort and the server will not start up [1][2].",
+      "answerable": true,
+      "citations": [
+        1,
+        2
+      ],
+      "cited_ids": [
+        1065,
+        1064
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "what does it mean if recovery_end_command doesn't work?",
+          "top1": 0.8016,
+          "ids": [
+            1065,
+            1064,
+            751,
+            86,
+            633
+          ]
+        }
+      ],
+      "shown_ids": [
+        1065,
+        1064,
+        751,
+        86,
+        633
+      ],
+      "sources": {
+        "1": {
+          "id": 1065,
+          "heading": "19.5.5. Archive Recovery",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-wal.html"
+        },
+        "2": {
+          "id": 1064,
+          "heading": "19.5.5. Archive Recovery",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-wal.html"
+        },
+        "3": {
+          "id": 751,
+          "heading": "27.2.3. pg_stat_activity",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "4": {
+          "id": 86,
+          "heading": "25.3.5. Recovering Using a Continuous Archive Backup",
+          "url": "https://www.postgresql.org/docs/17/continuous-archiving.html"
+        },
+        "5": {
+          "id": 633,
+          "heading": "26.4.3. Administrator's Overview",
+          "url": "https://www.postgresql.org/docs/17/hot-standby.html"
+        }
+      }
+    },
+    "g70": {
+      "answer": "'WALInitSync' is a wait event meaning the backend is waiting for a newly initialized WAL (Write-Ahead Log) file to reach durable storage (i.e., to be synced to disk) [2].",
+      "answerable": true,
+      "citations": [
+        2
+      ],
+      "cited_ids": [
+        749
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "What does 'WALInitSync' mean in PostgreSQL?",
+          "top1": 0.5111,
+          "ids": [
+            973,
+            749,
+            1268,
+            1264,
+            773
+          ]
+        }
+      ],
+      "shown_ids": [
+        973,
+        749,
+        1268,
+        1264,
+        773
+      ],
+      "sources": {
+        "1": {
+          "id": 973,
+          "heading": "19.14. Error Handling",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-error-handling.html"
+        },
+        "2": {
+          "id": 749,
+          "heading": "27.2.3. pg_stat_activity",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "3": {
+          "id": 1268,
+          "heading": "28.1. Reliability",
+          "url": "https://www.postgresql.org/docs/17/wal-reliability.html"
+        },
+        "4": {
+          "id": 1264,
+          "heading": "28.5. WAL Configuration",
+          "url": "https://www.postgresql.org/docs/17/wal-configuration.html"
+        },
+        "5": {
+          "id": 773,
+          "heading": "27.2.16. pg_stat_wal",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        }
+      }
+    },
+    "g71": {
+      "answer": "The default for wal_receiver_timeout is 60 seconds [1].",
+      "answerable": true,
+      "citations": [
+        1
+      ],
+      "cited_ids": [
+        1025
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "what's wal_receiver_timeout set to by default?",
+          "top1": 0.8181,
+          "ids": [
+            1025,
+            1024,
+            1018,
+            1055,
+            696
+          ]
+        }
+      ],
+      "shown_ids": [
+        1025,
+        1024,
+        1018,
+        1055,
+        696
+      ],
+      "sources": {
+        "1": {
+          "id": 1025,
+          "heading": "19.6.3. Standby Servers",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-replication.html"
+        },
+        "2": {
+          "id": 1024,
+          "heading": "19.6.3. Standby Servers",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-replication.html"
+        },
+        "3": {
+          "id": 1018,
+          "heading": "19.6.1. Sending Servers",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-replication.html"
+        },
+        "4": {
+          "id": 1055,
+          "heading": "19.5.1. Settings",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-wal.html"
+        },
+        "5": {
+          "id": 696,
+          "heading": "29.11.2. Subscribers",
+          "url": "https://www.postgresql.org/docs/17/logical-replication-config.html"
+        }
+      }
+    },
+    "g72": {
+      "answer": "The default log_transaction_sample_rate is 0, meaning no additional transactions are sampled/logged (setting to 1 would log all transactions). [2]",
+      "answerable": true,
+      "citations": [
+        2
+      ],
+      "cited_ids": [
+        986
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "what's the default rate for logging transactions?",
+          "top1": 0.6475,
+          "ids": [
+            987,
+            986,
+            1055,
+            989,
+            982
+          ]
+        }
+      ],
+      "shown_ids": [
+        987,
+        986,
+        1055,
+        989,
+        982
+      ],
+      "sources": {
+        "1": {
+          "id": 987,
+          "heading": "19.8.2. When to Log",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-logging.html"
+        },
+        "2": {
+          "id": 986,
+          "heading": "19.8.2. When to Log",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-logging.html"
+        },
+        "3": {
+          "id": 1055,
+          "heading": "19.5.1. Settings",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-wal.html"
+        },
+        "4": {
+          "id": 989,
+          "heading": "19.8.3. What to Log",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-logging.html"
+        },
+        "5": {
+          "id": 982,
+          "heading": "19.8.1. Where to Log",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-logging.html"
+        }
+      }
+    },
+    "g73": {
+      "answer": "Create indexes after bulk-loading for best speed: create table, COPY the data, then CREATE INDEX, because building an index on existing data is faster than updating it row-by-row as you load [1]. For adding large amounts to an existing table, dropping indexes before the load and recreating them afterward can help, though that removes the index during the load [1]. If you will recreate indexes afterward, increasing maintenance_work_mem speeds CREATE INDEX [3]; pg_dump/pg_restore already load data before creating indexes in a full dump and recommends similar steps (and running ANALYZE after) [4][2].",
+      "answerable": true,
+      "citations": [
+        1,
+        3,
+        4,
+        2
+      ],
+      "cited_ids": [
+        820,
+        822,
+        826,
+        827
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "should I create indexes before or after loading data for better speed?",
+          "top1": 0.7947,
+          "ids": [
+            820,
+            827,
+            822,
+            826,
+            821
+          ]
+        }
+      ],
+      "shown_ids": [
+        820,
+        827,
+        822,
+        826,
+        821
+      ],
+      "sources": {
+        "1": {
+          "id": 820,
+          "heading": "14.4.3. Remove Indexes",
+          "url": "https://www.postgresql.org/docs/17/populate.html"
+        },
+        "2": {
+          "id": 827,
+          "heading": "14.4.9. Some Notes about pg_dump",
+          "url": "https://www.postgresql.org/docs/17/populate.html"
+        },
+        "3": {
+          "id": 822,
+          "heading": "14.4.5. Increase maintenance_work_mem",
+          "url": "https://www.postgresql.org/docs/17/populate.html"
+        },
+        "4": {
+          "id": 826,
+          "heading": "14.4.9. Some Notes about pg_dump",
+          "url": "https://www.postgresql.org/docs/17/populate.html"
+        },
+        "5": {
+          "id": 821,
+          "heading": "14.4.4. Remove Foreign Key Constraints",
+          "url": "https://www.postgresql.org/docs/17/populate.html"
+        }
+      }
+    },
+    "g74": {
+      "answer": "The default max_files_per_process is 1000 (one thousand) files per server subprocess; this parameter can only be set at server start [4].",
+      "answerable": true,
+      "citations": [
+        4
+      ],
+      "cited_ids": [
+        1037
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "what's the default for max files per process in PostgreSQL?",
+          "top1": 0.8243,
+          "ids": [
+            681,
+            680,
+            1036,
+            1037,
+            673
+          ]
+        }
+      ],
+      "shown_ids": [
+        681,
+        680,
+        1036,
+        1037,
+        673
+      ],
+      "sources": {
+        "1": {
+          "id": 681,
+          "heading": "18.4.3. Resource Limits",
+          "url": "https://www.postgresql.org/docs/17/kernel-resources.html"
+        },
+        "2": {
+          "id": 680,
+          "heading": "18.4.3. Resource Limits",
+          "url": "https://www.postgresql.org/docs/17/kernel-resources.html"
+        },
+        "3": {
+          "id": 1036,
+          "heading": "19.4.2. Disk",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-resource.html"
+        },
+        "4": {
+          "id": 1037,
+          "heading": "19.4.3. Kernel Resource Usage",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-resource.html"
+        },
+        "5": {
+          "id": 673,
+          "heading": "18.4.1. Shared Memory and Semaphores",
+          "url": "https://www.postgresql.org/docs/17/kernel-resources.html"
+        }
+      }
+    },
+    "g75": {
+      "answer": "vacuum_freeze_min_age sets the cutoff age (in transactions) that VACUUM uses to decide whether to freeze pages containing older XIDs; default 50 million. Increasing it can avoid freezing rows that will soon be modified, decreasing it increases how long between required vacuums; VACUUM\u2019s effective value is limited to half of autovacuum_freeze_max_age. Also, lowering it may cause useless work by freezing rows that change soon thereafter [2][1][4].",
+      "answerable": true,
+      "citations": [
+        2,
+        1,
+        4
+      ],
+      "cited_ids": [
+        936,
+        905,
+        907
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "What does vacuum_freeze_min_age do in PostgreSQL?",
+          "top1": 0.8859,
+          "ids": [
+            905,
+            936,
+            935,
+            907,
+            914
+          ]
+        }
+      ],
+      "shown_ids": [
+        905,
+        936,
+        935,
+        907,
+        914
+      ],
+      "sources": {
+        "1": {
+          "id": 905,
+          "heading": "24.1.5. Preventing Transaction ID Wraparound Failures",
+          "url": "https://www.postgresql.org/docs/17/routine-vacuuming.html"
+        },
+        "2": {
+          "id": 936,
+          "heading": "19.11.1. Statement Behavior",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-client.html"
+        },
+        "3": {
+          "id": 935,
+          "heading": "19.11.1. Statement Behavior",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-client.html"
+        },
+        "4": {
+          "id": 907,
+          "heading": "24.1.5. Preventing Transaction ID Wraparound Failures",
+          "url": "https://www.postgresql.org/docs/17/routine-vacuuming.html"
+        },
+        "5": {
+          "id": 914,
+          "heading": "24.1.6. The Autovacuum Daemon",
+          "url": "https://www.postgresql.org/docs/17/routine-vacuuming.html"
+        }
+      }
+    },
+    "g76": {
+      "answer": "Yes. PostgreSQL can combine multiple index scans for OR (and AND) conditions: it scans each needed index, builds bitmaps of matching row locations, then ORs/ANDs the bitmaps and visits the table rows (example: WHERE x = 42 OR x = 47 ... can be broken into separate index scans) [1].",
+      "answerable": true,
+      "citations": [
+        1
+      ],
+      "cited_ids": [
+        640
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "Can I use multiple indexes for OR queries?",
+          "top1": 0.8005,
+          "ids": [
+            640,
+            641,
+            642,
+            654,
+            653
+          ]
+        }
+      ],
+      "shown_ids": [
+        640,
+        641,
+        642,
+        654,
+        653
+      ],
+      "sources": {
+        "1": {
+          "id": 640,
+          "heading": "11.5. Combining Multiple Indexes",
+          "url": "https://www.postgresql.org/docs/17/indexes-bitmap-scans.html"
+        },
+        "2": {
+          "id": 641,
+          "heading": "11.5. Combining Multiple Indexes",
+          "url": "https://www.postgresql.org/docs/17/indexes-bitmap-scans.html"
+        },
+        "3": {
+          "id": 642,
+          "heading": "11.11. Indexes and Collations",
+          "url": "https://www.postgresql.org/docs/17/indexes-collations.html"
+        },
+        "4": {
+          "id": 654,
+          "heading": "11.3. Multicolumn Indexes",
+          "url": "https://www.postgresql.org/docs/17/indexes-multicolumn.html"
+        },
+        "5": {
+          "id": 653,
+          "heading": "11.3. Multicolumn Indexes",
+          "url": "https://www.postgresql.org/docs/17/indexes-multicolumn.html"
+        }
+      }
+    },
+    "g77": {
+      "answer": "Using syncfs (on Linux) as the recovery_init_sync_method asks the OS to synchronize entire file systems that contain the data directory, WAL files and each tablespace (but not other file systems reached via arbitrary symlinks). That can be much faster than recursively fsync\u2019ing every file, because it doesn\u2019t open files one-by-one; however it can be slower if the filesystem is shared and many other files must be written, and on Linux <5.8 write-back I/O errors may not be reported to PostgreSQL (they may only appear in kernel logs) [1][2].",
+      "answerable": true,
+      "citations": [
+        1,
+        2
+      ],
+      "cited_ids": [
+        974,
+        973
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "How does syncfs help with PostgreSQL errors?",
+          "top1": 0.8355,
+          "ids": [
+            974,
+            973,
+            1269,
+            324,
+            96
+          ]
+        }
+      ],
+      "shown_ids": [
+        974,
+        973,
+        1269,
+        324,
+        96
+      ],
+      "sources": {
+        "1": {
+          "id": 974,
+          "heading": "19.14. Error Handling",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-error-handling.html"
+        },
+        "2": {
+          "id": 973,
+          "heading": "19.14. Error Handling",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-error-handling.html"
+        },
+        "3": {
+          "id": 1269,
+          "heading": "28.1. Reliability",
+          "url": "https://www.postgresql.org/docs/17/wal-reliability.html"
+        },
+        "4": {
+          "id": 324,
+          "heading": "9.28.5. Snapshot Synchronization Functions",
+          "url": "https://www.postgresql.org/docs/17/functions-admin.html"
+        },
+        "5": {
+          "id": 96,
+          "heading": "18.2.2. File Systems",
+          "url": "https://www.postgresql.org/docs/17/creating-cluster.html"
+        }
+      }
+    },
+    "g78": {
+      "answer": "Use TRUNCATE instead of DELETE followed by VACUUM when you periodically delete an entire table\u2019s contents: TRUNCATE removes the entire contents immediately and doesn't require a subsequent VACUUM to reclaim space; the tradeoff is that strict MVCC semantics are violated [1].",
+      "answerable": true,
+      "citations": [
+        1
+      ],
+      "cited_ids": [
+        900
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "What\u2019s a better way to handle periodic deletes than DELETE and VACUUM?",
+          "top1": 0.685,
+          "ids": [
+            900,
+            899,
+            904,
+            898,
+            905
+          ]
+        }
+      ],
+      "shown_ids": [
+        900,
+        899,
+        904,
+        898,
+        905
+      ],
+      "sources": {
+        "1": {
+          "id": 900,
+          "heading": "24.1.2. Recovering Disk Space",
+          "url": "https://www.postgresql.org/docs/17/routine-vacuuming.html"
+        },
+        "2": {
+          "id": 899,
+          "heading": "24.1.2. Recovering Disk Space",
+          "url": "https://www.postgresql.org/docs/17/routine-vacuuming.html"
+        },
+        "3": {
+          "id": 904,
+          "heading": "24.1.5. Preventing Transaction ID Wraparound Failures",
+          "url": "https://www.postgresql.org/docs/17/routine-vacuuming.html"
+        },
+        "4": {
+          "id": 898,
+          "heading": "24.1.1. Vacuuming Basics",
+          "url": "https://www.postgresql.org/docs/17/routine-vacuuming.html"
+        },
+        "5": {
+          "id": 905,
+          "heading": "24.1.5. Preventing Transaction ID Wraparound Failures",
+          "url": "https://www.postgresql.org/docs/17/routine-vacuuming.html"
+        }
+      }
+    },
+    "g79": {
+      "answer": "Setting client_connection_check_interval to 0 disables the optional connection checks (this is the default). With checks disabled, the server will detect a lost client connection only when it next interacts with the socket (waits for, receives, or sends data) [1].",
+      "answerable": true,
+      "citations": [
+        1
+      ],
+      "cited_ids": [
+        955
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "what does setting client_connection_check_interval to 0 do?",
+          "top1": 0.8946,
+          "ids": [
+            955,
+            932,
+            954,
+            935,
+            956
+          ]
+        }
+      ],
+      "shown_ids": [
+        955,
+        932,
+        954,
+        935,
+        956
+      ],
+      "sources": {
+        "1": {
+          "id": 955,
+          "heading": "19.3.2. TCP Settings",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-connection.html"
+        },
+        "2": {
+          "id": 932,
+          "heading": "19.11.1. Statement Behavior",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-client.html"
+        },
+        "3": {
+          "id": 954,
+          "heading": "19.3.2. TCP Settings",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-connection.html"
+        },
+        "4": {
+          "id": 935,
+          "heading": "19.11.1. Statement Behavior",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-client.html"
+        },
+        "5": {
+          "id": 956,
+          "heading": "19.3.3. Authentication",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-connection.html"
+        }
+      }
+    },
+    "hw1": {
+      "answer": "In pg_stat_activity, \"idle in transaction\" means the backend is currently inside a transaction but is not executing a query at the moment [1]. It is one of the tracked states that also contributes to idle_in_transaction_time statistics [2].",
+      "answerable": true,
+      "citations": [
+        1,
+        2
+      ],
+      "cited_ids": [
+        744,
+        775
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "In pg_stat_activity, what does a state of 'idle in transaction' mean?",
+          "top1": 0.8671,
+          "ids": [
+            744,
+            775,
+            745,
+            738,
+            739
+          ]
+        }
+      ],
+      "shown_ids": [
+        744,
+        775,
+        745,
+        738,
+        739
+      ],
+      "sources": {
+        "1": {
+          "id": 744,
+          "heading": "27.2.3. pg_stat_activity",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "2": {
+          "id": 775,
+          "heading": "27.2.17. pg_stat_database",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "3": {
+          "id": 745,
+          "heading": "27.2.3. pg_stat_activity",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "4": {
+          "id": 738,
+          "heading": "27.2.2. Viewing Statistics",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "5": {
+          "id": 739,
+          "heading": "27.2.2. Viewing Statistics",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        }
+      }
+    },
+    "hw11": {
+      "answer": "random_page_cost controls the planner\u2019s estimate of the cost of a non\u2011sequential (random) disk page fetch; lowering it makes index scans look cheaper and raising it makes index scans look more expensive. Default: 4.0 [1].\n\neffective_io_concurrency controls the number of concurrent disk I/O operations PostgreSQL expects it can issue (it increases how many I/O requests a session attempts in parallel); currently it only affects bitmap heap scans. Default: 1 on supported systems, otherwise 0 [3].",
+      "answerable": true,
+      "citations": [
+        1,
+        3
+      ],
+      "cited_ids": [
+        1006,
+        1042
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "What do random_page_cost and effective_io_concurrency each control, and what are their defaults?",
+          "top1": 0.6517,
+          "ids": [
+            1006,
+            1007,
+            1042,
+            1043,
+            1226
+          ]
+        }
+      ],
+      "shown_ids": [
+        1006,
+        1007,
+        1042,
+        1043,
+        1226
+      ],
+      "sources": {
+        "1": {
+          "id": 1006,
+          "heading": "19.7.2. Planner Cost Constants",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-query.html"
+        },
+        "2": {
+          "id": 1007,
+          "heading": "19.7.2. Planner Cost Constants",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-query.html"
+        },
+        "3": {
+          "id": 1042,
+          "heading": "19.4.6. Asynchronous Behavior",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-resource.html"
+        },
+        "4": {
+          "id": 1043,
+          "heading": "19.4.6. Asynchronous Behavior",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-resource.html"
+        },
+        "5": {
+          "id": 1226,
+          "heading": "13.2.3. Serializable Isolation Level",
+          "url": "https://www.postgresql.org/docs/17/transaction-iso.html"
+        }
+      }
+    },
+    "hw13": {
+      "answer": "Yes \u2014 log_checkpoints is on by default. The checkpoint_warning default threshold is 30 seconds (30s); if checkpoints caused by filling WAL segment files happen closer together than that, a warning is logged (zero disables it) [5][1].",
+      "answerable": true,
+      "citations": [
+        5,
+        1
+      ],
+      "cited_ids": [
+        989,
+        1059
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "Is log_checkpoints on by default, and by default how close together must checkpoints be before checkpoint_warning logs a warning?",
+          "top1": 0.6652,
+          "ids": [
+            1059,
+            1058,
+            1258,
+            988,
+            989
+          ]
+        }
+      ],
+      "shown_ids": [
+        1059,
+        1058,
+        1258,
+        988,
+        989
+      ],
+      "sources": {
+        "1": {
+          "id": 1059,
+          "heading": "19.5.2. Checkpoints",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-wal.html"
+        },
+        "2": {
+          "id": 1058,
+          "heading": "19.5.2. Checkpoints",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-wal.html"
+        },
+        "3": {
+          "id": 1258,
+          "heading": "28.5. WAL Configuration",
+          "url": "https://www.postgresql.org/docs/17/wal-configuration.html"
+        },
+        "4": {
+          "id": 988,
+          "heading": "19.8.3. What to Log",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-logging.html"
+        },
+        "5": {
+          "id": 989,
+          "heading": "19.8.3. What to Log",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-logging.html"
+        }
+      }
+    },
+    "hw2": {
+      "answer": "They are the planner\u2019s cost estimates for that plan node: the first is the estimated start-up cost (time before output can begin) and the second is the estimated total cost if the node runs to completion. Costs are in arbitrary planner units (traditionally page-fetch units) [1][2].",
+      "answerable": true,
+      "citations": [
+        1,
+        2
+      ],
+      "cited_ids": [
+        1234,
+        1235
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "In an EXPLAIN plan, what do the two numbers in cost=0.00..458.00 mean?",
+          "top1": 0.7607,
+          "ids": [
+            1234,
+            1235,
+            1247,
+            1246,
+            241
+          ]
+        }
+      ],
+      "shown_ids": [
+        1234,
+        1235,
+        1247,
+        1246,
+        241
+      ],
+      "sources": {
+        "1": {
+          "id": 1234,
+          "heading": "14.1.1. EXPLAIN Basics",
+          "url": "https://www.postgresql.org/docs/17/using-explain.html"
+        },
+        "2": {
+          "id": 1235,
+          "heading": "14.1.1. EXPLAIN Basics",
+          "url": "https://www.postgresql.org/docs/17/using-explain.html"
+        },
+        "3": {
+          "id": 1247,
+          "heading": "14.1.2. EXPLAIN ANALYZE",
+          "url": "https://www.postgresql.org/docs/17/using-explain.html"
+        },
+        "4": {
+          "id": 1246,
+          "heading": "14.1.2. EXPLAIN ANALYZE",
+          "url": "https://www.postgresql.org/docs/17/using-explain.html"
+        },
+        "5": {
+          "id": 241,
+          "heading": "5.12.4. Partition Pruning",
+          "url": "https://www.postgresql.org/docs/17/ddl-partitioning.html"
+        }
+      }
+    },
+    "hw5": {
+      "answer": "Make sure table statistics are up-to-date by running ANALYZE (the planner\u2019s estimates can change after each ANALYZE because statistics are taken from a randomized sample) [2].",
+      "answerable": true,
+      "citations": [
+        2
+      ],
+      "cited_ids": [
+        1236
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "EXPLAIN ANALYZE shows row estimates far from the actual rows -- what setting helps the planner estimate better?",
+          "top1": 0.7619,
+          "ids": [
+            1246,
+            1236,
+            1253,
+            1254,
+            1251
+          ]
+        }
+      ],
+      "shown_ids": [
+        1246,
+        1236,
+        1253,
+        1254,
+        1251
+      ],
+      "sources": {
+        "1": {
+          "id": 1246,
+          "heading": "14.1.2. EXPLAIN ANALYZE",
+          "url": "https://www.postgresql.org/docs/17/using-explain.html"
+        },
+        "2": {
+          "id": 1236,
+          "heading": "14.1.1. EXPLAIN Basics",
+          "url": "https://www.postgresql.org/docs/17/using-explain.html"
+        },
+        "3": {
+          "id": 1253,
+          "heading": "14.1.3. Caveats",
+          "url": "https://www.postgresql.org/docs/17/using-explain.html"
+        },
+        "4": {
+          "id": 1254,
+          "heading": "14.1.3. Caveats",
+          "url": "https://www.postgresql.org/docs/17/using-explain.html"
+        },
+        "5": {
+          "id": 1251,
+          "heading": "14.1.2. EXPLAIN ANALYZE",
+          "url": "https://www.postgresql.org/docs/17/using-explain.html"
+        }
+      }
+    },
+    "hw6": {
+      "answer": "Index-only scans additionally require that the heap pages involved be marked \u201call visible\u201d in the visibility map so the scan can skip heap fetches. Vacuum (including autovacuum) maintains and updates that visibility map; if pages aren\u2019t marked all-visible (i.e. vacuum hasn\u2019t cleared old dead tuples and set the map), index-only scans won\u2019t be usable even with a covering index [1][3].",
+      "answerable": true,
+      "citations": [
+        1,
+        3
+      ],
+      "cited_ids": [
+        646,
+        903
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "Index-only scans aren't happening even with a covering index -- what maintenance affects whether they can be used?",
+          "top1": 0.7668,
+          "ids": [
+            646,
+            650,
+            903,
+            779,
+            658
+          ]
+        }
+      ],
+      "shown_ids": [
+        646,
+        650,
+        903,
+        779,
+        658
+      ],
+      "sources": {
+        "1": {
+          "id": 646,
+          "heading": "11.9. Index-Only Scans and Covering Indexes",
+          "url": "https://www.postgresql.org/docs/17/indexes-index-only-scans.html"
+        },
+        "2": {
+          "id": 650,
+          "heading": "11.9. Index-Only Scans and Covering Indexes",
+          "url": "https://www.postgresql.org/docs/17/indexes-index-only-scans.html"
+        },
+        "3": {
+          "id": 903,
+          "heading": "24.1.4. Updating the Visibility Map",
+          "url": "https://www.postgresql.org/docs/17/routine-vacuuming.html"
+        },
+        "4": {
+          "id": 779,
+          "heading": "27.2.20. pg_stat_all_indexes",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "5": {
+          "id": 658,
+          "heading": "11.4. Indexes and ORDER BY",
+          "url": "https://www.postgresql.org/docs/17/indexes-ordering.html"
+        }
+      }
+    },
+    "hw7": {
+      "answer": "I cannot find instructions for sharding tables with Citus in the passages you provided. The passages discuss general approaches such as data partitioning (splitting tables so each set is modified by one server) and other replication/replica options [5][8], but they do not mention Citus or how to shard across multiple servers with it. The provided documentation therefore does not answer the question about using Citus.",
+      "answerable": false,
+      "citations": [
+        5,
+        8
+      ],
+      "cited_ids": [
+        279,
+        622
+      ],
+      "invalid_citations": [],
+      "path": "agentic",
+      "searches": 2,
+      "llm_calls": 2,
+      "trace": [
+        {
+          "query": "How do I shard tables across multiple servers with Citus?",
+          "top1": 0.3603,
+          "ids": [
+            725,
+            262,
+            67,
+            277,
+            279
+          ]
+        },
+        {
+          "query": "Citus shard tables across multiple servers",
+          "top1": 0.1908,
+          "ids": [
+            726,
+            278,
+            725,
+            277,
+            622
+          ]
+        }
+      ],
+      "shown_ids": [
+        725,
+        262,
+        67,
+        277,
+        279,
+        726,
+        278,
+        622
+      ],
+      "sources": {
+        "1": {
+          "id": 725,
+          "heading": "29.2.2. Examples: Set Up Logical Replication",
+          "url": "https://www.postgresql.org/docs/17/logical-replication-subscription.html"
+        },
+        "2": {
+          "id": 262,
+          "heading": "5.9. Row Security Policies",
+          "url": "https://www.postgresql.org/docs/17/ddl-rowsecurity.html"
+        },
+        "3": {
+          "id": 67,
+          "heading": "19.1.5. Managing Configuration File Contents",
+          "url": "https://www.postgresql.org/docs/17/config-setting.html"
+        },
+        "4": {
+          "id": 277,
+          "heading": "26.1. Comparison of Different Solutions",
+          "url": "https://www.postgresql.org/docs/17/different-replication-solutions.html"
+        },
+        "5": {
+          "id": 279,
+          "heading": "26.1. Comparison of Different Solutions",
+          "url": "https://www.postgresql.org/docs/17/different-replication-solutions.html"
+        },
+        "6": {
+          "id": 726,
+          "heading": "29.2.2. Examples: Set Up Logical Replication",
+          "url": "https://www.postgresql.org/docs/17/logical-replication-subscription.html"
+        },
+        "7": {
+          "id": 278,
+          "heading": "26.1. Comparison of Different Solutions",
+          "url": "https://www.postgresql.org/docs/17/different-replication-solutions.html"
+        },
+        "8": {
+          "id": 622,
+          "heading": "Chapter 26. High Availability, Load Balancing, and Replication",
+          "url": "https://www.postgresql.org/docs/17/high-availability.html"
+        }
+      }
+    },
+    "hw8": {
+      "answer": "The provided PostgreSQL passages do not mention pgpool-II or how to enable query result caching in pgpool-II; the documentation excerpts [1]\u2013[5] do not answer your question. They discuss unrelated PostgreSQL server parameters, statistics, and reliability topics but contain no information about pgpool-II caching. answerable: false",
+      "answerable": false,
+      "citations": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "cited_ids": [
+        965,
+        1048,
+        1033,
+        738,
+        1268
+      ],
+      "invalid_citations": [],
+      "path": "agentic",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "How do I enable query result caching in pgpool-II?",
+          "top1": 0.4812,
+          "ids": [
+            965,
+            1048,
+            1033,
+            738,
+            1268
+          ]
+        }
+      ],
+      "shown_ids": [
+        965,
+        1048,
+        1033,
+        738,
+        1268
+      ],
+      "sources": {
+        "1": {
+          "id": 965,
+          "heading": "19.17. Developer Options",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-developer.html"
+        },
+        "2": {
+          "id": 1048,
+          "heading": "19.9.1. Cumulative Query and Index Statistics",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-statistics.html"
+        },
+        "3": {
+          "id": 1033,
+          "heading": "19.4.1. Memory",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-resource.html"
+        },
+        "4": {
+          "id": 738,
+          "heading": "27.2.2. Viewing Statistics",
+          "url": "https://www.postgresql.org/docs/17/monitoring-stats.html"
+        },
+        "5": {
+          "id": 1268,
+          "heading": "28.1. Reliability",
+          "url": "https://www.postgresql.org/docs/17/wal-reliability.html"
+        }
+      }
+    },
+    "hw9": {
+      "answer": "shared_buffers: default ~128MB (min 128kB). For a dedicated DB server with \u22651GB RAM, a reasonable starting value is about 25% of system RAM; some workloads benefit from larger values but >40% is unlikely to help; large shared_buffers often require increasing max_wal_size [1].\neffective_cache_size: this is the planner\u2019s assumption about the effective size of the disk cache available to a single query; it affects cost estimates (higher \u2192 index scans more likely, lower \u2192 seq scans more likely). It should reflect shared_buffers plus the portion of the OS cache PostgreSQL can use and expected concurrency. It does not allocate or reserve memory\u2014only used for planning. Default is 4GB [2].",
+      "answerable": true,
+      "citations": [
+        1,
+        2
+      ],
+      "cited_ids": [
+        1028,
+        1008
+      ],
+      "invalid_citations": [],
+      "path": "direct",
+      "searches": 1,
+      "llm_calls": 1,
+      "trace": [
+        {
+          "query": "How much RAM should I give shared_buffers, and what does effective_cache_size actually do?",
+          "top1": 0.5903,
+          "ids": [
+            1028,
+            1008,
+            1033,
+            1055,
+            999
+          ]
+        }
+      ],
+      "shown_ids": [
+        1028,
+        1008,
+        1033,
+        1055,
+        999
+      ],
+      "sources": {
+        "1": {
+          "id": 1028,
+          "heading": "19.4.1. Memory",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-resource.html"
+        },
+        "2": {
+          "id": 1008,
+          "heading": "19.7.2. Planner Cost Constants",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-query.html"
+        },
+        "3": {
+          "id": 1033,
+          "heading": "19.4.1. Memory",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-resource.html"
+        },
+        "4": {
+          "id": 1055,
+          "heading": "19.5.1. Settings",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-wal.html"
+        },
+        "5": {
+          "id": 999,
+          "heading": "19.15. Preset Options",
+          "url": "https://www.postgresql.org/docs/17/runtime-config-preset.html"
+        }
+      }
+    }
+  }
+}

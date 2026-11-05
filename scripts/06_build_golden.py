@@ -28,7 +28,11 @@ WHY TWO JUDGES FROM DIFFERENT VENDORS
 
 Two runs of one model disagree only through sampling noise. Two vendors
 disagree when their standards differ, which is the disagreement worth
-catching. Temperature is zero for all judges.
+catching. Neither vendor's judge runs at temperature 0: the OpenAI judge is
+a reasoning model, which takes a reasoning effort instead of a temperature,
+and the current Anthropic SDK no longer accepts a temperature parameter. That costs less than it sounds: every label is cached
+the moment it is made, so a rerun reuses it rather than sampling again, and
+the reported inter-judge agreement measures whatever variance remains.
 
 RECONCILIATION
 
@@ -86,7 +90,7 @@ configurations. Cross-vendor judging reduces that; it does not remove it.
 OPERATION
 
 Every judgment is cached in eval/judgments.jsonl, keyed by prompt version,
-model, question, and chunk. Interrupted runs resume without paying twice, and
+model, question id, chunk id, and a hash of the exact question and chunk text. Interrupted runs resume without paying twice, and
 a run after a retrieval change judges only chunks that are new to the pool.
 
     python3 scripts/06_build_golden.py                 # full run
@@ -97,6 +101,7 @@ a run after a retrieval change judges only chunks that are new to the pool.
 
 import argparse
 import asyncio
+import hashlib
 import json
 import random
 import re
@@ -132,13 +137,19 @@ REPORT_PATH = EVAL_DIR / "judge_report.json"
 
 # ---------------------------------------------------------------- judges
 
-JUDGE_A = ("openai", "gpt-4o-mini")
+# gpt-4o-mini was the first choice. Calibration showed it misreading passages:
+# it labelled the work_mem definition "yes" while answering that work_mem IS
+# a per-connection limit (the opposite of the text), and labelled the
+# continuation chunk "no". A stronger reader replaced it.
+JUDGE_A = ("openai", "gpt-5-mini")
 JUDGE_B = ("anthropic", "claude-haiku-4-5-20251001")
-JUDGE_C = ("anthropic", "claude-sonnet-4-5")      # referee, contradictions only
+# Referee, contradictions only. claude-sonnet-4-5 was the first choice but
+# reaches end-of-life on 2026-11-30, which would break any later rerun.
+JUDGE_C = ("anthropic", "claude-sonnet-5")
 
 # Bump when a prompt changes. It is part of every cache key, so judgments made
 # under an old prompt are never reused under a new one.
-PROMPT_VERSION = "v1"
+PROMPT_VERSION = "v2"
 
 # Client-side pacing, kept just under typical tier-1 limits. Raise the
 # Anthropic figure if your account tier allows more
@@ -201,6 +212,33 @@ HANDWRITTEN = [
     {"qid": "hw8", "type": "unanswerable",
      "question": "How do I enable query result caching in pgpool-II?",
      "seed_terms": ["pgpool", "query cache"]},
+
+    # Parallel multi-hop, added after the first run left no `all` question.
+    # Each was checked against the chunk text before being written: the two
+    # halves of the answer sit in different chunks, and no chunk names both
+    # settings. Where a definition crosses a chunk boundary (work_mem,
+    # log_checkpoints, checkpoint_warning), the question asks for the default,
+    # which appears in only one of the two overlapping chunks -- so exactly
+    # one set of chunks is necessary and the judges' combination check has a
+    # single right answer. Expected chunks are noted for later checking only;
+    # the judges decide.
+    {"qid": "hw9", "type": "multi_hop_parallel",   # expect 1028 + 1008
+     "question": "How much RAM should I give shared_buffers, and what does effective_cache_size actually do?",
+     "seed_terms": ["shared_buffers ( integer )", "effective_cache_size ( integer )"]},
+    {"qid": "hw10", "type": "multi_hop_parallel",  # expect 1055 + 1059
+     "question": "What do wal_buffers and max_wal_size each control, and what are their defaults?",
+     "seed_terms": ["wal_buffers ( integer )", "max_wal_size ( integer )"]},
+    {"qid": "hw11", "type": "multi_hop_parallel",  # expect 1006 + 1042
+     "question": "What do random_page_cost and effective_io_concurrency each control, and what are their defaults?",
+     "seed_terms": ["random_page_cost ( floating point )", "effective_io_concurrency ( integer )"]},
+    {"qid": "hw12", "type": "multi_hop_parallel",  # expect 1030 + 1036
+     "question": "Sorts keep spilling to temp files: what controls how much memory a sort gets before it spills, "
+                 "what is its default, and how do I cap the temp file space a process can use?",
+     "seed_terms": ["work_mem ( integer )", "temp_file_limit ( integer )"]},
+    {"qid": "hw13", "type": "multi_hop_parallel",  # expect 989 + 1059
+     "question": "Is log_checkpoints on by default, and by default how close together must checkpoints be "
+                 "before checkpoint_warning logs a warning?",
+     "seed_terms": ["log_checkpoints ( boolean )", "checkpoint_warning ( integer )"]},
 ]
 
 # Calibration: cases whose answers were verified by reading the source. Never
@@ -232,6 +270,10 @@ CHUNK_SYSTEM = """You judge whether a passage from the PostgreSQL manual answers
 
 Judge the passage alone. Do not use outside knowledge, and do not assume other passages exist.
 
+First write the answer a reader would give using only this passage, in one or two sentences. If the passage gives no answer, write "no answer". Then choose the label for that answer.
+
+A passage answers the question when it lets the reader give the correct answer, whether or not it uses the question's words. That includes questions whose premise is wrong: if a question asks "is this limit per user?" and the passage says the limit applies per request, the passage answers it ("no, it applies per request").
+
 Labels:
 - "yes": a reader given only this passage could answer the question correctly and completely.
 - "partial": the passage contains information the answer needs, but not all of it.
@@ -255,6 +297,9 @@ Give a one-sentence reason."""
 
 
 class ChunkJudgment(BaseModel):
+    # Field order matters: the judge writes the answer before choosing a
+    # label, so the label is grounded in what the passage actually says.
+    answer: str
     label: Literal["yes", "partial", "no"]
     reason: str
 
@@ -352,10 +397,10 @@ async def call_judge(judge: tuple[str, str], system: str, user: str,
             if vendor == "openai":
                 resp = await openai_client.chat.completions.parse(
                     model=model,
-                    temperature=0,
                     messages=[{"role": "system", "content": system},
                               {"role": "user", "content": user}],
                     response_format=schema,
+                    **openai_sampling(model),
                 )
                 parsed = resp.choices[0].message.parsed
                 if parsed is None:
@@ -364,10 +409,11 @@ async def call_judge(judge: tuple[str, str], system: str, user: str,
 
             # Anthropic: a forced tool call is the reliable way to get
             # schema-shaped output.
+            # No temperature argument: the current SDK rejects it with a
+            # TypeError. Determinism comes from the cache instead.
             resp = await anthropic_client.messages.create(
                 model=model,
                 max_tokens=400,
-                temperature=0,
                 system=system,
                 tools=[{"name": "record", "description": "Record the judgment.",
                         "input_schema": schema.model_json_schema()}],
@@ -389,16 +435,42 @@ async def call_judge(judge: tuple[str, str], system: str, user: str,
             return None
 
 
-def chunk_key(judge, qid: str, cid: int) -> str:
-    return f"{PROMPT_VERSION}|{judge[1]}|{qid}|{cid}"
+def openai_sampling(model: str) -> dict:
+    """Sampling arguments the model accepts.
+
+    Reasoning models (the gpt-5 and o-series) reject temperature; they take a
+    reasoning effort instead. "low" is enough to read one passage carefully
+    without paying for long hidden reasoning on thousands of calls.
+    """
+    if model.startswith(("gpt-5", "o1", "o3", "o4")):
+        return {"reasoning_effort": "low"}
+    return {"temperature": 0}
 
 
-def combo_key(judge, qid: str, cids: list[int]) -> str:
-    return f"{PROMPT_VERSION}|{judge[1]}|{qid}|combo|{','.join(map(str, cids))}"
+def fingerprint(*texts: str) -> str:
+    """Short hash of the exact text a judge saw.
+
+    qid and chunk id are positions, not content: g00 is whatever candidate
+    happens to come first, and a chunk id points at different text after
+    re-chunking. Keying on them alone would silently reuse a judgment made for
+    a different question or passage. The fingerprint changes whenever the text
+    does, so a changed question or chunk is judged again.
+    """
+    digest = hashlib.sha256("\x1f".join(texts).encode("utf-8")).hexdigest()
+    return digest[:16]
+
+
+def chunk_key(judge, qid: str, cid: int, question: str, content: str) -> str:
+    return f"{PROMPT_VERSION}|{judge[1]}|{qid}|{cid}|{fingerprint(question, content)}"
+
+
+def combo_key(judge, qid: str, cids: list[int], question: str, contents: list[str]) -> str:
+    ids = ",".join(map(str, cids))
+    return f"{PROMPT_VERSION}|{judge[1]}|{qid}|combo|{ids}|{fingerprint(question, *contents)}"
 
 
 async def judge_chunk(judge, qid: str, question: str, cid: int, content: str) -> str | None:
-    key = chunk_key(judge, qid, cid)
+    key = chunk_key(judge, qid, cid, question, content)
     hit = CACHE.get(key)
     if hit:
         return hit["label"]
@@ -407,13 +479,14 @@ async def judge_chunk(judge, qid: str, question: str, cid: int, content: str) ->
     if result is None:
         return None
     await CACHE.put(key, {"qid": qid, "chunk_id": cid, "model": judge[1],
-                          "label": result.label, "reason": result.reason})
+                          "answer": result.answer, "label": result.label,
+                          "reason": result.reason})
     return result.label
 
 
 async def judge_combo(judge, qid: str, question: str, cids: list[int],
                       contents: list[str]) -> tuple[bool, list[int]] | None:
-    key = combo_key(judge, qid, cids)
+    key = combo_key(judge, qid, cids, question, contents)
     hit = CACHE.get(key)
     if hit:
         return hit["complete"], hit["necessary_ids"]
@@ -457,12 +530,12 @@ async def label_items(items: list[tuple[str, str, int, str]], label: str) -> dic
     Returns {(qid, cid): {"a", "b", "c", "final"}}; "final" is None when a
     call failed and the item needs a rerun.
     """
-    uncached = sum(1 for j in (JUDGE_A, JUDGE_B) for qid, _, cid, _ in items
-                   if not CACHE.get(chunk_key(j, qid, cid)))
+    uncached = sum(1 for j in (JUDGE_A, JUDGE_B) for qid, q, cid, text in items
+                   if not CACHE.get(chunk_key(j, qid, cid, q, text)))
     progress = Progress(max(uncached, 1), label)
 
     async def one(judge, qid, question, cid, content):
-        cached = CACHE.get(chunk_key(judge, qid, cid)) is not None
+        cached = CACHE.get(chunk_key(judge, qid, cid, question, content)) is not None
         result = await judge_chunk(judge, qid, question, cid, content)
         if not cached:
             progress.tick()
@@ -689,6 +762,19 @@ async def calibrate(pool) -> bool:
     show(continuation, "overlap continuation", lambda f: f != "no")
     show(other_param, "autovacuum_work_mem", lambda f: f != "yes")
 
+    # A label can be right for the wrong reason: gpt-4o-mini once labelled the
+    # definition "yes" while answering that work_mem IS per-connection. Check
+    # the substance too. The correct answer is "no"; an answer that opens with
+    # "yes" has misread the passage, whatever label it chose.
+    def_text = texts[str(definition)]["content"]
+    for judge in (JUDGE_A, JUDGE_B):
+        rec = CACHE.get(chunk_key(judge, "cal_work_mem", definition,
+                                  CAL_WORK_MEM_QUESTION, def_text)) or {}
+        answer = rec.get("answer", "")
+        passed = bool(answer) and not answer.strip().lower().startswith("yes")
+        ok &= passed
+        print(f"  {'pass' if passed else 'FAIL'}  {judge[1]} answer on #{definition}: {answer[:110]!r}")
+
     un = [v for (qid, _), v in labels.items() if qid == "cal_unanswerable"]
     un_yes = [v for v in un if v["final"] == "yes"]
     un_missing = [v for v in un if v["final"] is None]
@@ -856,8 +942,10 @@ async def run(args) -> None:
         questions, chunks = snapshot["questions"], snapshot["chunks"]
         items = [(qid, q["question"], cid, chunks[str(cid)]["content"])
                  for qid, q in questions.items() for cid in q["pool"]]
-        todo_a = sum(1 for qid, _, cid, _ in items if not CACHE.get(chunk_key(JUDGE_A, qid, cid)))
-        todo_b = sum(1 for qid, _, cid, _ in items if not CACHE.get(chunk_key(JUDGE_B, qid, cid)))
+        todo_a = sum(1 for qid, q, cid, text in items
+                     if not CACHE.get(chunk_key(JUDGE_A, qid, cid, q, text)))
+        todo_b = sum(1 for qid, q, cid, text in items
+                     if not CACHE.get(chunk_key(JUDGE_B, qid, cid, q, text)))
         print(f"\n{len(items)} (question, chunk) pairs; uncached: "
               f"A {todo_a}, B {todo_b}; estimated time ~{todo_b / ANTHROPIC_RPM:.0f} min "
               f"(Anthropic-bound)")
