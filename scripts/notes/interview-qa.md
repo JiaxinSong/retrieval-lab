@@ -2,6 +2,8 @@
 
 Each question has two parts. **Key points** are the short version to remember. **Answer** is the version to say out loud, about 30–60 seconds each.
 
+Terms unfamiliar? `interview-guide.md`, section 3, explains every technical term in plain language, with examples from this project.
+
 Never quote a number that is not in this file or the step docs. The first follow-up is always "how did you measure that?".
 
 ---
@@ -374,7 +376,7 @@ My three retrievers compare representations: the question and the document are e
 
 The cost is that nothing can be precomputed: every question-passage pair is a model call. Scoring the whole corpus per query is infeasible, so reranking always comes after recall, never instead of it. I take the top 20 from each retriever, fuse them, and rerank the top 40 fused candidates.
 
-There's a useful side effect: the top rerank score is a confidence signal. It was 0.897 on a well-covered question and 0.405 on one whose answer wasn't in the corpus. I plan to use that as the trigger for an agentic retry.
+There's a useful side effect: the top rerank score is a confidence signal. It was 0.897 on a well-covered question and 0.405 on one whose answer wasn't in the corpus. I use that as the trigger for the agentic retry (Q33).
 
 ---
 
@@ -402,18 +404,18 @@ That's the argument from principle. I kept both orders as configurations so the 
 
 **Key points**
 - Yes — the cap trades depth within a section for coverage across sections
-- Current impact on the test set is small: no `all` question survived, and an `any` question needs just one chunk; with rerank before the cap, the two most relevant chunks of a section survive
+- Current impact on the test set is small: an `any` question needs just one chunk, and with rerank before the cap, the two most relevant chunks of a section survive
 - Real users can hit it: "which settings in the memory section affect sorting?" spans several chunks of one section
 - Alternatives: raise the cap, add neighbouring chunks (id ± 1), MMR (penalise near-duplicates instead of a hard count), give generation a longer list than the 5 being evaluated, or let the agentic layer retrieve again
-- Measured rather than argued: a configuration runs reranking with no cap at all — recall changes by one question (noise), but one section fills 3+ slots on 30 of 79 questions
+- Measured rather than argued: a configuration runs reranking with no cap at all — recall changes by one question (noise), but one section fills 3+ slots on 31 of 82 questions
 
 **Answer**
 
 Yes, and that's a real trade-off, not a free win. The cap keeps at most two chunks per section, so it stops one long section from filling all five slots, but an answer spread across three chunks of one section loses one.
 
-On my test set the impact is small: no genuine multi-hop question survived labelling, and for a question that any one correct chunk answers, reranking first means the two most relevant chunks of a section are the ones kept. A real user could still hit it, though, with a question that spans a section listing a dozen related settings.
+On my test set the impact is small: for a question that any one correct chunk answers, reranking first means the two most relevant chunks of a section are the ones kept. A real user could still hit it, though, with a question that spans a section listing a dozen related settings.
 
-There are softer alternatives: a higher cap, pulling in neighbouring chunks, or MMR, which penalises near-duplicates instead of counting. But rather than argue it, I added a configuration with no cap at all. Comparing it with the capped version shows directly whether the cap costs recall, and how often one section would otherwise take three or more of the five slots.
+There are softer alternatives: a higher cap, pulling in neighbouring chunks, or MMR, which penalises near-duplicates instead of counting. But rather than argue it, I added a configuration with no cap at all. Comparing it with the capped version showed the cap changes recall by one question, which is noise, while without it one section takes three or more of the five slots on 31 of 82 questions. So the cap is about diversity, not recall.
 
 ---
 
@@ -440,7 +442,7 @@ The lesson I took from this and the underscore bug: retrieval bugs rarely crash.
 ## Q17. How do you evaluate the system?
 
 **Key points**
-- Retrieval is evaluated on its own; generation isn't built yet
+- Retrieval is evaluated on its own first; answers are judged separately (Q39)
 - Golden dataset: questions + the set of chunks that answer each
 - Metrics: Recall@5 (correct chunk in top 5), MRR (rank of first correct chunk), distractor intrusion
 - Nine configurations: each retriever alone, hybrid with and without the section cap, hybrid+rerank, hybrid+cap-then-rerank, hybrid+rerank without the cap, vector+rerank
@@ -787,13 +789,13 @@ The most interesting thing was what the rewrites looked like. Six of eight turne
 - Near-domain questions retrieve plausible chunks, which is what tempts a model to invent an answer
 - Signal: low rerank top-1 score (0.405 vs 0.897)
 - In generation: the answer tool has an `answerable` flag, and the prompt says to answer only from the passages and say when they don't contain the answer
-- Result: both near-domain questions refused; none of the 79 answerable ones refused
+- Result: both near-domain questions refused; none of the 82 answerable ones refused
 
 **Answer**
 
 I wrote unanswerable test questions on purpose, and drew them from PostgreSQL's neighbourhood: Citus for sharding, pgpool-II for query caching. Asking about Redis would be trivially refused and measure nothing. Near-domain questions are hard because retrieval returns plausible chunks about sharding or connection pooling, and that's exactly the situation that tempts a model into a confident wrong answer.
 
-The rerank score helps here too: it was 0.405 on a question whose answer wasn't in the corpus, versus 0.897 on a well-covered one. In generation, the model answers through a tool with an `answerable` flag and is told to use only the passages. Both near-domain questions were refused, and none of the 79 answerable ones was, so the refusal isn't coming from a model that refuses everything.
+The rerank score helps here too: it was 0.405 on a question whose answer wasn't in the corpus, versus 0.897 on a well-covered one. In generation, the model answers through a tool with an `answerable` flag and is told to use only the passages. Both near-domain questions were refused, and none of the 82 answerable ones was, so the refusal isn't coming from a model that refuses everything.
 
 ---
 
@@ -828,7 +830,7 @@ A few things would change. HNSW indexes live mostly in memory, so I'd tune its p
 
 Ingest would become incremental. Right now I rebuild the whole table and reset ids so chunk ids stay stable for the golden set. In production I'd use content-based ids so a document update doesn't renumber everything.
 
-And evaluation would run continuously: the golden set grows with the corpus, and every retrieval change runs against it as a regression test, the same way the six configurations are compared now.
+And evaluation would run continuously: the golden set grows with the corpus, and every retrieval change runs against it as a regression test, the same way the nine configurations are compared now.
 
 ---
 
@@ -914,4 +916,49 @@ It caught two things. First, Haiku passed two answers with the invented sentence
 Second, it caught a bug of mine. One "half-removed" answer was still judged correct by both judges, and their reasons quoted the very fact I thought I'd removed. It had survived in another sentence. So the judges were right and my test was wrong; I fixed the removal rule rather than lowering the bar.
 
 The limit is that planted errors only test one direction. They show the judges catch clear errors, not that they never flag a correct answer. For that side I only have the two judges' agreement, which is why I read the cases both of them flagged.
+
+---
+
+## Q41. How do you make sure the answers are correct?
+
+**Key points**
+- Can't guarantee it; every layer lowers the error rate, and the rate is measured
+- **Retrieval**: answers only from retrieved passages, so retrieval comes first (Recall@5 0.976); 2 of 3 confirmed answer errors started here
+- **Generation**: strict-schema answer tool (answer, citations, answerable flag); every citation maps to a chunk id and URL; refusal instead of invention; a low rerank score triggers a second search
+  - 0 invalid citations; 2 / 2 unanswerable refused; 0 answerable refused
+- **Evaluation**: citations checked against ground truth (80 / 80), then the text itself — faithfulness and correctness by two cross-vendor judges calibrated on planted errors (Q39, Q40)
+  - 0 answers a hallucination by both judges; 69 / 82 correct by both; 3 confirmed problems
+- Known gaps: confident answers from partial retrieval (hw5, g28); refusals that still cite passages; a correctness judge that sees only ground-truth chunks (g25)
+- Production additions: a per-sentence support check before returning, confidence shown to the user, user-flagged errors fed back as regression tests, human spot checks
+
+**Answer**
+
+I can't guarantee every answer is right, but every layer has a mechanism that lowers the error rate, and I measured the rate rather than assuming it.
+
+The first layer is retrieval, because the model may only answer from the passages it's given. Hybrid retrieval with reranking finds the answer in the top five 97.6% of the time, and when I traced the answer errors back, two of the three real ones started here.
+
+The second is generation. The model answers through a tool with a fixed schema: the text, the passage numbers it cites, and whether the passages answer the question at all. Every citation maps back to a chunk and a URL, so any sentence can be checked against the source, and when the passages don't contain the answer it refuses instead of filling the gap. Both out-of-corpus questions were refused and no answerable one was.
+
+The third is evaluation of the answers themselves: two judges from different vendors check every sentence against its cited passage and grade the answer against the ground truth, after passing calibration on errors I planted. No answer was a hallucination by both judges.
+
+What I'd still fix is the case where retrieval finds only half the answer: the model answered confidently without saying anything was missing. In production I'd add a support check on each sentence before returning the answer, and show the user when confidence is low.
+
+---
+
+## Q42. A new question comes in, with no ground truth. How do you know that answer is right?
+
+**Key points**
+- Correctness needs ground truth → offline only; **faithfulness doesn't** → can run online on every new question
+- Step 09's faithfulness judge (answer vs its cited passages) can be reused online; a cheaper model or an NLI model for cost and latency
+- Already applies to every question: answers only from retrieved passages, a citation per sentence mapped to a URL, refusal when the passages don't answer, a second search when the rerank score is below 0.5
+- To add: a faithfulness check before returning (drop or flag unsupported sentences), uncertainty shown to the user, sampling and labelling real questions after launch, user-flagged errors added as regression tests
+- Caveat: offline numbers describe questions like the test set (paraphrased, engineer's voice); real queries may be shorter or paste error codes; the 0.5 threshold was chosen on the test set — re-measure both on real traffic
+
+**Answer**
+
+A new question has no ground truth, so I can't check correctness at that moment; that's only measurable offline, on the golden set. But faithfulness doesn't need ground truth. It only asks whether each sentence of the answer is supported by the passage it cites, so the same judge I used in evaluation can run on every new question before the answer goes back, and drop or flag anything unsupported.
+
+That sits on top of what already applies to every question: the model answers only from retrieved passages, every sentence carries a citation the user can open, it refuses when the passages don't answer, and a low rerank score triggers a second search. I'd add one more thing for the user: when the score is low or only part of the answer was found, say so.
+
+And I'd be honest about what the offline numbers mean. They describe questions like my test set, which were paraphrased in an engineer's voice. Real users may write shorter questions or paste error codes, and my retry threshold was picked on the test set. So after launch I'd sample real questions, label them, measure again, and turn every answer a user flags as wrong into a regression test.
 
