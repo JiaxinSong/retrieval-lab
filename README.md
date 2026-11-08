@@ -77,7 +77,7 @@ Differences under two questions are treated as noise. Full analysis and limits: 
 
 ## Demo
 
-Saved runs in `demo/`, so the pipeline can be seen without API keys:
+Saved runs in `demo/`, so the pipeline can be seen without API keys. `demo/README.md` explains what each one shows and how to read it:
 
 | File | Shows |
 | --- | --- |
