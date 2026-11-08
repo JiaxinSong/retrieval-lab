@@ -1,0 +1,10 @@
+
+No — work_mem is not a single per-connection cap. It is a per-operation/per-process limit: each sort/hash operation generally may use up to work_mem (and hash tables multiply that by hash_mem_multiplier), multiple operations in a session and multiple sessions can each use work_mem, and resource limits like work_mem are applied separately to each parallel worker process as well [3][2][4].
+
+  search: 'Is work_mem a per-connection limit?'  top score 0.62
+  path: direct, answerable: True
+
+Sources:
+  [2] 19.4.6. Asynchronous Behavior — https://www.postgresql.org/docs/17/runtime-config-resource.html
+  [3] 19.4.1. Memory — https://www.postgresql.org/docs/17/runtime-config-resource.html
+  [4] 19.4.6. Asynchronous Behavior — https://www.postgresql.org/docs/17/runtime-config-resource.html

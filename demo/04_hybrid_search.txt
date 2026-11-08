@@ -1,0 +1,303 @@
+corpus 1293 chunks, df cutoff 193 (15%)
+
+========================================================================
+'work_mem'
+
+  lexemes kept:    ['mem']
+  lexemes dropped: ['work']
+  identifiers:     ['work_mem']
+
+  vector only
+    1   v#1 l#1 i#1                 19.4.1. Memory
+    2   v#2 l#9 i#4                 19.4.1. Memory
+    3   v#3 l#6                     14.4.5. Increase maintenance_work_mem
+    4   v#4 l#2 i#7                 19.4.1. Memory
+    5   v#5                         19.5.1. Settings
+
+  lexical only
+    1   l#1                         19.4.1. Memory
+    2   l#2                         19.4.1. Memory
+    3   l#3                         27.2.5. pg_stat_replication_slots
+    4   l#4                         19.4.6. Asynchronous Behavior
+    5 D l#5 i#10                    18.4.4. Linux Memory Overcommit
+
+  identifier only
+    1   i#1                         19.4.1. Memory
+    2   i#2                         19.4.6. Asynchronous Behavior
+    3   i#3                         19.7.1. Planner Method Configuration
+    4   i#4                         19.4.1. Memory
+    5   i#5                         19.4.6. Asynchronous Behavior
+
+  RRF fused
+    1   v#1 l#1 i#1                 19.4.1. Memory
+    2   v#6 l#4 i#2                 19.4.6. Asynchronous Behavior
+    3   v#4 l#2 i#7                 19.4.1. Memory
+    4   v#2 l#9 i#4                 19.4.1. Memory
+    5   v#17 l#11 i#5               19.4.6. Asynchronous Behavior
+
+  hybrid only: + section cap (2/section)
+    1   v#1 l#1 i#1                 19.4.1. Memory
+    2   v#6 l#4 i#2                 19.4.6. Asynchronous Behavior
+    3   v#4 l#2 i#7                 19.4.1. Memory
+    4   v#17 l#11 i#5               19.4.6. Asynchronous Behavior
+    5   v#3 l#6                     14.4.5. Increase maintenance_work_mem
+
+  full stack: rerank -> section cap
+    1   v#1 l#1 i#1        0.7090   19.4.1. Memory
+    2   v#4 l#2 i#7        0.7087   19.4.1. Memory
+    3   v#6 l#4 i#2        0.6525   19.4.6. Asynchronous Behavior
+    4   l#17 i#6           0.5692   19.18. Short Options
+    5   v#17 l#11 i#5      0.5646   19.4.6. Asynchronous Behavior
+
+  candidates: 20 vector, 19 lexical, 10 identifier, 6 in all, 31 union
+  rerank changed 4/5 top positions
+
+========================================================================
+'difference between work_mem and maintenance_work_mem'
+
+  lexemes kept:    ['mainten', 'mem']
+  lexemes dropped: ['differ', 'work']
+  identifiers:     ['maintenance_work_mem', 'work_mem']
+
+  vector only
+    1   v#1 l#1 i#1                 19.4.1. Memory
+    2   v#2 l#5 i#6                 14.4.5. Increase maintenance_work_mem
+    3   v#3 l#16 i#7                19.4.1. Memory
+    4   v#4 l#6 i#3                 19.4.1. Memory
+    5   v#5 l#19 i#15               19.4.1. Memory
+
+  lexical only
+    1   l#1                         19.4.1. Memory
+    2   l#2                         19.4.6. Asynchronous Behavior
+    3   l#3                         19.4.6. Asynchronous Behavior
+    4   l#4 i#8                     14.4.9. Some Notes about pg_dump
+    5   l#5                         14.4.5. Increase maintenance_work_mem
+
+  identifier only
+    1   i#1                         19.4.1. Memory
+    2   i#2                         19.4.6. Asynchronous Behavior
+    3   i#3                         19.4.1. Memory
+    4   i#4                         19.4.6. Asynchronous Behavior
+    5   i#5                         19.7.1. Planner Method Configuration
+
+  RRF fused
+    1   v#1 l#1 i#1                 19.4.1. Memory
+    2   v#2 l#5 i#6                 14.4.5. Increase maintenance_work_mem
+    3   v#4 l#6 i#3                 19.4.1. Memory
+    4   v#7 l#3 i#4                 19.4.6. Asynchronous Behavior
+    5   v#14 l#2 i#2                19.4.6. Asynchronous Behavior
+
+  hybrid only: + section cap (2/section)
+    1   v#1 l#1 i#1                 19.4.1. Memory
+    2   v#2 l#5 i#6                 14.4.5. Increase maintenance_work_mem
+    3   v#4 l#6 i#3                 19.4.1. Memory
+    4   v#7 l#3 i#4                 19.4.6. Asynchronous Behavior
+    5   v#14 l#2 i#2                19.4.6. Asynchronous Behavior
+
+  full stack: rerank -> section cap
+    1   v#1 l#1 i#1        0.8138   19.4.1. Memory
+    2   v#4 l#6 i#3        0.5809   19.4.1. Memory
+    3   v#14 l#2 i#2       0.5666   19.4.6. Asynchronous Behavior
+    4   v#2 l#5 i#6        0.4309   14.4.5. Increase maintenance_work_mem
+    5   l#7 i#12           0.3380   27.4.5. VACUUM Progress Reporting
+
+  candidates: 20 vector, 20 lexical, 16 identifier, 8 in all, 32 union
+  rerank changed 4/5 top positions
+
+========================================================================
+'Is work_mem a per-connection limit?'
+
+  lexemes kept:    ['limit', 'mem', 'per', 'per-connect']
+  lexemes dropped: ['connect', 'work']
+  identifiers:     ['work_mem']
+
+  vector only
+    1   v#1 l#6 i#1                 19.4.1. Memory
+    2   v#2 l#3 i#4                 19.4.1. Memory
+    3 D v#3 l#19                    18.4.1. Shared Memory and Semaphores
+    4   v#4 l#5 i#7                 19.4.1. Memory
+    5   v#5 i#9                     19.4.1. Memory
+
+  lexical only
+    1   l#1                         19.4.6. Asynchronous Behavior
+    2   l#2                         19.4.6. Asynchronous Behavior
+    3   l#3                         19.4.1. Memory
+    4 D l#4                         18.4.3. Resource Limits
+    5   l#5                         19.4.1. Memory
+
+  identifier only
+    1   i#1                         19.4.1. Memory
+    2   i#2                         19.4.6. Asynchronous Behavior
+    3   i#3                         19.7.1. Planner Method Configuration
+    4   i#4                         19.4.1. Memory
+    5   i#5                         19.4.6. Asynchronous Behavior
+
+  RRF fused
+    1   v#1 l#6 i#1                 19.4.1. Memory
+    2   v#2 l#3 i#4                 19.4.1. Memory
+    3   v#7 l#1 i#2                 19.4.6. Asynchronous Behavior
+    4   v#9 l#2 i#5                 19.4.6. Asynchronous Behavior
+    5   v#4 l#5 i#7                 19.4.1. Memory
+
+  hybrid only: + section cap (2/section)
+    1   v#1 l#6 i#1                 19.4.1. Memory
+    2   v#2 l#3 i#4                 19.4.1. Memory
+    3   v#7 l#1 i#2                 19.4.6. Asynchronous Behavior
+    4   v#9 l#2 i#5                 19.4.6. Asynchronous Behavior
+    5 D v#14 l#4                    18.4.3. Resource Limits
+
+  full stack: rerank -> section cap
+    1   v#4 l#5 i#7        0.6241   19.4.1. Memory
+    2   v#7 l#1 i#2        0.5207   19.4.6. Asynchronous Behavior
+    3   v#1 l#6 i#1        0.4891   19.4.1. Memory
+    4   v#9 l#2 i#5        0.4701   19.4.6. Asynchronous Behavior
+    5   i#8                0.4648   19.7.1. Planner Method Configuration
+
+  candidates: 20 vector, 20 lexical, 10 identifier, 5 in all, 34 union
+  rerank changed 4/5 top positions
+
+========================================================================
+'why does the database slow down after many updates'
+
+  lexemes kept:    ['mani', 'slow', 'updat']
+  lexemes dropped: ['databas']
+  identifiers:     []
+
+  vector only
+    1   v#1                         14.4.3. Remove Indexes
+    2 D v#2                         9.29. Trigger Functions
+    3   v#3                         14.1.2. EXPLAIN ANALYZE
+    4 D v#4                         65.7. Heap-Only Tuples (HOT)
+    5   v#5                         14.4.8. Run ANALYZE Afterwards
+
+  lexical only
+    1 D l#1                         12.4.2. Manipulating Queries
+    2   l#2                         11.1. Introduction
+    3 D l#3                         9.29. Trigger Functions
+    4 D l#4                         13.2.1. Read Committed Isolation Level
+    5   l#5                         19.5.1. Settings
+
+  identifier only
+    (no results)
+
+  RRF fused
+    1   v#1                         14.4.3. Remove Indexes
+    2 D l#1                         12.4.2. Manipulating Queries
+    3 D v#2                         9.29. Trigger Functions
+    4   l#2                         11.1. Introduction
+    5   v#3                         14.1.2. EXPLAIN ANALYZE
+
+  hybrid only: + section cap (2/section)
+    1   v#1                         14.4.3. Remove Indexes
+    2 D l#1                         12.4.2. Manipulating Queries
+    3 D v#2                         9.29. Trigger Functions
+    4   l#2                         11.1. Introduction
+    5   v#3                         14.1.2. EXPLAIN ANALYZE
+
+  full stack: rerank -> section cap
+    1 D v#2                0.4047   9.29. Trigger Functions
+    2   l#18               0.3744   24.1.6. The Autovacuum Daemon
+    3 D v#4                0.3626   65.7. Heap-Only Tuples (HOT)
+    4 D l#1                0.3576   12.4.2. Manipulating Queries
+    5   v#13               0.3228   14.4.5. Increase maintenance_work_mem
+
+  candidates: 20 vector, 20 lexical, 0 identifier, 0 in all, 40 union
+  rerank changed 5/5 top positions
+
+========================================================================
+'what does autovacuum_vacuum_scale_factor control'
+
+  lexemes kept:    ['autovacuum', 'control', 'factor', 'scale', 'vacuum']
+  lexemes dropped: []
+  identifiers:     ['autovacuum_vacuum_scale_factor']
+
+  vector only
+    1   v#1                         19.10. Automatic Vacuuming
+    2   v#2 l#3 i#2                 19.10. Automatic Vacuuming
+    3   v#3 l#4                     19.10. Automatic Vacuuming
+    4   v#4 l#14                    19.10. Automatic Vacuuming
+    5   v#5 l#13                    24.1.6. The Autovacuum Daemon
+
+  lexical only
+    1   l#1                         24.1.6. The Autovacuum Daemon
+    2   l#2                         24.1.6. The Autovacuum Daemon
+    3   l#3                         19.10. Automatic Vacuuming
+    4   l#4                         19.10. Automatic Vacuuming
+    5   l#5                         24.1.5. Preventing Transaction ID Wraparound
+
+  identifier only
+    1   i#1                         24.1.6. The Autovacuum Daemon
+    2   i#2                         19.10. Automatic Vacuuming
+
+  RRF fused
+    1   v#2 l#3 i#2                 19.10. Automatic Vacuuming
+    2   v#6 l#1 i#1                 24.1.6. The Autovacuum Daemon
+    3   v#3 l#4                     19.10. Automatic Vacuuming
+    4   v#7 l#2                     24.1.6. The Autovacuum Daemon
+    5   v#4 l#14                    19.10. Automatic Vacuuming
+
+  hybrid only: + section cap (2/section)
+    1   v#2 l#3 i#2                 19.10. Automatic Vacuuming
+    2   v#6 l#1 i#1                 24.1.6. The Autovacuum Daemon
+    3   v#3 l#4                     19.10. Automatic Vacuuming
+    4   v#7 l#2                     24.1.6. The Autovacuum Daemon
+    5   v#9 l#12                    24.1.5. Preventing Transaction ID Wraparound
+
+  full stack: rerank -> section cap
+    1   v#2 l#3 i#2        0.7104   19.10. Automatic Vacuuming
+    2   v#6 l#1 i#1        0.7048   24.1.6. The Autovacuum Daemon
+    3   v#3 l#4            0.6727   19.10. Automatic Vacuuming
+    4   v#7 l#2            0.6100   24.1.6. The Autovacuum Daemon
+    5   l#10               0.4248   19.4.1. Memory
+
+  candidates: 20 vector, 20 lexical, 2 identifier, 2 in all, 27 union
+  rerank changed 1/5 top positions
+
+========================================================================
+'preventing transaction id wraparound'
+
+  lexemes kept:    ['id', 'prevent', 'wraparound']
+  lexemes dropped: ['transact']
+  identifiers:     []
+
+  vector only
+    1   v#1 l#6                     24.1.5. Preventing Transaction ID Wraparound
+    2   v#2 l#3                     24.1.5. Preventing Transaction ID Wraparound
+    3   v#3 l#1                     24.1.5. Preventing Transaction ID Wraparound
+    4   v#4 l#5                     24.1.5. Preventing Transaction ID Wraparound
+    5   v#5 l#4                     24.1.5. Preventing Transaction ID Wraparound
+
+  lexical only
+    1   l#1                         24.1.5. Preventing Transaction ID Wraparound
+    2   l#2                         19.10. Automatic Vacuuming
+    3   l#3                         24.1.5. Preventing Transaction ID Wraparound
+    4   l#4                         24.1.5. Preventing Transaction ID Wraparound
+    5   l#5                         24.1.5. Preventing Transaction ID Wraparound
+
+  identifier only
+    (no results)
+
+  RRF fused
+    1   v#3 l#1                     24.1.5. Preventing Transaction ID Wraparound
+    2   v#2 l#3                     24.1.5. Preventing Transaction ID Wraparound
+    3   v#1 l#6                     24.1.5. Preventing Transaction ID Wraparound
+    4   v#4 l#5                     24.1.5. Preventing Transaction ID Wraparound
+    5   v#5 l#4                     24.1.5. Preventing Transaction ID Wraparound
+
+  hybrid only: + section cap (2/section)
+    1   v#3 l#1                     24.1.5. Preventing Transaction ID Wraparound
+    2   v#2 l#3                     24.1.5. Preventing Transaction ID Wraparound
+    3   l#2                         19.10. Automatic Vacuuming
+    4 D v#7                         13.2. Transaction Isolation
+    5   l#7                         19.11.1. Statement Behavior
+
+  full stack: rerank -> section cap
+    1   v#2 l#3            0.8966   24.1.5. Preventing Transaction ID Wraparound
+    2   v#5 l#4            0.8885   24.1.5. Preventing Transaction ID Wraparound
+    3   l#2                0.8181   19.10. Automatic Vacuuming
+    4   l#9                0.7382   19.11.1. Statement Behavior
+    5   l#10               0.7355   19.10. Automatic Vacuuming
+
+  candidates: 20 vector, 20 lexical, 0 identifier, 8 in all, 32 union
+  rerank changed 4/5 top positions
+

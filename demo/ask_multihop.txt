@@ -1,0 +1,9 @@
+
+If you have a dedicated DB server with ≥1GB RAM, a reasonable starting shared_buffers is about 25% of system RAM; settings above ~40% are unlikely to help (and smaller percentages are appropriate on systems with <1GB) [1]. effective_cache_size is not allocation at all but a planner hint: it tells the planner the effective size of the disk cache available to a single query (influencing index vs sequential-scan choices). It should reflect shared_buffers plus the kernel cache you expect PostgreSQL to use; it does not reserve memory or change shared_buffers and is used only for cost estimation (default 4GB) [2].
+
+  search: 'How much RAM should I give shared_buffers, and what does effective_cache_size actually do?'  top score 0.59
+  path: direct, answerable: True
+
+Sources:
+  [1] 19.4.1. Memory — https://www.postgresql.org/docs/17/runtime-config-resource.html
+  [2] 19.7.2. Planner Cost Constants — https://www.postgresql.org/docs/17/runtime-config-query.html

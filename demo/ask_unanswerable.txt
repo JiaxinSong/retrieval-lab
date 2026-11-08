@@ -1,0 +1,17 @@
+
+The provided PostgreSQL passages do not mention Citus or how to shard a table across nodes; therefore the documentation given does not answer the question.[1][2][3][4][5][6][7][8][9]
+
+  search: 'How do I shard a table across nodes with Citus?'  top score 0.12
+  search: 'Citus shard table across nodes shard table Citus how to shard a table across nodes'  top score 0.20
+  path: agentic, answerable: False
+
+Sources:
+  [1] 5.12.3. Partitioning Using Inheritance — https://www.postgresql.org/docs/17/ddl-partitioning.html
+  [2] 5.9. Row Security Policies — https://www.postgresql.org/docs/17/ddl-rowsecurity.html
+  [3] 5.12.6. Best Practices for Declarative Partitioning — https://www.postgresql.org/docs/17/ddl-partitioning.html
+  [4] 5.12.3. Partitioning Using Inheritance — https://www.postgresql.org/docs/17/ddl-partitioning.html
+  [5] 5.12.2. Declarative Partitioning — https://www.postgresql.org/docs/17/ddl-partitioning.html
+  [6] 29.5.1. Examples — https://www.postgresql.org/docs/17/logical-replication-col-lists.html
+  [7] 29.5.1. Examples — https://www.postgresql.org/docs/17/logical-replication-col-lists.html
+  [8] 11.8. Partial Indexes — https://www.postgresql.org/docs/17/indexes-partial.html
+  [9] 5.11.1. Caveats — https://www.postgresql.org/docs/17/ddl-inherit.html

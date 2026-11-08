@@ -75,6 +75,37 @@ Differences under two questions are treated as noise. Full analysis and limits: 
 - **Two of the three real problems are retrieval misses**: the only two answerable questions whose retrieval missed the ground truth produced confidently incomplete answers. The third is a reasoning error on a vague question.
 - Inter-judge kappa is low (0.25 correctness, −0.05 faithfulness) because flags are rare and the judges flag different borderline answers; only flags both judges share are treated as findings.
 
+## Demo
+
+Saved runs in `demo/`, so the pipeline can be seen without API keys:
+
+| File | Shows |
+| --- | --- |
+| `04_hybrid_search.txt` | Every retrieval stage (vector, lexical, identifier, RRF, cap, rerank) for six queries |
+| `ask_work_mem.txt` | A question with a false premise, answered by correcting it |
+| `ask_multihop.txt` | A two-part question answered from two sections, each half cited |
+| `ask_unanswerable.txt` | A question the docs can't answer (Citus), refused after a second search |
+| `ask_agentic.txt` | The agentic loop forced on: the second query adds `default_statistics_target`, and the answer cites passages from that search |
+
+The multi-hop example, trimmed:
+
+```
+$ python scripts/08_agent.py --ask "How much RAM should I give shared_buffers, and what does effective_cache_size actually do?"
+
+If you have a dedicated DB server with ≥1GB RAM, a reasonable starting shared_buffers is about 25% of
+system RAM; settings above ~40% are unlikely to help ... [1]. effective_cache_size is not allocation
+at all but a planner hint ... used only for cost estimation (default 4GB) [2].
+
+  search: 'How much RAM should I give shared_buffers, ...'  top score 0.59
+  path: direct, answerable: True
+
+Sources:
+  [1] 19.4.1. Memory — https://www.postgresql.org/docs/17/runtime-config-resource.html
+  [2] 19.7.2. Planner Cost Constants — https://www.postgresql.org/docs/17/runtime-config-query.html
+```
+
+One quirk the demos show: when the model refuses, it still cites every passage it read (nine in the Citus example), although none supports an answer. A refusal should carry no citations; the answer tool doesn't enforce that yet.
+
 ## Status
 
 - Done: corpus, chunking, ingest, retrieval stack, question generation, golden set (84 LLM-judged questions, inter-judge kappa 0.592), evaluation of nine configurations, cited answer generation with a gated agentic retry, answer-level judging of faithfulness and correctness
@@ -91,9 +122,11 @@ retrieval-lab/
 ├── data/
 │   ├── raw/manifest.json          # page -> chapter, group
 │   └── processed/chunks.json      # the frozen, chunked corpus
+├── demo/                          # saved terminal output of the retrieval and answer demos
 ├── eval/                          # candidate questions, golden set, judge report, results, answers
 ├── scripts/
 │   ├── notes/                     # design notes for each step
+│   │   └── zh/                    # Chinese versions of the notes, plus an interview guide
 │   ├── 01_fetch_docs.py
 │   ├── 02_chunk_docs.py
 │   ├── 03_ingest.py
@@ -180,7 +213,7 @@ python scripts/09_judge_answers.py            # judge the answers -> eval/answer
 
 Step 01 fetches the live documentation. If any page has changed since the committed snapshot, chunk contents and ids change too, and the committed evaluation files no longer apply: steps 05 and 06 must be re-run. Step 06 makes a few thousand judge calls (a few dollars) and caches every judgment in `eval/judgments.jsonl`, so an interrupted run resumes without paying twice.
 
-Design notes for each step are in `scripts/notes/`.
+Design notes for each step are in `scripts/notes/`; Chinese versions are in `scripts/notes/zh/`.
 
 ## Data Source
 
